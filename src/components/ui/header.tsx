@@ -22,15 +22,15 @@ export function Header() {
     }];
 
     return (
-        <header className="bg-white border-b-0.5 border-opacity-50 border-[#1A002D] py-5">
-            <div className="container flex items-center justify-between">
+        <header className="bg-white border-b-[0.5px] border-[#C0BAC8] py-5">
+            <div className="container relative flex items-center justify-between">
                 <Logo />
 
-                <nav>
+                <nav className="max-lg:hidden">
                     <ul className="flex align-items-center justify-between gap-10">
-                        {menu.map(op => {
+                        {menu.map((op, index) => {
                             return (
-                                <li>
+                                <li key={index}>
                                     <Link
                                         className="text-lg font-semibold text-[#887A94]"
                                         aria-expanded={op.expanded}
@@ -44,7 +44,26 @@ export function Header() {
                     </ul>
                 </nav>
 
-                <BurgerMenu />
+                <div className="flex items-center gap-6">
+                    <button
+                        className="
+                        text-sm
+                        font-semibold
+                        py-2
+                        px-7
+                        text-[#887A94]
+                        hover:text-[#ffffff]
+                        border
+                        border-[#887A94]
+                        rounded-3xl
+                        bg-[#ffffff]
+                        hover:bg-[#887A94]
+                        ease-in
+                        duration-75
+                        "
+                    >Login</button>
+                    <BurgerMenu />
+                </div>
             </div>
         </header>
     );

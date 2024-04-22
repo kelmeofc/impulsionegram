@@ -1,4 +1,104 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'QuickSand';
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/quicksand/Quicksand-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/quicksand/Quicksand-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/quicksand/Quicksand-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/quicksand/Quicksand-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/quicksand/Quicksand-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: #F4F4FA;
+}
+
+@layer components {
+  .primary-title {
+    @apply text-5xl font-bold text-[#1A002D]
+  }
+
+  .section-title {
+    @apply text-6xl max-[1050px]:text-5xl max-[600px]:text-2xl font-bold text-[#1A002D] text-center
+  }
+
+  .topic-title {
+    @apply text-3xl max-[550px]:text-2xl font-bold text-[#1A002D] text-center
+  }
+
+  .text {
+    @apply text-lg max-[600px]:text-base font-medium text-[#766A81] tracking-wide
+  }
+
+  .section-text-center {
+    @apply text-center max-w-[790px] mx-auto;
+  }
+
+  .button {
+    @apply block w-fit text-center text-[27px] font-bold text-white bg-[#4F008E] py-7 min-[900px]:px-24 rounded-full max-[900px]:w-full max-[900px]:py-5 max-[900px]:mt-8
+  }
+
+  .informative-content-blog p + p {
+    @apply mt-3
+  }
+
+  .informative-content-blog h2 {
+    @apply text-lg font-bold text-[#1A002D] my-3
+  }
+
+  .informative-content-blog h3 {
+    @apply text-lg font-bold text-[#1A002D] my-3
+  }
+
+  .informative-content-blog ul {
+    @apply my-3
+  }
+
+  .informative-content-blog li {
+    @apply list-disc ml-10
+  }
+}
+
+section+section {
+  margin-top: 110px;
+}
