@@ -203,7 +203,7 @@ export function BuyingProcessSection() {
     return (
         <section>
             <div className="container">
-                <h1 className="section-title">Pronto para comprar seguidores?</h1>
+                <h2 className="section-title">Pronto para comprar seguidores?</h2>
                 <p className="text section-text-center mt-8">Comprar seguidores para o seu perfil no Instagram é a melhor maneira de alcançar um público mais amplo, que vai incentivar o envolvimento e garantir o seu maior sucesso.</p>
 
                 <div className="flex items-center justify-center max-[950px]:flex-col w-full gap-6 p-11 py-14 bg-[#F4EFE3] rounded-3xl mt-10">

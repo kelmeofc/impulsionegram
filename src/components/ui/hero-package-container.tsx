@@ -2,121 +2,21 @@
 
 import { generateId } from "@/lib/utils";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { HeroContext } from "../sections/hero";
 
-export function FollowerPackageContainer() {
+export function HeroPackageContainer({
+    children
+}: {
+    children: React.ReactNode
+}) {
 
-    const packages: { id?: any, title: string, followers: number, bonus: number }[] = [{
-        title: 'Teste',
-        followers: 0,
-        bonus: 0
-    }, {
-        title: 'Teste',
-        followers: 0,
-        bonus: 0
-    }, {
-        title: 'Teste',
-        followers: 0,
-        bonus: 0
-    }, {
-        title: 'Teste',
-        followers: 0,
-        bonus: 0
-    }, {
-        title: 'Teste',
-        followers: 0,
-        bonus: 0
-    }, {
-        title: 'Teste',
-        followers: 0,
-        bonus: 0
-    }, {
-        title: 'Teste',
-        followers: 0,
-        bonus: 0
-    }];
-
-    const [activePackage, setActivePackage] = useState({ id: '', package: {} })
-
+    let { isPackage, setPackage } = useContext(HeroContext) as any;
+    
     return (
         <div className="w-full py-10 px-10 bg-white rounded-[50px]">
             <ul className="grid grid-cols-4 gap-4 max-[1350px]:grid-cols-5 max-[1050px]:grid-cols-4 max-[900px]:grid-cols-3 max-[670px]:grid-cols-2">
-                {packages.map((_package, index) => {
-                    _package.id = index;
-                    const id = _package.id;
-
-                    return (
-                        <li
-                            key={id}
-                            className="relative pt-12"
-                        >
-                            <Link
-                                href="#"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    console.log(id)
-                                    setActivePackage({ id, package: _package })
-                                }}
-                            >
-                                <div
-                                    className="w-full rounded-[30px] pt-4 pb-16 absolute top-0 z-[1]"
-                                    style={{
-                                        backgroundColor: activePackage.id == id ? '#B352FF' : '#F4F1FF',
-                                    }}
-                                >
-                                    <span
-                                        className="block text-center font-medium"
-                                        style={{
-                                            color: activePackage.id == id ? '#ffffff' : '#708898'
-                                        }}
-                                    >{_package.title}</span>
-                                </div>
-
-                                <div
-                                    className="rounded-[30px] overflow-hidden border-[2px] relative z-[2]"
-                                    style={{
-                                        borderColor: activePackage.id == id ? '#4F008E' : '#F0E9FA'
-                                    }}
-                                >
-                                    <div
-                                        className="w-full flex items-center flex-col text-sm font-bold py-4"
-                                        style={{
-                                            color: activePackage.id == id ? '#ffffff' : '#1A002D',
-                                            backgroundColor: activePackage.id == id ? '#4F008E' : '#F0E9FA',
-                                        }}
-                                    >
-                                        <span className="flex items-center gap-2">
-                                            <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fillRule="evenodd" clipRule="evenodd" d="M3.54359 0C1.86266 0 0.5 1.36266 0.5 3.04359V12.2196C0.5 13.9005 1.86266 15.2632 3.54359 15.2632H8.19839L9.67087 17.8136C10.1915 18.7154 11.4932 18.7154 12.0138 17.8136L13.4863 15.2632H17.4564C19.1373 15.2632 20.5 13.9005 20.5 12.2196V3.04359C20.5 1.36266 19.1373 0 17.4564 0H3.54359Z"
-                                                    style={{
-                                                        fill: activePackage.id == id ? "#ffffff" : '#1A002D'
-                                                    }}
-                                                />
-                                                <path d="M6.56143 12.3421C6.56143 12.3421 5.76318 12.3421 5.76318 11.5439C5.76318 10.7456 6.56143 8.3509 10.5527 8.3509C14.5439 8.3509 15.3421 10.7456 15.3421 11.5439C15.3421 12.3421 14.5439 12.3421 14.5439 12.3421H6.56143ZM10.5527 7.55266C11.1878 7.55266 11.7969 7.30036 12.246 6.85126C12.6951 6.40215 12.9474 5.79304 12.9474 5.15792C12.9474 4.5228 12.6951 3.91369 12.246 3.46459C11.7969 3.01549 11.1878 2.76318 10.5527 2.76318C9.91753 2.76318 9.30842 3.01549 8.85932 3.46459C8.41022 3.91369 8.15792 4.5228 8.15792 5.15792C8.15792 5.79304 8.41022 6.40215 8.85932 6.85126C9.30842 7.30036 9.91753 7.55266 10.5527 7.55266Z"
-                                                    style={{
-                                                        fill: activePackage.id == id ? "#1A002D" : '#ffffff'
-                                                    }}
-                                                />
-                                            </svg>
-                                            {_package.followers}
-                                        </span>
-
-                                        <p>Seguidores</p>
-                                    </div>
-
-                                    <div className="w-full flex items-center flex-col text-sm font-bold bg-[#ffffff] text-[#1A002D] py-4">
-                                        <span className="flex items-center gap-2">
-                                            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1818 1.77295C9.84545 1.77295 8.66818 2.44113 8 3.49113C7.33182 2.44113 6.15455 1.77295 4.81818 1.77295C2.71818 1.77295 1 3.49113 1 5.59113C1 9.37749 8 13.2275 8 13.2275C8 13.2275 15 9.40931 15 5.59113C15 3.49113 13.2818 1.77295 11.1818 1.77295Z" stroke="#1A002D" strokeWidth="1.9" /></svg>
-                                            {_package.bonus}
-                                        </span>
-
-                                        <p className="text-[#8E829A]">Curtidas Bônus</p>
-                                    </div>
-                                </div>
-                            </Link>
-                        </li>
-                    );
-                })}
+                {children}
             </ul>
 
             <div className="mt-9 flex min-[900px]:items-center min-[900px]:justify-between max-[900px]:flex-col">
@@ -125,13 +25,13 @@ export function FollowerPackageContainer() {
                         R$
                         <span
                             className="text-4xl font-bold text-[#1A002D] leading-[1]"
-                        >127</span>
+                        >{isPackage.price}</span>
                         <span
                             className="text-[#FF0000] line-through"
-                        >R$147</span>
+                        >R${isPackage.promo_price}</span>
                     </p>
 
-                    <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ 9,50 sem juros no cartão</p>
+                    <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(isPackage.price / 3).toFixed(2)}  sem juros no cartão</p>
 
                     <ul className="flex gap-4 mt-3">
                         <li>

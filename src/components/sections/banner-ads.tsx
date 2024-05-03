@@ -5,7 +5,7 @@ export function BannerAdsSection() {
         <section>
             <div className="container">
                 <div>
-                    <h1>Você está pronto para bombar o seu Instagram?</h1>
+                    <h2>Você está pronto para bombar o seu Instagram?</h2>
                     <p>Nossos clientes nos escolhem porque oferecemos o melhor serviço e o melhor atendimento.</p>
 
                     <LinkButton href="#">Comprar seguidores agora!</LinkButton>

@@ -1,7 +1,20 @@
-import Image from "next/image";
-import { FollowerPackageContainer } from "../ui/follower-package-container";
+'use client'
 
-export function HeroSection() {
+import Image from "next/image";
+import { HeroPackageContainer } from "../ui/hero-package-container";
+import { useContext, createContext, useState } from "react";
+
+export const HeroContext = createContext({ });
+
+export function HeroSection({
+    title,
+    description,
+    children
+}: {
+    title: string,
+    description: string,
+    children: React.ReactNode,
+}) {
     const profilePhotos = [
         'profile-01.png',
         'profile-02.png',
@@ -9,13 +22,15 @@ export function HeroSection() {
         'profile-04.png',
     ];
 
+    const [isPackage, setPackage] = useState({});
+
     return (
         <section>
             <div className="container py-14 flex gap-9 max-[1350px]:flex-col">
                 <div className="min-[1350px]:max-w-[490px] w-full grid max-[1350px]:grid-cols-[1fr_1fr] max-[1050px]:grid-cols-[1fr] max-[1350px]:gap-7">
                     <div>
-                        <h1 className="primary-title max-[1050px]:text-center">Comprar Seguidores no Instagram Reais e Brasileiros</h1>
-                        <p className="text mt-6 max-[1050px]:text-center">Crescer no Instagram é difícil e demorado? <span className="font-bold">Não mais!</span> O ImpulsioneGram é o melhor site para você <span className="font-bold">comprar seguidores reais e brasileiros</span> e crescer seu perfil em poucos cliques.</p>
+                        <h2 className="primary-title max-[1050px]:text-center">{title}</h2>
+                        <p className="text mt-6 max-[1050px]:text-center">{description}</p>
                     </div>
 
                     <div className="relative">
@@ -116,7 +131,11 @@ export function HeroSection() {
                     </div>
                 </div>
 
-                <FollowerPackageContainer />
+                <HeroContext.Provider value={{ isPackage, setPackage }}>
+                    <HeroPackageContainer>
+                        {children}
+                    </HeroPackageContainer>
+                </HeroContext.Provider>
             </div>
         </section>
     );

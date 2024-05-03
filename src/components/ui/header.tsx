@@ -5,19 +5,19 @@ import { BurgerMenu } from "./burger-menu";
 export function Header() {
     const menu = [{
         text: 'Seguidores',
-        link: '#',
+        link: '/',
         expanded: false,
     }, {
         text: 'Curtidas',
-        link: '#',
+        link: '/comprar-curtidas-instagram',
         expanded: false,
     }, {
         text: 'Visualizações',
-        link: '#',
+        link: '/comprar-visualizacoes-reels-instagram',
         expanded: false,
     }, {
         text: 'Comentários',
-        link: '#',
+        link: '/comprar-comentarios-instagram',
         expanded: false,
     }];
 

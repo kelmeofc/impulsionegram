@@ -4,7 +4,7 @@ export function ArticlesSection() {
     return (
         <section>
             <div className="container">
-                <h1 className="section-title">Explore todos os nossos artigos!</h1>
+                <h2 className="section-title">Explore todos os nossos artigos!</h2>
                 <p className="text section-text-center mt-8">Acompanhe as melhores dicas para impulsionar o seu perfil no Instagram.</p>
 
                 <div className="mt-10 grid grid-cols-[550px_1fr] max-[1300px]:grid-cols-[500px_1fr] max-[1062px]:grid-cols-[1fr] gap-5">
