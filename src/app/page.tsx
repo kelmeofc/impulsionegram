@@ -433,7 +433,7 @@ export default function Home() {
 
   return (
     <>
-      <Script type="application/ld+json">
+      {/* <Script type="application/ld+json">
         {`
           {
               "@context": "https://schema.org/", 
@@ -478,9 +478,9 @@ export default function Home() {
             }
           `}
       </Script>
-      
+
       <Head>
-      </Head>
+      </Head> */}
 
       <AppLayoutFragment>
         <HeroSection
