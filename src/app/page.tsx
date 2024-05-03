@@ -286,9 +286,9 @@ export default function Home() {
         <>
           <p>Imagine a seguinte situação: você está verificando quem segue um determinado perfil no Instagram e encontra nomes de usuários como:</p>
 
-          <p>“111429.pahw”</p>
-          <p>“__boot.68925”</p>
-          <p>“زحخظ؄؏؞؉ڇڒ"</p>
+          <p>&quot;111429.pahw&quot;</p>
+          <p>&quot;__boot.68925&quot;</p>
+          <p>&quot;زحخظ؄؏؞؉ڇڒ&quot;</p>
           <p>Isso acontece porque esses perfis não são usuários reais e, provavelmente, nem brasileiros.</p>
           <p>Dessa forma, fica evidente a todos que entrarem em contato com esse perfil que ali existem seguidores comprados.</p>
           <p>Inclusive, existe um risco do próprio algoritmo do Instagram perceber essa operação.</p>
