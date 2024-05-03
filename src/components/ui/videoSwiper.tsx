@@ -96,7 +96,7 @@ export function VideoSwiper() {
     >
       {vimeoStories.map((item, index) => {
         return (
-          <SwiperSlide className="w-full flex justify-center gap-8 align-middle m-auto rounded-2xl">
+          <SwiperSlide className="w-full flex justify-center gap-8 align-middle m-auto rounded-2xl" key={index}>
             <div
               className="w-flex m-auto flex-col align-middle justify-center"
               key={index}

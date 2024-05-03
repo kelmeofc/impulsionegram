@@ -39,7 +39,7 @@ export function CommentSliderItem({
             </div>
 
             <h3 className="font-bold text-lg text-[#1A002D] mt-10">{title}</h3>
-            <p className="text-[#5F4D6C] font-medium mt-5">"{text}"</p>
+            <p className="text-[#5F4D6C] font-medium mt-5">&ldquo;{text}&ldquo;</p>
 
             <div className="flex gap-2 items-center mt-5">
                 <Image

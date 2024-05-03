@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     "Procurando o melhor site para comprar seguidores reais e brasileiros no Instagram em 2024? Acesse agora o ImpulsioneGram: sem senhas, sem perigo e 100% garantido! ⭐️",
 };
 
-
 export default function Home() {
   const commentSliderItems = [
     {
@@ -434,9 +433,8 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <Script type="application/ld+json">
-          {`
+      <Script type="application/ld+json">
+        {`
           {
               "@context": "https://schema.org/", 
               "@type": "Product", 
@@ -479,7 +477,9 @@ export default function Home() {
               }
             }
           `}
-        </Script>
+      </Script>
+      
+      <Head>
       </Head>
 
       <AppLayoutFragment>
