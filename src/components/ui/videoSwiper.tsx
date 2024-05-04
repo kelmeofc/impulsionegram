@@ -79,7 +79,7 @@ export function VideoSwiper() {
 
   return (
     <Swiper
-      spaceBetween={50}
+      spaceBetween={500}
       slidesPerView={3}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
@@ -89,7 +89,6 @@ export function VideoSwiper() {
       effect={"cards"}
       grabCursor={true}
       pagination={{
-        dynamicBullets: true,
         clickable: true,
       }}
       className="mySwiper"
@@ -119,7 +118,7 @@ export function VideoSwiper() {
                   <p>{item.stars}</p>
                 </div>
 
-                <Image alt="tes" width="32" height="32" src={item.avatar} className="w-[32px] h-[32px]" />
+                {/* <Image alt="tes" width="32" height="32" src={item.avatar} className="w-[32px] h-[32px]" /> */}
                 <div className="">
                   <h4>{item.actor}</h4>
                   <h4>{item.username}</h4>

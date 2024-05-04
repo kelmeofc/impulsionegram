@@ -4,8 +4,6 @@ import Image from "next/image";
 import { HeroPackageContainer } from "../ui/hero-package-container";
 import { useContext, createContext, useState } from "react";
 
-export const HeroContext = createContext({ });
-
 export function HeroSection({
     title,
     description,
@@ -21,8 +19,6 @@ export function HeroSection({
         'profile-03.png',
         'profile-04.png',
     ];
-
-    const [isPackage, setPackage] = useState({});
 
     return (
         <section>
@@ -131,11 +127,9 @@ export function HeroSection({
                     </div>
                 </div>
 
-                <HeroContext.Provider value={{ isPackage, setPackage }}>
-                    <HeroPackageContainer>
-                        {children}
-                    </HeroPackageContainer>
-                </HeroContext.Provider>
+                <HeroPackageContainer>
+                    {children}
+                </HeroPackageContainer>
             </div>
         </section>
     );

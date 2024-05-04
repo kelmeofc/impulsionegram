@@ -1,18 +1,16 @@
 'use client'
 
-import { generateId } from "@/lib/utils";
-import Link from "next/link";
-import { useContext, useState } from "react";
-import { HeroContext } from "../sections/hero";
+import { PackageContext } from "@/context/useContext";
+import { useContext } from "react";
 
 export function HeroPackageContainer({
     children
 }: {
     children: React.ReactNode
 }) {
+    const { state } = useContext(PackageContext)
+    const heroPackage = state.isPackage as { price: number, promo_price: number };
 
-    let { isPackage, setPackage } = useContext(HeroContext) as any;
-    
     return (
         <div className="w-full py-10 px-10 bg-white rounded-[50px]">
             <ul className="grid grid-cols-4 gap-4 max-[1350px]:grid-cols-5 max-[1050px]:grid-cols-4 max-[900px]:grid-cols-3 max-[670px]:grid-cols-2">
@@ -25,13 +23,13 @@ export function HeroPackageContainer({
                         R$
                         <span
                             className="text-4xl font-bold text-[#1A002D] leading-[1]"
-                        >{isPackage.price}</span>
+                        >{heroPackage && heroPackage.price}</span>
                         <span
                             className="text-[#FF0000] line-through"
-                        >R${isPackage.promo_price}</span>
+                        >R${heroPackage && heroPackage.promo_price}</span>
                     </p>
 
-                    <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(isPackage.price / 3).toFixed(2)}  sem juros no cartão</p>
+                    <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(1 / 3).toFixed(2)}  sem juros no cartão</p>
 
                     <ul className="flex gap-4 mt-3">
                         <li>

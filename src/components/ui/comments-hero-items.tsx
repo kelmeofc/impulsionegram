@@ -1,8 +1,8 @@
 'use client'
 
+import { PackageContext } from "@/context/useContext";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
-import { HeroContext } from "../sections/hero";
 
 export function CommentsHeroItems() {
     const packages: { id?: any, price: number, promo_price: number, views: string }[] = [{
@@ -35,16 +35,14 @@ export function CommentsHeroItems() {
         views: '800',
     }];
 
-    const [activePackage, setActivePackage] = useState({ id: '', package: {} });
-    let [isValid, setValid] = useState(1) as any;
-    let { isPackage, setPackage } = useContext(HeroContext) as any;
-
-    useEffect(() => {
-        if (isValid) {
-            setPackage(packages[0])
-            setValid(0)
-        }
-    })
+    const [activePackage, setActivePackage] = useState({ id: '' });
+    const { state } = useContext(PackageContext);
+    
+    state.setIsPackage({
+        price: packages[0].price,
+        promo_price: packages[0].promo_price,
+        name: ''
+    });
 
     return (
         <>
@@ -62,8 +60,7 @@ export function CommentsHeroItems() {
                                 href="#"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    setActivePackage({ id, package: _package })
-                                    setPackage(_package);
+                                    setActivePackage({ id })
                                 }}
                             >
                                 <div
