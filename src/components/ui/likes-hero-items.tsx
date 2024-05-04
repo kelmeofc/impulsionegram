@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
-import { HeroContext } from "../sections/hero";
 
 export function LikesHeroItems() {
     const packages: { id?: any, price: number, promo_price: number, likes: string }[] = [{
@@ -40,15 +39,6 @@ export function LikesHeroItems() {
     }];
 
     const [activePackage, setActivePackage] = useState({ id: '', package: {} });
-    let [isValid, setValid] = useState(1) as any;
-    let { isPackage, setPackage } = useContext(HeroContext) as any;
-
-    useEffect(() => {
-        if (isValid) {
-            setPackage(packages[0])
-            setValid(0)
-        }
-    })
 
     return (
         <>
@@ -67,7 +57,6 @@ export function LikesHeroItems() {
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setActivePackage({ id, package: _package })
-                                    setPackage(_package);
                                 }}
                             >
                                 <div

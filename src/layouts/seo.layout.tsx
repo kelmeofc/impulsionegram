@@ -161,6 +161,8 @@ export default function SeoLayoutFragment ({ children }: ILayoutFragmentProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
+
+      {children}
     </>
   );
 }

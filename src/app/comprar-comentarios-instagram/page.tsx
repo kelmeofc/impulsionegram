@@ -7,7 +7,6 @@ import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { InformativeBlogSection } from "@/components/sections/informative-blog";
 import { CommentsHeroItems } from "@/components/ui/comments-hero-items";
 import { ITopic } from "@/components/ui/informative-blog-topic";
-import { PackageContextComponent } from "@/context/useContext";
 import AppLayoutFragment from "@/layouts/app.layout";
 import { Metadata } from "next";
 
@@ -281,25 +280,23 @@ export default function ReelsPackages() {
 
     return (
         <AppLayoutFragment>
-            <PackageContextComponent>
-                <HeroSection
-                    title="Comprar Comentários Personalizados Instagram Reais e Brasileiros em 2023"
-                    description="No ImpulsioneGram você pode comprar comentários para Instagram de forma rápida, segura e fácil com apenas alguns cliques. Veja nossas ofertas abaixo!"
-                >
-                    <CommentsHeroItems></CommentsHeroItems>
-                </HeroSection>
-                <AdvantagesSection
-                    advantages={advantages}
-                />
-                <GuaranteeSealSection />
-                <HowItWorksSection />
-                <FaqSection />
-                <InformativeBlogSection
-                    navigationPanelItems={navigationPanelItems}
-                    informativeBlogTopicsItems={informativeBlogTopicsItems}
-                />
-                <ArticlesSection />
-            </PackageContextComponent>
+            <HeroSection
+                title="Comprar Comentários Personalizados Instagram Reais e Brasileiros em 2023"
+                description="No ImpulsioneGram você pode comprar comentários para Instagram de forma rápida, segura e fácil com apenas alguns cliques. Veja nossas ofertas abaixo!"
+            >
+                <CommentsHeroItems></CommentsHeroItems>
+            </HeroSection>
+            <AdvantagesSection
+                advantages={advantages}
+            />
+            <GuaranteeSealSection />
+            <HowItWorksSection />
+            <FaqSection />
+            <InformativeBlogSection
+                navigationPanelItems={navigationPanelItems}
+                informativeBlogTopicsItems={informativeBlogTopicsItems}
+            />
+            <ArticlesSection />
         </AppLayoutFragment>
     )
 }

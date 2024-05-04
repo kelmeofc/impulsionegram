@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 // Import Swiper React components
 import * as React from "react";
@@ -9,16 +9,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination } from "swiper/modules";
 import { EffectCards } from "swiper/modules";
 
-import Star from '@/components/icons/star';
+import Star from "@/components/icons/star";
 
 import Image from "next/image";
 
-
 export function VideoSwiper() {
-
   const vimeoStories = [
     {
       link: "https://www.youtube.com/watch?v=gfU1iZnjRZM",
@@ -95,7 +93,10 @@ export function VideoSwiper() {
     >
       {vimeoStories.map((item, index) => {
         return (
-          <SwiperSlide className="w-full flex justify-center gap-8 align-middle m-auto rounded-2xl" key={index}>
+          <SwiperSlide
+            className="w-full flex justify-center gap-8 align-middle m-auto rounded-2xl"
+            key={index}
+          >
             <div
               className="w-flex m-auto flex-col align-middle justify-center"
               key={index}
@@ -123,13 +124,11 @@ export function VideoSwiper() {
                   <h4>{item.actor}</h4>
                   <h4>{item.username}</h4>
                 </div>
-
               </div>
             </div>
           </SwiperSlide>
         );
       })}
-
     </Swiper>
   );
-};
+}

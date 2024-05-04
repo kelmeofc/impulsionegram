@@ -1,15 +1,16 @@
 'use client'
 
-import { PackageContext } from "@/context/useContext";
-import { useContext } from "react";
+import { usePackageStore } from "@/store/zustand";
+import { HeroPriceSkeleton } from "./skeleton/hero-price-skeleton";
+import { useState } from "react";
 
 export function HeroPackageContainer({
     children
 }: {
     children: React.ReactNode
 }) {
-    const { state } = useContext(PackageContext)
-    const heroPackage = state.isPackage as { price: number, promo_price: number };
+
+    const _package = usePackageStore((state) => state._package);
 
     return (
         <div className="w-full py-10 px-10 bg-white rounded-[50px]">
@@ -19,15 +20,19 @@ export function HeroPackageContainer({
 
             <div className="mt-9 flex min-[900px]:items-center min-[900px]:justify-between max-[900px]:flex-col">
                 <div>
-                    <p className="text-xl font-medium text-[#8C8096] flex items-start gap-[5px]">
-                        R$
-                        <span
-                            className="text-4xl font-bold text-[#1A002D] leading-[1]"
-                        >{heroPackage && heroPackage.price}</span>
-                        <span
-                            className="text-[#FF0000] line-through"
-                        >R${heroPackage && heroPackage.promo_price}</span>
-                    </p>
+                    {_package.price && (
+                        <p className="text-xl font-medium text-[#8C8096] flex items-start gap-[5px]">
+                            R$
+                            <span
+                                className="text-4xl font-bold text-[#1A002D] leading-[1]"
+                            >{_package.price}</span>
+                            <span
+                                className="text-[#FF0000] line-through"
+                            >R${_package.promo_price}</span>
+                        </p>
+                    ) || (
+                            <HeroPriceSkeleton />
+                        )}
 
                     <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(1 / 3).toFixed(2)}  sem juros no cartão</p>
 
@@ -85,6 +90,6 @@ export function HeroPackageContainer({
 
                 <button className="text-[27px] font-bold text-white bg-[#4F008E] py-7 min-[900px]:px-24 rounded-full max-[900px]:w-full max-[900px]:py-5 max-[900px]:mt-8">Comprar Agora</button>
             </div>
-        </div>
+        </div >
     );
 }

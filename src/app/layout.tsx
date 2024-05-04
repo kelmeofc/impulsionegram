@@ -30,11 +30,10 @@ export default function RootLayout({
         <meta name="twitter:image:type" content="<generated>" />
         <meta name="twitter:image:width" content="<generated>" />
         <meta name="twitter:image:height" content="<generated>" />
-
-
-        
       </Head>
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

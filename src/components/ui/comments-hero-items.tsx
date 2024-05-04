@@ -1,6 +1,6 @@
 'use client'
 
-import { PackageContext } from "@/context/useContext";
+import { usePackageStore } from "@/store/zustand";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 
@@ -36,13 +36,9 @@ export function CommentsHeroItems() {
     }];
 
     const [activePackage, setActivePackage] = useState({ id: '' });
-    const { state } = useContext(PackageContext);
-    
-    state.setIsPackage({
-        price: packages[0].price,
-        promo_price: packages[0].promo_price,
-        name: ''
-    });
+    const setPackage = usePackageStore((_package) => _package.setPackage);
+
+    setPackage(packages[0]);
 
     return (
         <>
@@ -61,6 +57,10 @@ export function CommentsHeroItems() {
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setActivePackage({ id })
+                                    setPackage({
+                                        price: _package.price,
+                                        promo_price: _package.promo_price
+                                    });
                                 }}
                             >
                                 <div

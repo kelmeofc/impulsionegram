@@ -19,7 +19,6 @@ import { ActionBar } from "@/components/ui/action-bar";
 import { FollowersHeroItems } from "@/components/ui/followers-hero-items";
 import { InformativeBlogButton } from "@/components/ui/informative-blog-button";
 import { ITopic } from "@/components/ui/informative-blog-topic";
-import { PackageContext, PackageContextComponent } from "@/context/useContext";
 
 export const metadata: Metadata = {
   title: "Comprar Seguidores Instagram | Reais Brasileiros [2024]",
@@ -865,7 +864,6 @@ export default function Home() {
     <>
       <SeoLayoutFragment>
         <AppLayoutFragment>
-          {/* <PackageContextComponent> */}
           <HeroSection
             title="Comprar Seguidores no Instagram Reais e Brasileiros"
             description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
@@ -954,7 +952,6 @@ export default function Home() {
             informativeBlogTopicsItems={informativeBlogTopicsItems}
           />
           <ArticlesSection />
-          {/*  </PackageContextComponent> */}
         </AppLayoutFragment>
       </SeoLayoutFragment>
     </>
