@@ -9,12 +9,13 @@ import { ActionBar } from "@/components/ui/action-bar";
 import { ITopic } from "@/components/ui/informative-blog-topic";
 import { LikesHeroItems } from "@/components/ui/likes-hero-items";
 import AppLayoutFragment from "@/layouts/app.layout";
+import { ProviderLayout } from "@/layouts/provider.layout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Comprar Curtidas Reels Instagram | Reais Brasileiras [2024]",
-  description:
-    "Procurando o melhor site para comprar curtidas reais e brasileiras no Instagram em 2024? Acesse agora o ImpulsioneGram: sem senhas, sem perigo e 100% garantido! ⭐️",
+    title: "Comprar Curtidas Reels Instagram | Reais Brasileiras [2024]",
+    description:
+        "Procurando o melhor site para comprar curtidas reais e brasileiras no Instagram em 2024? Acesse agora o ImpulsioneGram: sem senhas, sem perigo e 100% garantido! ⭐️",
 };
 
 export default function ReelsPackages() {
@@ -273,62 +274,64 @@ export default function ReelsPackages() {
 
     return (
         <AppLayoutFragment>
-            <HeroSection
-                title="Comprar Curtidas no Instagram"
-                description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
-            >
-                <LikesHeroItems></LikesHeroItems>
-            </HeroSection>
-            <AdvantagesSection
-                advantages={advantages}
-            />
-            <ActionBar
-                items={[{
-                    label: 'Curtidas',
-                    amount: '2.500',
-                    subtitle: 'Mais vendido!',
-                    price: 127,
-                    promo_price: 235
-                }, {
-                    label: 'Curtidas',
-                    amount: '250',
-                    price: 19,
-                    promo_price: 27
-                }, {
-                    label: 'Curtidas',
-                    amount: '500',
-                    price: 37,
-                    promo_price: 47
-                }, {
-                    label: 'Curtidas',
-                    amount: '1.000',
-                    price: 0,
-                    promo_price: 0
-                }, {
-                    label: 'Curtidas',
-                    amount: '5.000',
-                    price: 0,
-                    promo_price: 0
-                }, {
-                    label: 'Curtidas',
-                    amount: '10.000',
-                    price: 0,
-                    promo_price: 0
-                }, {
-                    label: 'Curtidas',
-                    amount: '20.000',
-                    price: 0,
-                    promo_price: 0
-                }]}
-            />
-            <GuaranteeSealSection />
-            <HowItWorksSection />
-            <FaqSection />
-            <InformativeBlogSection
-                navigationPanelItems={navigationPanelItems}
-                informativeBlogTopicsItems={informativeBlogTopicsItems}
-            />
-            <ArticlesSection />
+            <ProviderLayout>
+                <HeroSection
+                    title="Comprar Curtidas no Instagram"
+                    description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
+                >
+                    <LikesHeroItems></LikesHeroItems>
+                </HeroSection>
+                <AdvantagesSection
+                    advantages={advantages}
+                />
+                <ActionBar
+                    items={[{
+                        label: 'Curtidas',
+                        amount: '2.500',
+                        subtitle: 'Mais vendido!',
+                        price: 127,
+                        promo_price: 235
+                    }, {
+                        label: 'Curtidas',
+                        amount: '250',
+                        price: 19,
+                        promo_price: 27
+                    }, {
+                        label: 'Curtidas',
+                        amount: '500',
+                        price: 37,
+                        promo_price: 47
+                    }, {
+                        label: 'Curtidas',
+                        amount: '1.000',
+                        price: 0,
+                        promo_price: 0
+                    }, {
+                        label: 'Curtidas',
+                        amount: '5.000',
+                        price: 0,
+                        promo_price: 0
+                    }, {
+                        label: 'Curtidas',
+                        amount: '10.000',
+                        price: 0,
+                        promo_price: 0
+                    }, {
+                        label: 'Curtidas',
+                        amount: '20.000',
+                        price: 0,
+                        promo_price: 0
+                    }]}
+                />
+                <GuaranteeSealSection />
+                <HowItWorksSection />
+                <FaqSection />
+                <InformativeBlogSection
+                    navigationPanelItems={navigationPanelItems}
+                    informativeBlogTopicsItems={informativeBlogTopicsItems}
+                />
+                <ArticlesSection />
+            </ProviderLayout>
         </AppLayoutFragment>
     )
 }

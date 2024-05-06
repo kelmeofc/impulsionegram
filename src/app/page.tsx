@@ -19,6 +19,7 @@ import { ActionBar } from "@/components/ui/action-bar";
 import { FollowersHeroItems } from "@/components/ui/followers-hero-items";
 import { InformativeBlogButton } from "@/components/ui/informative-blog-button";
 import { ITopic } from "@/components/ui/informative-blog-topic";
+import { ProviderLayout } from "@/layouts/provider.layout";
 
 export const metadata: Metadata = {
   title: "Comprar Seguidores Instagram | Reais Brasileiros [2024]",
@@ -27,62 +28,61 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const commentSliderItems = [
-    {
-      title: "incrível",
-      date: "Out 24, 2023",
-      text: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
-      rating: 5,
-      profile: {
-        picture: "/images/comments/comment-1.png",
-        name: "danilo almeida",
-        at: "@danilo_almeida",
-      },
+  const commentSliderItems = [{
+    title: "incrível",
+    date: "Out 24, 2023",
+    text: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
+    rating: 5,
+    profile: {
+      picture: "/images/comments/comment-1.png",
+      name: "danilo almeida",
+      at: "@danilo_almeida",
     },
-    {
-      title: "Consegui mais parcerias!",
-      date: "Out 24, 2023",
-      text: "Antes era muito difícil conseguir seguidores e parcerias, mas desde o dia que comecei a usar o ImpulsioneGram meu Instagram mudou muito e ganhou mais visibilidade.",
-      rating: 5,
-      profile: {
-        picture: "/images/comments/comment-2.png",
-        name: "Tainá Montenegro",
-        at: "@richelly_groomer",
-      },
+  },
+  {
+    title: "Consegui mais parcerias!",
+    date: "Out 24, 2023",
+    text: "Antes era muito difícil conseguir seguidores e parcerias, mas desde o dia que comecei a usar o ImpulsioneGram meu Instagram mudou muito e ganhou mais visibilidade.",
+    rating: 5,
+    profile: {
+      picture: "/images/comments/comment-2.png",
+      name: "Tainá Montenegro",
+      at: "@richelly_groomer",
     },
-    {
-      title: "São perfis reais e brasileiros!",
-      date: "Out 24, 2023",
-      text: "Fiquei muito satisfeito com o atendimento do ImpulsioneGram e espero que outros usuários possam se beneficiar dos serviços. O atendimento on-line é bem ágil e satisfatório, vale a pena conhecer mais sobre como funciona o ImpulsioneGram para quem precisa das redes sociais, sobretudo no que se refere aos negócios.",
-      rating: 5,
-      profile: {
-        picture: "/images/comments/comment-3.png",
-        name: "Marcelo Sardinha",
-        at: "@eventos__de__ouro",
-      },
+  },
+  {
+    title: "São perfis reais e brasileiros!",
+    date: "Out 24, 2023",
+    text: "Fiquei muito satisfeito com o atendimento do ImpulsioneGram e espero que outros usuários possam se beneficiar dos serviços. O atendimento on-line é bem ágil e satisfatório, vale a pena conhecer mais sobre como funciona o ImpulsioneGram para quem precisa das redes sociais, sobretudo no que se refere aos negócios.",
+    rating: 5,
+    profile: {
+      picture: "/images/comments/comment-3.png",
+      name: "Marcelo Sardinha",
+      at: "@eventos__de__ouro",
     },
-    {
-      title: "Ganho seguidores orgânicos!",
-      date: "Out 24, 2023",
-      text: "Passava horas e horas tentando ganhar seguidores no Instagram mas só conseguia uns 15 a 20 seguidores por dia. Pesquisando no Google encontrei esse site e consegui finalmente ganhar mais de 300 seguidores por dia. Isso me ajudou muito pra aparecer na aba explorar e começar a ganhar seguidores orgânicos, sem precisar perder meu tempo. Não vivo mais sem.",
-      rating: 5,
-      profile: {
-        picture: "/images/comments/comment-4.png",
-        name: "Rafaela Martin",
-        at: "Digital Influencer",
-      },
+  },
+  {
+    title: "Ganho seguidores orgânicos!",
+    date: "Out 24, 2023",
+    text: "Passava horas e horas tentando ganhar seguidores no Instagram mas só conseguia uns 15 a 20 seguidores por dia. Pesquisando no Google encontrei esse site e consegui finalmente ganhar mais de 300 seguidores por dia. Isso me ajudou muito pra aparecer na aba explorar e começar a ganhar seguidores orgânicos, sem precisar perder meu tempo. Não vivo mais sem.",
+    rating: 5,
+    profile: {
+      picture: "/images/comments/comment-4.png",
+      name: "Rafaela Martin",
+      at: "Digital Influencer",
     },
-    {
-      title: "incrível",
-      date: "Out 24, 2023",
-      text: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
-      rating: 5,
-      profile: {
-        picture: "/images/comments/comment-1.png",
-        name: "danilo almeida",
-        at: "@danilo_almeida",
-      },
+  },
+  {
+    title: "incrível",
+    date: "Out 24, 2023",
+    text: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
+    rating: 5,
+    profile: {
+      picture: "/images/comments/comment-1.png",
+      name: "danilo almeida",
+      at: "@danilo_almeida",
     },
+  },
   ];
 
   const advantages = [
@@ -861,9 +861,9 @@ export default function Home() {
   ];
 
   return (
-    <>
-      <SeoLayoutFragment>
-        <AppLayoutFragment>
+    <SeoLayoutFragment>
+      <AppLayoutFragment>
+        <ProviderLayout>
           <HeroSection
             title="Comprar Seguidores no Instagram Reais e Brasileiros"
             description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
@@ -952,8 +952,8 @@ export default function Home() {
             informativeBlogTopicsItems={informativeBlogTopicsItems}
           />
           <ArticlesSection />
-        </AppLayoutFragment>
-      </SeoLayoutFragment>
-    </>
+        </ProviderLayout>
+      </AppLayoutFragment>
+    </SeoLayoutFragment>
   );
 }

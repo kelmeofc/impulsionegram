@@ -3,6 +3,8 @@
 import { usePackageStore } from "@/store/zustand";
 import { HeroPriceSkeleton } from "./skeleton/hero-price-skeleton";
 import { useState } from "react";
+import { usePackageContext } from "@/providers/package-provider";
+import { HeroInstallmentPriceSkeleton } from "./skeleton/hero-installment-price-skeleton";
 
 export function HeroPackageContainer({
     children
@@ -10,7 +12,7 @@ export function HeroPackageContainer({
     children: React.ReactNode
 }) {
 
-    const _package = usePackageStore((state) => state._package);
+    const { productPackage } = usePackageContext() as any;
 
     return (
         <div className="w-full py-10 px-10 bg-white rounded-[50px]">
@@ -20,21 +22,25 @@ export function HeroPackageContainer({
 
             <div className="mt-9 flex min-[900px]:items-center min-[900px]:justify-between max-[900px]:flex-col">
                 <div>
-                    {_package.price && (
+                    {productPackage.price && (
                         <p className="text-xl font-medium text-[#8C8096] flex items-start gap-[5px]">
                             R$
                             <span
                                 className="text-4xl font-bold text-[#1A002D] leading-[1]"
-                            >{_package.price}</span>
+                            >{productPackage.price}</span>
                             <span
                                 className="text-[#FF0000] line-through"
-                            >R${_package.promo_price}</span>
+                            >R${productPackage.promo_price}</span>
                         </p>
                     ) || (
                             <HeroPriceSkeleton />
                         )}
 
-                    <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(1 / 3).toFixed(2)}  sem juros no cartão</p>
+                    {productPackage.price && (
+                        <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(productPackage.price / 3).toFixed(2)}  sem juros no cartão</p>
+                    ) || (
+                            <p className="text-[#B2ACB6] text-base font-medium mt-3 flex gap-2 items-center">3x de R$ <HeroInstallmentPriceSkeleton />  sem juros no cartão</p>
+                        )}
 
                     <ul className="flex gap-4 mt-3">
                         <li>

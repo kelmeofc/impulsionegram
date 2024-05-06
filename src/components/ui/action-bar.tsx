@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/carousel"
 
 import useEmblaCarousel from 'embla-carousel-react'
+import { usePackageContext } from "@/providers/package-provider";
 
 export function ActionBar({ items }: {
     items: {
@@ -29,27 +30,53 @@ export function ActionBar({ items }: {
         'profile-04.png',
     ];
 
+    const [packageIndex, setPackageIndex] = useState(0);
+    const [selectedPackage, setSelectedPackage] = useState({
+        label: '',
+        amount: '',
+        promo_price: 0,
+        price: 0,
+        subtitle: '',
+    });
+
+    const regress = () => {
+        if ((packageIndex - 1) >= 0) {
+            setPackageIndex(packageIndex - 1);
+        }
+
+        setSelectedPackage(items[packageIndex] as any);
+    }
+
+    const pass = () => {
+        if ((packageIndex + 1) < items.length) {
+            setPackageIndex(packageIndex + 1);
+        }
+
+        setSelectedPackage(items[packageIndex] as any);
+    }
+
     useEffect(() => {
+        setSelectedPackage(items[0] as any);
+
         window.addEventListener('scroll', (event) => {
             const actionBar = document.querySelector('[data-action-bar]') as HTMLElement;
             const container = document.querySelector('[data-action-bar-container]') as HTMLElement;
 
-            if (actionBar.getBoundingClientRect().top < 200) {
-                container.classList.remove(
-                    'opacity-0',
-                    'pointer-events-none'
-                )
-            } else {
-                container.classList.add(
-                    'opacity-0',
-                    'pointer-events-none'
-                )
+            if (container) {
+                if (actionBar.getBoundingClientRect().top < 200) {
+                    container.classList.remove(
+                        'opacity-0',
+                        'pointer-events-none'
+                    )
+                } else {
+                    container.classList.add(
+                        'opacity-0',
+                        'pointer-events-none'
+                    )
+                }
             }
         });
-    });
-
-    const [isRange, setIsRange] = useState(0);
-    const [isPackage, setPackage] = useState(items[0]);
+    }, []);
 
     return (
         <div data-action-bar>
@@ -61,10 +88,10 @@ export function ActionBar({ items }: {
                                 R$
                                 <span
                                     className="text-4xl font-bold text-[#1A002D] leading-[1]"
-                                >{isPackage.price}</span>
+                                >{selectedPackage.price}</span>
                                 <span
                                     className="text-[#FF0000] line-through"
-                                >R${isPackage.promo_price}</span>
+                                >R${selectedPackage.promo_price}</span>
                             </p>
 
                             <div className="flex gap-1">
@@ -100,56 +127,29 @@ export function ActionBar({ items }: {
                     <div className="flex flex-col gap-5">
                         <div className="max-w-[350px] relative">
                             <button
-                                className="absolute left-8 top-1/2 w-[60px] h-[60px] bg-white text-[#34005B] text-4xl rounded-full"
+                                className="absolute left-8 top-1/2 w-[50px] h-[50px] bg-white text-[#34005B] text-4xl rounded-full"
                                 style={{
                                     transform: 'translateY(-50%)'
                                 }}
-                                onClick={(event: any) => {
-                                    event.preventDefault();
-                                    const field = document.querySelector('[data-field]');
-
-                                    field?.scrollBy({
-                                        left: -350
-                                    })
-
-                                    if (isRange > 0) {
-                                        setPackage(items[isRange]);
-                                    }
-                                }}
+                                onClick={regress}
                             >-</button>
 
-                            <ul className="w-full flex overflow-hidden" data-field>
-                                {items.map((item, index) => (
-                                    <li key={index} onChange={() => console.log('passou')}>
-                                        <div className="bg-[#F0E9FA] rounded-full text-center text-[#1A002D] flex flex-col py-1 min-w-[350px]">
-                                            <span className="text-base font-bold">{item.label}</span>
-                                            <span className="text-3xl font-bold">{item.amount}</span>
-                                            <span className="text-base font-medium">{item.subtitle || '‎'}</span>
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
+                            <div className="bg-[#F0E9FA] rounded-full text-center text-[#1A002D] flex flex-col py-1 min-w-[350px]">
+                                <span className="text-sm font-bold">{selectedPackage.label}</span>
+                                <span className="text-2xl font-bold">{selectedPackage.amount}</span>
+                                <span className="text-sm font-medium">{selectedPackage.subtitle || '‎'}</span>
+                            </div>
 
                             <button
-                                className="absolute right-8 top-1/2 w-[60px] h-[60px] bg-white text-[#34005B] text-4xl rounded-full"
+                                className="absolute right-8 top-1/2 w-[50px] h-[50px] bg-white text-[#34005B] text-4xl rounded-full"
                                 style={{
                                     transform: 'translateY(-50%)'
                                 }}
-                                onClick={(event: any) => {
-                                    event.preventDefault();
-                                    const field = document.querySelector('[data-field]');
-                                    field?.scrollBy({
-                                        left: 350
-                                    })
-
-                                    if (isRange < items.length - 1) {
-                                        setPackage(items[isRange]);
-                                    }
-                                }}
+                                onClick={pass}
                             >+</button>
                         </div>
                         <button
-                            className="py-5 w-full bg-[#4F008E] text-white font-bold block rounded-full"
+                            className="py-4 w-full bg-[#4F008E] text-white font-bold block rounded-full"
                         >Comprar Agora</button>
 
                     </div>
@@ -159,13 +159,13 @@ export function ActionBar({ items }: {
                             R$
                             <span
                                 className="text-4xl font-bold text-[#1A002D] leading-[1]"
-                            >{isPackage.price}</span>
+                            >{selectedPackage.price}</span>
                             <span
                                 className="text-[#FF0000] line-through"
-                            >R${isPackage.promo_price}</span>
+                            >R${selectedPackage.promo_price}</span>
                         </p>
 
-                        <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(isPackage.price / 3).toFixed(2)} sem juros no cartão</p>
+                        <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(selectedPackage.price / 3).toFixed(2)} sem juros no cartão</p>
 
                         <ul className="flex gap-4 mt-3">
                             <li>

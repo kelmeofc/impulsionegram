@@ -14,12 +14,10 @@ import { EffectCards } from "swiper/modules";
 
 import Star from "@/components/icons/star";
 
-import Image from "next/image";
-
 export function VideoSwiper() {
   const vimeoStories = [
     {
-      link: "https://www.youtube.com/watch?v=gfU1iZnjRZM",
+      link: "https://vimeo.com/803570100",
       content: "video 01",
       avatar: "https://randomuser.me/api/portraits",
       actor: "Juliana Oliveira",
@@ -28,7 +26,7 @@ export function VideoSwiper() {
       stars: "5/5",
     },
     {
-      link: "https://www.youtube.com/watch?v=gfU1iZnjRZM",
+      link: "https://vimeo.com/833881036",
       content: "video 02",
       avatar: "https://randomuser.me/api/portraits",
       actor: "Rayssa Hungria",
@@ -37,7 +35,7 @@ export function VideoSwiper() {
       stars: "5/5",
     },
     {
-      link: "https://www.youtube.com/watch?v=gfU1iZnjRZM",
+      link: "https://vimeo.com/803582947",
       content: "video 03",
       avatar: "https://randomuser.me/api/portraits",
       actor: "Giovani Teles",
@@ -46,7 +44,7 @@ export function VideoSwiper() {
       stars: "5/5",
     },
     {
-      link: "https://www.youtube.com/watch?v=gfU1iZnjRZM",
+      link: "https://vimeo.com/803569955",
       content: "video 04",
       avatar: "https://randomuser.me/api/portraits",
       actor: "Taise",
@@ -55,7 +53,7 @@ export function VideoSwiper() {
       stars: "5/5",
     },
     {
-      link: "https://www.youtube.com/watch?v=gfU1iZnjRZM",
+      link: "https://vimeo.com/803582703",
       content: "video 05",
       avatar: "https://randomuser.me/api/portraits",
       actor: "Ana Carolina",
@@ -63,9 +61,17 @@ export function VideoSwiper() {
       description: "Hoje fecho muito mais parcerias",
       stars: "5/5",
     },
-
     {
-      link: "https://www.youtube.com/watch?v=gfU1iZnjRZM",
+      link: "https://vimeo.com/803569834",
+      content: "video 05",
+      avatar: "https://randomuser.me/api/portraits",
+      actor: "Karin Hermann",
+      username: "@k_herrmann8",
+      description: "Minha presença está muito mais forte!",
+      stars: "5/5",
+    },
+    {
+      link: "https://vimeo.com/833881088",
       content: "video 05",
       avatar: "https://randomuser.me/api/portraits",
       actor: "Karin Hermann",
@@ -89,7 +95,7 @@ export function VideoSwiper() {
       pagination={{
         clickable: true,
       }}
-      className="mySwiper"
+      className=""
     >
       {vimeoStories.map((item, index) => {
         return (

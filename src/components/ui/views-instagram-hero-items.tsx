@@ -1,7 +1,8 @@
 'use client'
 
+import { usePackageContext } from "@/providers/package-provider";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function ViewsInstagramHeroItems() {
     const packages: { id?: any, price: number, promo_price: number, views: string }[] = [{
@@ -38,8 +39,17 @@ export function ViewsInstagramHeroItems() {
         views: '500.000',
     }];
 
-    const [activePackage, setActivePackage] = useState({ id: '', package: {} });
-
+    const [activePackage, setActivePackage] = useState({ id: '' });
+    const { handlePackage } = usePackageContext() as any;
+    
+    useEffect(() => {
+        handlePackage({
+            id: '',
+            price: packages[0].price,
+            promo_price: packages[0].promo_price,
+        });
+    }, []);
+    
     return (
         <>
             {
@@ -56,7 +66,12 @@ export function ViewsInstagramHeroItems() {
                                 href="#"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    setActivePackage({ id, package: _package })
+                                    setActivePackage({ id });
+                                    handlePackage({
+                                        id: '',
+                                        price: _package.price,
+                                        promo_price: _package.promo_price,
+                                    })
                                 }}
                             >
                                 <div

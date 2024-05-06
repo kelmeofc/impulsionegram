@@ -45,7 +45,9 @@ export function Header() {
                 </nav>
 
                 <div className="flex items-center gap-6">
-                    <button
+                    <Link
+                        href={'https://painel.impulsionegram.com.br/'}
+                        target="_blank"
                         className="
                         text-sm
                         font-semibold
@@ -61,7 +63,7 @@ export function Header() {
                         ease-in
                         duration-75
                         "
-                    >Login</button>
+                    >Login</Link>
                     <BurgerMenu />
                 </div>
             </div>

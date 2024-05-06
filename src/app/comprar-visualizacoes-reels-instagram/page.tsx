@@ -5,9 +5,11 @@ import { GuaranteeSealSection } from "@/components/sections/guarantee-seal";
 import { HeroSection } from "@/components/sections/hero";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { InformativeBlogSection } from "@/components/sections/informative-blog";
+import { ActionBar } from "@/components/ui/action-bar";
 import { ITopic } from "@/components/ui/informative-blog-topic";
 import { ViewsInstagramHeroItems } from "@/components/ui/views-instagram-hero-items";
 import AppLayoutFragment from "@/layouts/app.layout";
+import { ProviderLayout } from "@/layouts/provider.layout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -280,23 +282,64 @@ export default function ReelsPackages() {
 
     return (
         <AppLayoutFragment>
-            <HeroSection
-                title="Comprar Visualizações Reels no Instagram"
-                description="No ImpulsioneGram você pode comprar Visualizações para Reels do Instagram de forma rápida, segura e fácil com apenas alguns cliques. Veja nossas ofertas abaixo!"
-            >
-                <ViewsInstagramHeroItems></ViewsInstagramHeroItems>
-            </HeroSection>
-            <AdvantagesSection
-                advantages={advantages}
-            />
-            <GuaranteeSealSection />
-            <HowItWorksSection />
-            <FaqSection />
-            <InformativeBlogSection
-                navigationPanelItems={navigationPanelItems}
-                informativeBlogTopicsItems={informativeBlogTopicsItems}
-            />
-            <ArticlesSection />
+            <ProviderLayout>
+                <HeroSection
+                    title="Comprar Visualizações Reels no Instagram"
+                    description="No ImpulsioneGram você pode comprar Visualizações para Reels do Instagram de forma rápida, segura e fácil com apenas alguns cliques. Veja nossas ofertas abaixo!"
+                >
+                    <ViewsInstagramHeroItems></ViewsInstagramHeroItems>
+                </HeroSection>
+                <AdvantagesSection
+                    advantages={advantages}
+                />
+                <ActionBar
+                    items={[{
+                        label: 'Visualizações Reels',
+                        amount: '5.000',
+                        subtitle: 'Mais vendido!',
+                        price: 127,
+                        promo_price: 235
+                    }, {
+                        label: 'Visualizações Reels',
+                        amount: '1.000',
+                        price: 19,
+                        promo_price: 27
+                    }, {
+                        label: 'Visualizações Reels',
+                        amount: '2.000',
+                        price: 37,
+                        promo_price: 47
+                    }, {
+                        label: 'Visualizações Reels',
+                        amount: '40.000',
+                        price: 0,
+                        promo_price: 0
+                    }, {
+                        label: 'Visualizações Reels',
+                        amount: '80.000',
+                        price: 0,
+                        promo_price: 0
+                    }, {
+                        label: 'Visualizações Reels',
+                        amount: '200.000',
+                        price: 0,
+                        promo_price: 0
+                    }, {
+                        label: 'Visualizações Reels',
+                        amount: '500.000',
+                        price: 0,
+                        promo_price: 0
+                    }]}
+                />
+                <GuaranteeSealSection />
+                <HowItWorksSection />
+                <FaqSection />
+                <InformativeBlogSection
+                    navigationPanelItems={navigationPanelItems}
+                    informativeBlogTopicsItems={informativeBlogTopicsItems}
+                />
+                <ArticlesSection />
+            </ProviderLayout>
         </AppLayoutFragment>
     )
 }

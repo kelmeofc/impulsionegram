@@ -5,9 +5,11 @@ import { GuaranteeSealSection } from "@/components/sections/guarantee-seal";
 import { HeroSection } from "@/components/sections/hero";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { InformativeBlogSection } from "@/components/sections/informative-blog";
+import { ActionBar } from "@/components/ui/action-bar";
 import { CommentsHeroItems } from "@/components/ui/comments-hero-items";
 import { ITopic } from "@/components/ui/informative-blog-topic";
 import AppLayoutFragment from "@/layouts/app.layout";
+import { ProviderLayout } from "@/layouts/provider.layout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -280,23 +282,64 @@ export default function ReelsPackages() {
 
     return (
         <AppLayoutFragment>
-            <HeroSection
-                title="Comprar Comentários Personalizados Instagram Reais e Brasileiros em 2023"
-                description="No ImpulsioneGram você pode comprar comentários para Instagram de forma rápida, segura e fácil com apenas alguns cliques. Veja nossas ofertas abaixo!"
-            >
-                <CommentsHeroItems></CommentsHeroItems>
-            </HeroSection>
-            <AdvantagesSection
-                advantages={advantages}
-            />
-            <GuaranteeSealSection />
-            <HowItWorksSection />
-            <FaqSection />
-            <InformativeBlogSection
-                navigationPanelItems={navigationPanelItems}
-                informativeBlogTopicsItems={informativeBlogTopicsItems}
-            />
-            <ArticlesSection />
+            <ProviderLayout>
+                <HeroSection
+                    title="Comprar Comentários Personalizados Instagram Reais e Brasileiros em 2023"
+                    description="No ImpulsioneGram você pode comprar comentários para Instagram de forma rápida, segura e fácil com apenas alguns cliques. Veja nossas ofertas abaixo!"
+                >
+                    <CommentsHeroItems />
+                </HeroSection>
+                <AdvantagesSection
+                    advantages={advantages}
+                />
+                <ActionBar
+                    items={[{
+                        label: 'Comentários Instagram',
+                        amount: '60',
+                        subtitle: 'Mais vendido!',
+                        price: 127,
+                        promo_price: 235
+                    }, {
+                        label: 'Comentários Instagram',
+                        amount: '15',
+                        price: 19,
+                        promo_price: 27
+                    }, {
+                        label: 'Comentários Instagram',
+                        amount: '30',
+                        price: 37,
+                        promo_price: 47
+                    }, {
+                        label: 'Comentários Instagram',
+                        amount: '100',
+                        price: 0,
+                        promo_price: 0
+                    }, {
+                        label: 'Comentários Instagram',
+                        amount: '200',
+                        price: 0,
+                        promo_price: 0
+                    }, {
+                        label: 'Comentários Instagram',
+                        amount: '400',
+                        price: 0,
+                        promo_price: 0
+                    }, {
+                        label: 'Comentários Instagram',
+                        amount: '800',
+                        price: 0,
+                        promo_price: 0
+                    }]}
+                />
+                <GuaranteeSealSection />
+                <HowItWorksSection />
+                <FaqSection />
+                <InformativeBlogSection
+                    navigationPanelItems={navigationPanelItems}
+                    informativeBlogTopicsItems={informativeBlogTopicsItems}
+                />
+                <ArticlesSection />
+            </ProviderLayout>
         </AppLayoutFragment>
     )
 }
