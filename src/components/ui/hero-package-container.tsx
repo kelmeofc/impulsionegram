@@ -16,7 +16,7 @@ export function HeroPackageContainer({
 
     return (
         <div className="w-full py-10 px-10 bg-white rounded-[50px]">
-            <ul className="grid grid-cols-4 gap-4 max-[1350px]:grid-cols-5 max-[1050px]:grid-cols-4 max-[900px]:grid-cols-3 max-[670px]:grid-cols-2">
+            <ul className="grid grid-cols-4 gap-4 max-[1350px]:grid-cols-5 max-[1050px]:grid-cols-4 max-[900px]:grid-cols-3 max-[670px]:grid-cols-2 max-[400px]:grid-cols-1">
                 {children}
             </ul>
 

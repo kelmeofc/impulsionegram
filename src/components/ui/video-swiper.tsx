@@ -92,9 +92,10 @@ export function VideoSwiper() {
 				}}
 			>
 
-				{vimeoStories.map(video => (
+				{vimeoStories.map((video, index) => (
 					<SwiperSlide
 						className="relative"
+						key={index}
 					>
 						<iframe
 							className="w-full h-full"
