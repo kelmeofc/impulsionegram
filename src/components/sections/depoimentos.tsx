@@ -1,6 +1,7 @@
 import Star from "@/components/icons/star";
 
 import { VideoSwiper } from "../ui/video-swiper";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
 export function DepoimentosSection() {
 	return (
@@ -22,8 +23,20 @@ export function DepoimentosSection() {
 					</p>
 				</div>
 
+				{/* <Carousel>
+					<CarouselContent>
+						{Array.from({ length: 4 }).map(() => (
+							<CarouselItem className="basis-1/3 w-full h-[400px] bg-black border border-[#ffffff]"
+								style={{
+									transform: "translate3d(calc(9.17596% - 800px), 0px, -130.719px) rotateZ(2.61438deg) scale(1)"
+								}}
+							>...</CarouselItem>
+						))}
+					</CarouselContent>
+				</Carousel> */}
+
 				<VideoSwiper />
 			</div>
-		</section>
+		</section >
 	);
 }
