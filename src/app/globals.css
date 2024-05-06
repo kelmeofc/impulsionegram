@@ -99,8 +99,8 @@ body {
   }
 }
 
-[data-action-bar] + section,
-section + [data-action-bar],
+[data-action-bar]+section,
+section+[data-action-bar],
 section+section,
 section+main,
 main+section {
@@ -134,6 +134,13 @@ body {
   width: 350px;
   height: 600px;
   overflow: visible !important;
+}
+
+@media screen and (max-width: 600px) {
+  .swiper {
+    width: 300px;
+    height: 550px;
+  }
 }
 
 .swiper-cards {

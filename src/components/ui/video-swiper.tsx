@@ -98,7 +98,7 @@ export function VideoSwiper() {
 						key={index}
 					>
 						<iframe
-							className="w-full h-full"
+							className="w-full h-full rounded-3xl"
 							src={`https://player.vimeo.com/video/${video.link}`}
 						></iframe>
 
