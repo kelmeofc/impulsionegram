@@ -50,7 +50,7 @@ export function CommentsHeroItems() {
         views: '800',
     }];
 
-    const [activePackage, setActivePackage] = useState({ id: '' });
+    const [activePackage, setActivePackage] = useState({ id: 0 });
     const { handlePackage } = usePackageContext() as any;
 
     useEffect(() => {
@@ -84,7 +84,7 @@ export function CommentsHeroItems() {
                                         card_id: _package.card_id,
                                         price: _package.price,
                                         promo_price: _package.promo_price,
-                                    })
+                                    });
                                 }}
                             >
                                 <div

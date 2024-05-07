@@ -15,7 +15,7 @@ export interface ITopic {
 export function InformativeBlogTopic({ topic }: { topic: ITopic }) {
     return (
         <div id={topic.id} data-informative-blog-topics>
-            <h1 className="primary-title mt-5">{topic.title}</h1>
+            <h2 className="primary-title mt-5">{topic.title}</h2>
 
             {topic.banner ? (<img
                 className="block mt-10 rounded-3xl"

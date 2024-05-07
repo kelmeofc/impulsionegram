@@ -7,19 +7,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/pagination";
+
 
 // import required modules
 import { Pagination } from "swiper/modules";
 import { EffectCards } from "swiper/modules";
 
 import Star from "@/components/icons/star";
+import Image from "next/image";
 
 export function VideoSwiper() {
 	const vimeoStories = [
 		{
 			link: "803570100",
 			content: "video 01",
-			avatar: "https://randomuser.me/api/portraits",
+			avatar: "images/avatars/juliana.png",
 			actor: "Juliana Oliveira",
 			username: "@julianaoliveira.br",
 			description: "Seguidores de alta qualidade",
@@ -73,7 +76,7 @@ export function VideoSwiper() {
 		{
 			link: "833881088",
 			content: "video 05",
-			avatar: "https://randomuser.me/api/portraits",
+			avatar: "",
 			actor: "Karin Hermann",
 			username: "@k_herrmann8",
 			description: "Minha presença está muito mais forte!",
@@ -84,30 +87,54 @@ export function VideoSwiper() {
 	return (
 		<>
 			<Swiper
-				effect={'cards'}
+				effect={"cards"}
 				grabCursor={true}
-				modules={[EffectCards]}
+				modules={[EffectCards, Pagination]}
+				pagination={{
+					dynamicBullets: true,
+				}}
 				onSlideChange={() => {
-					const activeItem = document.querySelector('.swiper-slide-active [data-video]');
+					const activeItem = document.querySelector(
+						".swiper-slide-active [data-video]"
+					);
 				}}
 			>
-
 				{vimeoStories.map((video, index) => (
-					<SwiperSlide
-						className="relative"
-						key={index}
-					>
+					<SwiperSlide className="relative rounded-[40px] bg-[#AF3EC4] overflow-hidden" key={index}>
 						<iframe
 							className="w-full h-full rounded-3xl"
 							src={`https://player.vimeo.com/video/${video.link}`}
 						></iframe>
 
-						<div className="w-full p-7 absolute left-0 bottom-0 z-[999] bg-[#220439] text-white"
+						{/* <video className="w-full h-full rounded-3xl" src={`@/videos/${video.link}.m4a`}></video> */}
+
+						<div
+							className="w-full p-7 absolute left-0 bottom-0 z-[999] bg-[#220439] text-white flex flex-col gap-3"
 							style={{
-								backdropFilter: 'blur(50px)',
+								backdropFilter: "blur(50px)",
 							}}
 						>
-							<h3>{video.description}</h3>
+							<h3 className="font-bold text-[18px] text-[#E5DFD9] text-center">&quot;{video.description}&quot;</h3>
+
+							<div className="flex flex-row gap-2 justify-center align-middle">
+								<Star />
+								<Star />
+								<Star />
+								<Star />
+								<Star />
+
+								<span className="font-bold tracking-widest text-[#E5DFD9]">5/5</span>
+
+								<div>
+									{/* <Image
+										src={video.link}
+										alt={video.username}
+										width={20}
+										height={20}
+									/> */}
+								</div>
+							</div>
+
 						</div>
 					</SwiperSlide>
 				))}

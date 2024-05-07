@@ -289,38 +289,59 @@ export default function ReelsPackages() {
                         label: 'Curtidas',
                         amount: '2.500',
                         subtitle: 'Mais vendido!',
-                        price: 127,
-                        promo_price: 235
+                        card_id: 'DGZ148559',
+                        payment_id: '879',
+                        price: 67,
+                        promo_price: 135,
                     }, {
                         label: 'Curtidas',
                         amount: '250',
-                        price: 19,
-                        promo_price: 27
+                        card_id: 'KAH323273',
+                        payment_id: '379649',
+                        price: 17,
+                        promo_price: 32,
                     }, {
                         label: 'Curtidas',
                         amount: '500',
-                        price: 37,
-                        promo_price: 47
+                        card_id: 'DSM148557',
+                        payment_id: '876',
+                        price: 27,
+                        promo_price: 44,
                     }, {
                         label: 'Curtidas',
                         amount: '1.000',
-                        price: 0,
-                        promo_price: 0
+                        card_id: 'DLM148558',
+                        payment_id: '877',
+                        price: 37,
+                        promo_price: 54,
                     }, {
                         label: 'Curtidas',
                         amount: '5.000',
+                        card_id: 'DJU148560',
+                        payment_id: '880',
+                        price: 117,
+                        promo_price: 270,
+                    }, {
+                        label: 'Curtidas',
+                        amount: '7.500',
+                        card_id: '',
+                        payment_id: '',
                         price: 0,
-                        promo_price: 0
+                        promo_price: 0,
                     }, {
                         label: 'Curtidas',
                         amount: '10.000',
-                        price: 0,
-                        promo_price: 0
+                        card_id: 'DSV150994',
+                        payment_id: '54036',
+                        price: 187,
+                        promo_price: 540,
                     }, {
                         label: 'Curtidas',
                         amount: '20.000',
-                        price: 0,
-                        promo_price: 0
+                        card_id: 'DHA150995',
+                        payment_id: '54037',
+                        price: 297,
+                        promo_price: 997,
                     }]}
                 />
                 <GuaranteeSealSection />

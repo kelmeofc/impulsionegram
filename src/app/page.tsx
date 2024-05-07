@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/sections/hero";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { InformativeBlogSection } from "@/components/sections/informative-blog";
 import AppLayoutFragment from "@/layouts/app.layout";
-import SeoLayoutFragment from "@/layouts/seo.layout";
+
 
 import type { Metadata } from "next";
 import { PackagesSlider } from "@/components/sections/packages-slider";
@@ -397,7 +397,7 @@ export default function Home() {
             conteúdo pelo próprio Instagram
           </p>
 
-          <InformativeBlogButton link="#" text="Quero ter mais visibilidade" />
+          <InformativeBlogButton link="#comprar-agora" text="Quero ter mais visibilidade" />
 
           <p>
             O passo a passo para comprar seguidores para o seu perfil no
@@ -483,7 +483,7 @@ export default function Home() {
               </ul>
 
               <InformativeBlogButton
-                link="#"
+                link="#comprar-agora"
                 text="Crescer meu Instagram com segurança"
               />
             </>
@@ -802,7 +802,7 @@ export default function Home() {
           </p>
 
           <InformativeBlogButton
-            link="#"
+            link="#comprar-agora"
             text="Crescer meu Instagram com o impulsioneGram"
           />
         </>
@@ -861,99 +861,112 @@ export default function Home() {
   ];
 
   return (
-    <SeoLayoutFragment>
-      <AppLayoutFragment>
-        <ProviderLayout>
-          <HeroSection
-            title="Comprar Seguidores no Instagram Reais e Brasileiros"
-            description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
-          >
-            <FollowersHeroItems />
-          </HeroSection>
-          <AdvantagesSection advantages={advantages} />
-          <DepoimentosSection />
-          <ActionBar
-            items={[
-              {
-                label: "Premium",
-                amount: "2.500",
-                subtitle: "+ 1.500 cutidas bônus",
-                price: 127,
-                promo_price: 235,
-              },
-              {
-                label: "Essencial",
-                amount: "250",
-                subtitle: "+ 100 cutidas bônus",
-                price: 19,
-                promo_price: 27,
-              },
-              {
-                label: "Iniciante",
-                amount: "500",
-                subtitle: "+ 250 cutidas bônus",
-                price: 37,
-                promo_price: 47,
-              },
-              {
-                label: "Básico",
-                amount: "1.000",
-                subtitle: "+ 750 cutidas bônus",
-                price: 0,
-                promo_price: 0,
-              },
-              {
-                label: "Profissional",
-                amount: "5.000",
-                subtitle: "+ 3.500 cutidas bônus",
-                price: 0,
-                promo_price: 0,
-              },
-              {
-                label: "Elite",
-                amount: "10.000",
-                subtitle: "+ 7.500 cutidas bônus",
-                price: 0,
-                promo_price: 0,
-              },
-              {
-                label: "Influencer",
-                amount: "20.000",
-                subtitle: "+ 10.000 cutidas bônus",
-                price: 0,
-                promo_price: 0,
-              },
-            ]}
-          />
-          <GuaranteeSealSection />
-          {/* <ActionBar /> */}
-          <PackagesSlider />
-          <SimpleSlider
-            title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
-            description="Criado por uma equipe de especialistas em redes sociais, o ImpulsioneGram nasceu para transformar a realidade de todos que querem mais visibilidade sem esperar meses para isso!"
-          >
-            {commentSliderItems.map((item, index) => {
-              return (
-                <CommentSliderItem
-                  title={item.title}
-                  text={item.text}
-                  date={item.date}
-                  profile={item.profile}
-                  rating={item.rating}
-                  key={index}
-                />
-              );
-            })}
-          </SimpleSlider>
-          <BuyingProcessSection />
-          <HowItWorksSection />
-          <InformativeBlogSection
-            navigationPanelItems={navigationPanelItems}
-            informativeBlogTopicsItems={informativeBlogTopicsItems}
-          />
-          <ArticlesSection />
-        </ProviderLayout>
-      </AppLayoutFragment>
-    </SeoLayoutFragment>
+
+    <AppLayoutFragment>
+      <ProviderLayout>
+        <HeroSection
+          title="Comprar Seguidores no Instagram Reais e Brasileiros"
+          description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
+        >
+          <FollowersHeroItems />
+        </HeroSection>
+        <AdvantagesSection advantages={advantages} />
+        <DepoimentosSection />
+        <ActionBar
+          items={[
+            {
+              payment_id: '10179',
+              card_id: 'DXP177580',
+              label: "Premium",
+              amount: "2.500",
+              subtitle: "+ 1.500 cutidas bônus",
+              price: 127,
+              promo_price: 235,
+            },
+            {
+              payment_id: '376129',
+              card_id: 'DLZ243515',
+              label: "Essencial",
+              amount: "250",
+              subtitle: "+ 100 cutidas bônus",
+              price: 19,
+              promo_price: 27,
+            },
+            {
+              payment_id: '10176',
+              card_id: 'DKS177578',
+              label: "Iniciante",
+              amount: "500",
+              subtitle: "+ 250 cutidas bônus",
+              price: 37,
+              promo_price: 47,
+            },
+            {
+              payment_id: '10177',
+              card_id: 'DAG177579',
+              label: "Básico",
+              amount: "1.000",
+              subtitle: "+ 750 cutidas bônus",
+              price: 69,
+              promo_price: 94
+            },
+            {
+              payment_id: '10180',
+              card_id: 'DDT177581',
+              label: "Profissional",
+              amount: "5.000",
+              subtitle: "+ 3.500 cutidas bônus",
+              price: 247,
+              promo_price: 470
+            },
+            {
+              payment_id: '10244',
+              card_id: 'DXT177583',
+              label: "Elite",
+              amount: "10.000",
+              subtitle: "+ 7.500 cutidas bônus",
+              price: 497,
+              promo_price: 940
+            },
+            {
+              payment_id: '10179',
+              card_id: 'DAS177592',
+              label: "Influencer",
+              amount: "20.000",
+              subtitle: "+ 10.000 cutidas bônus",
+              price: 897,
+              promo_price: 1880
+            },
+          ]}
+        />
+        <GuaranteeSealSection />
+        {/* <ActionBar /> */}
+        <PackagesSlider />
+        <SimpleSlider
+          title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
+          description="Criado por uma equipe de especialistas em redes sociais, o ImpulsioneGram nasceu para transformar a realidade de todos que querem mais visibilidade sem esperar meses para isso!"
+        >
+          {commentSliderItems.map((item, index) => {
+            return (
+              <CommentSliderItem
+                title={item.title}
+                text={item.text}
+                date={item.date}
+                profile={item.profile}
+                rating={item.rating}
+                key={index}
+              />
+            );
+          })}
+        </SimpleSlider>
+        <BuyingProcessSection />
+        <HowItWorksSection />
+        <InformativeBlogSection
+          navigationPanelItems={navigationPanelItems}
+          informativeBlogTopicsItems={informativeBlogTopicsItems}
+        />
+        <ArticlesSection />
+      </ProviderLayout>
+    </AppLayoutFragment>
   );
 }

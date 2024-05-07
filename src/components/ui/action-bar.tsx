@@ -1,21 +1,14 @@
 'use client'
 
+import { usePackageContext } from "@/providers/package-provider";
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
-import {
-    Carousel,
-    CarouselApi,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
-
-import useEmblaCarousel from 'embla-carousel-react'
-import { usePackageContext } from "@/providers/package-provider";
+import { CheckoutDialog } from "./checkout-dialog";
 
 export function ActionBar({ items }: {
     items: {
+        payment_id: string,
+        card_id: string,
         label: string,
         amount: string,
         promo_price: number,
@@ -30,6 +23,8 @@ export function ActionBar({ items }: {
         'profile-04.png',
     ];
 
+    const { productPackage, handlePackage } = usePackageContext() as any;
+
     const [packageIndex, setPackageIndex] = useState(0);
     const [selectedPackage, setSelectedPackage] = useState({
         label: '',
@@ -42,14 +37,25 @@ export function ActionBar({ items }: {
     function regress() {
         if ((packageIndex - 1) >= 0) {
             setSelectedPackage(items[packageIndex - 1] as any);
+            handlePackage({
+                payment_id: items[packageIndex - 1].payment_id,
+                card_id: items[packageIndex - 1].card_id,
+                price: items[packageIndex - 1].price,
+                promo_price: items[packageIndex - 1].promo_price,
+            })
             setPackageIndex(packageIndex - 1);
         }
-
     }
 
     function pass() {
         if ((packageIndex + 1) < items.length) {
             setSelectedPackage(items[packageIndex + 1] as any);
+            handlePackage({
+                payment_id: items[packageIndex + 1].payment_id,
+                card_id: items[packageIndex + 1].card_id,
+                price: items[packageIndex + 1].price,
+                promo_price: items[packageIndex + 1].promo_price,
+            })
             setPackageIndex(packageIndex + 1);
         }
     }
@@ -147,10 +153,11 @@ export function ActionBar({ items }: {
                                 onClick={pass}
                             >+</button>
                         </div>
-                        <button
-                            className="py-4 w-full bg-[#4F008E] text-white font-bold block rounded-full"
-                        >Comprar Agora</button>
-
+                        <CheckoutDialog>
+                            <button
+                                className="py-4 w-full bg-[#4F008E] text-white font-bold block rounded-full"
+                            >Comprar Agora</button>
+                        </CheckoutDialog>
                     </div>
 
                     <div className="max-[980px]:hidden">
@@ -158,13 +165,13 @@ export function ActionBar({ items }: {
                             R$
                             <span
                                 className="text-4xl font-bold text-[#1A002D] leading-[1]"
-                            >{selectedPackage.price}</span>
+                            >{productPackage.price}</span>
                             <span
                                 className="text-[#FF0000] line-through"
-                            >R${selectedPackage.promo_price}</span>
+                            >R${productPackage.promo_price}</span>
                         </p>
 
-                        <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(selectedPackage.price / 3).toFixed(2)} sem juros no cartão</p>
+                        <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(productPackage.price / 3).toFixed(2)} sem juros no cartão</p>
 
                         <ul className="flex gap-4 mt-3">
                             <li>

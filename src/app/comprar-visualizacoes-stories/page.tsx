@@ -297,38 +297,59 @@ export default function ReelsPackages() {
                         label: 'Visualizações Reels',
                         amount: '5.000',
                         subtitle: 'Mais vendido!',
-                        price: 127,
-                        promo_price: 235
+                        payment_id: '176387',
+                        card_id: 'DAZ175834',
+                        price: 37,
+                        promo_price: 67,
                     }, {
                         label: 'Visualizações Reels',
                         amount: '1.000',
-                        price: 19,
-                        promo_price: 27
+                        payment_id: '176359',
+                        card_id: 'DDC175832',
+                        price: 14,
+                        promo_price: 22,
                     }, {
                         label: 'Visualizações Reels',
                         amount: '2.000',
-                        price: 37,
-                        promo_price: 47
+                        payment_id: '176386',
+                        card_id: 'DWG175833',
+                        price: 27,
+                        promo_price: 28,
+                    }, {
+                        label: 'Visualizações Reels',
+                        amount: '20.000',
+                        payment_id: '176388',
+                        card_id: 'DQR175835',
+                        price: 97,
+                        promo_price: 147,
                     }, {
                         label: 'Visualizações Reels',
                         amount: '40.000',
-                        price: 0,
-                        promo_price: 0
+                        payment_id: '176389',
+                        card_id: 'DTC175836',
+                        price: 157,
+                        promo_price: 197,
                     }, {
                         label: 'Visualizações Reels',
                         amount: '80.000',
-                        price: 0,
-                        promo_price: 0
+                        payment_id: '176390',
+                        card_id: 'DQM175837',
+                        price: 257,
+                        promo_price: 317,
                     }, {
                         label: 'Visualizações Reels',
                         amount: '200.000',
-                        price: 0,
-                        promo_price: 0
+                        payment_id: '176392',
+                        card_id: 'DUL175839',
+                        price: 497,
+                        promo_price: 647,
                     }, {
                         label: 'Visualizações Reels',
                         amount: '500.000',
-                        price: 0,
-                        promo_price: 0
+                        payment_id: '176393',
+                        card_id: 'KCN252464',
+                        price: 997,
+                        promo_price: 1470,
                     }]}
                 />
                 <GuaranteeSealSection />

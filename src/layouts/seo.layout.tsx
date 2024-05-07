@@ -4,12 +4,14 @@ interface ILayoutFragmentProps {
   children: React.ReactNode;
 }
 
-export default function SeoLayoutFragment ({ children }: ILayoutFragmentProps) {
+import Head from "next/head";
+
+export default function SeoLayoutFragment({ children }: ILayoutFragmentProps) {
   const schemaData = {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: "Comprar Seguidores, Curtidas, Visualizações e Comentários no Instagram",
-    image: "https://www.impulsionegram.com.br/images/og.jpeg",
+    image: "https://impulsionegram.vercel.app/icon.png",
     description:
       "Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores, curtidas, visualizações e comentários, reais e brasileiros, para crescer seu perfil em poucos cliques",
     brand: {
@@ -157,6 +159,16 @@ export default function SeoLayoutFragment ({ children }: ILayoutFragmentProps) {
   };
   return (
     <>
+      {/* Primary OG's Meta Tags */}
+
+      <Head>
+        <meta property="og:image" content="<generated>" />
+        <meta property="og:image:type" content="<generated>" />
+        <meta property="og:image:width" content="<generated>" />
+        <meta property="og:image:height" content="<generated>" />
+x
+      </Head>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

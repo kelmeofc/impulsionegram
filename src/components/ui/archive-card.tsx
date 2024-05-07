@@ -22,7 +22,7 @@ export interface IArchiveCard {
 
 export function ArchiveCard({ banner, title, category, link, author, row = false }: IArchiveCard) {
     return (
-        <div className={`flex w-full p-8 rounded-[30px] bg-white ${row && 'max-[580px]:!flex-col'}`} style={{
+        <Link href={link.href} className={`flex w-full p-8 rounded-[30px] bg-white ${row && 'max-[580px]:!flex-col'}`} style={{
             flexDirection: row ? 'row' : 'column',
             gap: row ? '20px' : '0',
         }}>
@@ -57,7 +57,7 @@ export function ArchiveCard({ banner, title, category, link, author, row = false
                     </div>
 
                     <Link
-                        href={'#'}
+                        href={link.href}
                         className="text-[#877A93] flex gap-2 items-center justify-center font-semibold"
                         style={{
                             display: row ? 'none' : 'flex',
@@ -70,6 +70,6 @@ export function ArchiveCard({ banner, title, category, link, author, row = false
                     </Link>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }

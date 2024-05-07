@@ -55,7 +55,7 @@ export function ViewsInstagramHeroItems() {
         views: '500.000',
     }];
 
-    const [activePackage, setActivePackage] = useState({ id: '' });
+    const [activePackage, setActivePackage] = useState({ id: 0 });
     const { handlePackage } = usePackageContext() as any;
 
     useEffect(() => {

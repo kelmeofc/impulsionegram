@@ -297,38 +297,52 @@ export default function ReelsPackages() {
                         label: 'Comentários Instagram',
                         amount: '60',
                         subtitle: 'Mais vendido!',
-                        price: 127,
-                        promo_price: 235
+                        payment_id: '172137',
+                        card_id: 'DAQ175817',
+                        price: 77,
+                        promo_price: 108,
                     }, {
                         label: 'Comentários Instagram',
                         amount: '15',
-                        price: 19,
-                        promo_price: 27
+                        payment_id: '172112',
+                        card_id: 'DNQ175815',
+                        price: 27,
+                        promo_price: 34,
                     }, {
                         label: 'Comentários Instagram',
                         amount: '30',
-                        price: 37,
-                        promo_price: 47
+                        payment_id: '172136',
+                        card_id: 'DXX175816',
+                        price: 47,
+                        promo_price: 54,
                     }, {
                         label: 'Comentários Instagram',
                         amount: '100',
-                        price: 0,
-                        promo_price: 0
+                        payment_id: '172138',
+                        card_id: 'DCX175818',
+                        price: 117,
+                        promo_price: 180,
                     }, {
                         label: 'Comentários Instagram',
                         amount: '200',
-                        price: 0,
-                        promo_price: 0
+                        payment_id: '172187',
+                        card_id: 'DWF175819',
+                        price: 217,
+                        promo_price: 359,
                     }, {
                         label: 'Comentários Instagram',
                         amount: '400',
-                        price: 0,
-                        promo_price: 0
+                        payment_id: '172188',
+                        card_id: 'DJM175820',
+                        price: 397,
+                        promo_price: 718,
                     }, {
                         label: 'Comentários Instagram',
                         amount: '800',
-                        price: 0,
-                        promo_price: 0
+                        payment_id: '172189',
+                        card_id: 'DSS175821',
+                        price: 697,
+                        promo_price: 1439,
                     }]}
                 />
                 <GuaranteeSealSection />

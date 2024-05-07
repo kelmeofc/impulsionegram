@@ -4,7 +4,7 @@ export function BuyFollowersButton() {
     return (
         <>
             <Link
-                href={'#'}
+                href={'#comprar-agora'}
                 className="button mx-auto mt-14"
             >
                 Comprar Seguidores Agora!
