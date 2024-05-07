@@ -55,7 +55,7 @@ body {
 
 @layer components {
   .primary-title {
-    @apply text-5xl font-bold text-[#1A002D]
+    @apply text-5xl font-bold text-[#1A002D] max-[400px]:text-3xl
   }
 
   .section-title {
@@ -149,8 +149,8 @@ body {
 
 @media screen and (max-width: 600px) {
   .swiper {
-    width: 300px;
-    height: 550px;
+    width: 250px;
+    height: 500px;
   }
 }
 

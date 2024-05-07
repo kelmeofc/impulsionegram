@@ -1,5 +1,6 @@
 import { AdvantagesSection } from "@/components/sections/advantages";
 import { ArticlesSection } from "@/components/sections/articles";
+import { DepoimentosSection } from "@/components/sections/depoimentos";
 import { FaqSection } from "@/components/sections/faq";
 import { GuaranteeSealSection } from "@/components/sections/guarantee-seal";
 import { HeroSection } from "@/components/sections/hero";
@@ -292,6 +293,7 @@ export default function ReelsPackages() {
                 <AdvantagesSection
                     advantages={advantages}
                 />
+                <DepoimentosSection />
                 <ActionBar
                     items={[{
                         label: 'Comentários Instagram',
