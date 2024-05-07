@@ -8,35 +8,35 @@ export function BurgerMenu() {
 
     const menu = [{
         content: 'Preços',
-        link: '#'
+        link: '#precos'
     }, {
         content: 'Como Funciona',
-        link: '#'
+        link: '#como-funciona'
     }, {
         content: 'Comprar Curtidas',
-        link: '#',
+        link: '/comprar-curtidas-instagram',
         class: 'lg:hidden'
     }, {
         content: 'Comprar Comentários',
-        link: '#',
+        link: '/comprar-comentarios-instagram',
         class: 'lg:hidden'
     }, {
         content: 'Comprar Visus Vídeo',
-        link: '#',
+        link: '/comprar-visualizacoes-reels-instagram',
         class: 'lg:hidden'
     }, {
         content: 'Comprar Visus Stores',
-        link: '#',
+        link: '/comprar-visualizacoes-stories',
         class: 'lg:hidden'
     }, {
         content: 'FAQ',
-        link: '#'
+        link: '#faq'
     }, {
         content: 'Suporte',
-        link: '#'
+        link: '#suporte'
     }, {
         content: 'Blog',
-        link: '#'
+        link: '#blog'
     }];
 
     return (
@@ -71,6 +71,7 @@ export function BurgerMenu() {
                         <path d="M14.728 2L2.00011 14.7279" stroke="#1A002D" strokeWidth="3" strokeLinecap="round" />
                     </svg>
                 </button>
+
                 <ul>
                     {menu.map((li, index) => {
                         return (
@@ -85,7 +86,7 @@ export function BurgerMenu() {
 
                     <li>
                         <Link
-                            className="text-lg font-bold text-white p-3 rounded-full bg-[#B352FF] block text-center mt-6 w-[full] min-w-[178px]"
+                            className="text-lg font-bold text-white p-3 rounded-full bg-[#B352FF] block text-center mt-6 w-full min-w-[178px]"
                             href={'#'}
                         >Comprar Agora</Link>
                     </li>

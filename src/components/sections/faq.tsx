@@ -32,7 +32,7 @@ export function FaqSection() {
     }];
 
     return (
-        <section>
+        <section id="faq">
             <div className="container">
                 <Logo
                     width="374"

@@ -75,7 +75,7 @@ body {
   }
 
   .button {
-    @apply block w-fit text-center text-[27px] font-bold text-white bg-[#4F008E] py-7 min-[900px]:px-24 rounded-full max-[900px]:w-full max-[900px]:py-5 max-[900px]:mt-8
+    @apply block w-fit text-center text-[27px] font-bold text-white bg-[#4F008E] py-7 min-[900px]:px-24 rounded-full max-[900px]:w-full max-[900px]:py-5 max-[500px]:text-[17px] max-[500px]:py-3 max-[900px]:mt-8
   }
 
   .informative-content-blog p+p {
@@ -105,6 +105,17 @@ section+section,
 section+main,
 main+section {
   margin-top: 110px;
+}
+
+@media screen and (max-width: 600px) {
+
+  [data-action-bar]+section,
+  section+[data-action-bar],
+  section+section,
+  section+main,
+  main+section {
+    margin-top: 55px;
+  }
 }
 
 body {

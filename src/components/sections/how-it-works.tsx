@@ -105,10 +105,10 @@ export function HowItWorksSection() {
     }];
 
     return (
-        <section>
+        <section id="como-funciona">
             <div className="container">
                 <h2 className="text section-text-center">Como a ImpulsioneGram funciona</h2>
-                <h2 className="section-title max-w-[1000px] mx-auto mt-4">Você está hà poucos passos da popularidade no Instagram!</h2>
+                <h2 className="section-title max-w-[1000px] mx-auto mt-4">Você está há poucos passos da popularidade no Instagram!</h2>
                 <p className="text section-text-center max-w-[820px] mt-8">Para celebridades e marcas já conhecidas, crescer no Instagram pode ser fácil. Mas para a grande maioria das pessoas é um processo complexo, lento e incerto. Por isso, você deve confiar na compra de seguidores para seu perfil:</p>
 
                 <ul className="bg-[#E3DCEF] w-full py-14 px-14 mt-24 rounded-[80px] max-w-[980px] mx-auto">

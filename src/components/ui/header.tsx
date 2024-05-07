@@ -1,6 +1,9 @@
+'use client'
+
 import Link from "next/link";
 import Logo from "./logo";
 import { BurgerMenu } from "./burger-menu";
+import { useEffect, useState } from "react";
 
 export function Header() {
     const menu = [{
@@ -22,7 +25,7 @@ export function Header() {
     }];
 
     return (
-        <header className="bg-white border-b-[0.5px] border-[#C0BAC8] py-5">
+        <header className="bg-white border-b-[0.5px] border-[#C0BAC8] py-5 z-[997]" data-header>
             <div className="container relative flex items-center justify-between">
                 <Logo />
 

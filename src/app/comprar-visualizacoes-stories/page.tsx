@@ -14,7 +14,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Comprar Visualizações Reels Instagram | Reais Brasileiras [2024]",
-    description: "Procurando o melhor site para comprar visualizações de reels reais e brasileiras no Instagram em 2024? Acesse agora o ImpulsioneGram: sem senhas, sem perigo e 100% garantido! ⭐️",
+    description:
+        "Procurando o melhor site para comprar visualizações de reels reais e brasileiras no Instagram em 2024? Acesse agora o ImpulsioneGram: sem senhas, sem perigo e 100% garantido! ⭐️",
 };
 
 export default function ReelsPackages() {

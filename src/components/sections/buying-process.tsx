@@ -214,7 +214,7 @@ export function BuyingProcessSection() {
 
                     <div>
                         <h2 className="topic-title text-left max-[950px]:text-center">A verdade é que...</h2>
-                        <p className="text w-full max-w-[630px] text-left max-[950px]:text-center">As pessoas preferem seguir e confiar em perfis com milhares de seguidores. Já, Perfis com poucos seguidores não despertam interesse e não passam credibilidade.</p>
+                        <p className="text w-full max-w-[630px] text-left max-[950px]:text-center">As pessoas preferem seguir e confiar em perfis com milhares de seguidores. Já perfis com poucos seguidores não despertam interesse e não passam credibilidade.</p>
                     </div>
                 </div>
 

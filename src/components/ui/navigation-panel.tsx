@@ -90,7 +90,7 @@ export function NavigationPanel({ topics }: { topics: ITopic[] }) {
                                     href={`#${topic.id}`}
                                     onClick={() => handleClick({ id: topic.id })}
                                     data-panel-item
-                                >{topic.title}</Link>
+                                >{topic.title.length <= 35 ? topic.title : topic.title.slice(0, 35) + '...'}</Link>
 
                                 {topic.sub_topics &&
                                     <ul className="flex flex-col gap-4 max-[1100px]:flex-row">

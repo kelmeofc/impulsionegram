@@ -39,20 +39,19 @@ export function ActionBar({ items }: {
         subtitle: '',
     });
 
-    const regress = () => {
+    function regress() {
         if ((packageIndex - 1) >= 0) {
+            setSelectedPackage(items[packageIndex - 1] as any);
             setPackageIndex(packageIndex - 1);
         }
 
-        setSelectedPackage(items[packageIndex] as any);
     }
 
-    const pass = () => {
+    function pass() {
         if ((packageIndex + 1) < items.length) {
+            setSelectedPackage(items[packageIndex + 1] as any);
             setPackageIndex(packageIndex + 1);
         }
-
-        setSelectedPackage(items[packageIndex] as any);
     }
 
     useEffect(() => {
@@ -82,8 +81,8 @@ export function ActionBar({ items }: {
         <div data-action-bar>
             <div className="z-50 opacity-0 pointer-events-none transition fixed bottom-0 left-0 right-0" data-action-bar-container>
                 <div className="container bg-white rounded-t-2xl px-14 py-5 flex justify-between items-center max-[640px]:flex-col max-[640px]:gap-5">
-                    <div className="flex justify-between flex-col gap-3 items-start max-[640px]:flex-row max-[640px]:gap-5">
-                        <div>
+                    <div className="flex justify-between flex-col gap-3 items-start max-[640px]:flex-row max-[640px]:gap-5 max-[640px]:w-full">
+                        <div className="max-[640px]:flex max-[640px]:justify-between max-[640px]:w-full max-[640px]:items-center">
                             <p className="font-medium text-[#8C8096] flex items-start gap-[5px] min-[980px]:hidden">
                                 R$
                                 <span
@@ -121,7 +120,7 @@ export function ActionBar({ items }: {
                             })}
                         </ul>
 
-                        <p className="min-[580px]:w-[190px]">Mais de <span>62.356</span> pessoas usam o ImpulsioneGram</p>
+                        <p className="min-[580px]:w-[190px] max-[640px]:hidden">Mais de <span>62.356</span> pessoas usam o ImpulsioneGram</p>
                     </div>
 
                     <div className="flex flex-col gap-5">

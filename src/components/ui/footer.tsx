@@ -57,7 +57,7 @@ export function Footer() {
     }]
 
     return (
-        <footer className="w-full flex mt-10">
+        <footer className="w-full flex mt-10 mb-[196px] max-[640px]:mb-[252px]">
             <div className="container  flex flex-col justify-center gap-7">
                 <div className="grid grid-cols-[400px_1fr] gap-20 justify-center items-center max-[1000px]:grid-cols-1">
                     <div>
