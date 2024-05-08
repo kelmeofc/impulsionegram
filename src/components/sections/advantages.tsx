@@ -5,7 +5,7 @@ export function AdvantagesSection({ advantages }: { advantages: any[] }) {
                 <ul className="flex justify-center items-center flex-wrap gap-6">
                     {advantages.map((advantage, index) => {
                         return (
-                            <li className="flex items-center gap-3 py-3 px-6 rounded-full border-[2px] border-[#E2D9EE] text-lg font-bold" key={index}>{advantage.icon} {advantage.text}</li>
+                            <li className="flex items-center gap-3 py-2 px-5 rounded-full border-[2px] border-[#E2D9EE] text-base font-bold" key={index}>{advantage.icon} {advantage.text}</li>
                         )
                     })}
                 </ul>

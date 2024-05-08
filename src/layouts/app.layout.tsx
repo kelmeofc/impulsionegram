@@ -9,8 +9,6 @@ interface ILayoutFragmentProps {
 export default function AppLayoutFragment({ children }: ILayoutFragmentProps) {
   return (
     <>
-      
-
       <Header />
       <div id="main-content">{children}</div>
       <Footer />

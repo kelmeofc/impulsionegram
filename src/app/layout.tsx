@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/ui/header";
 import Head from "next/head";
 import SeoLayoutFragment from "@/layouts/seo.layout";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
@@ -11,32 +12,51 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      
       <Head>
-        <link
-          rel="icon"
-          href="/icon?<generated>"
-          type="image/<generated>"
-          sizes="<generated>"
+        //* HTML OpenGraph Tags */
+        <meta
+          property="og:title"
+          content="Crescer no Instagram é difícil e demorado? Não mais!"
         />
-
-        <meta property="og:image" content="<generated>" />
-        <meta property="og:image:type" content="<generated>" />
-        <meta property="og:image:width" content="<generated>" />
-        <meta property="og:image:height" content="<generated>" />
-
+        <meta property="og:site_name" content="ImpulsioneGram" />
+        <meta property="og:url" content="impulsionegram.vercel.app" />
+        <meta
+          property="og:description"
+          content="O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
+        />
+        <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://impulsionegram.vercel.app/images/seo/opengraph-image.jpeg"
         />
+        //* Facebook Meta Tags */
+        <meta property="og:url" content="https://impulsionegram.vercel.app/" />
+        <meta property="og:type" content="website" />
         <meta
-          name="twitter:image"
-          content="https://impulsionegram.vercel.app/images/seo/opengraph-image.jpeg"
+          property="og:title"
+          content="Crescer no Instagram é difícil e demorado? Não mais!"
         />
         <meta
-          name="image"
-          content="https://impulsionegram.vercel.app/images/seo/opengraph-image.jpeg"
+          property="og:description"
+          content="O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
         />
-
+        <meta property="og:image" content="" />
+        //* Twitter Meta Tags */
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="impulsionegram.vercel.app" />
+        <meta
+          property="twitter:url"
+          content="https://impulsionegram.vercel.app/"
+        />
+        <meta
+          name="twitter:title"
+          content="Crescer no Instagram é difícil e demorado? Não mais!"
+        />
+        <meta
+          name="twitter:description"
+          content="O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
+        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="canonical" href="https://www.impulsionegram.com.br/" />
         <link rel="preconnect" href="https://fonts.googleapis.com/" />
@@ -47,7 +67,11 @@ export default function RootLayout({
         />
       </Head>
       <SeoLayoutFragment>
+        
+        <GoogleTagManager gtmId="GTM-XYZ" />
+        
         <body>{children}</body>
+        
       </SeoLayoutFragment>
     </html>
   );

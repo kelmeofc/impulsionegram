@@ -25,9 +25,12 @@ export function Header() {
     }];
 
     return (
-        <header className="bg-white border-b-[0.5px] border-[#C0BAC8] py-5 z-[997] fixed left-0 right-0" data-header>
+        <header className="bg-white border-b-[0.5px] border-[#C0BAC8] py-5 z-[997]" data-header>
             <div className="container relative flex items-center justify-between">
-                <Logo />
+                <Logo
+                    width="198"
+                    height="35"
+                />
 
                 <nav className="max-lg:hidden">
                     <ul className="flex align-items-center justify-between gap-10">
@@ -35,7 +38,7 @@ export function Header() {
                             return (
                                 <li key={index}>
                                     <Link
-                                        className="text-lg font-semibold text-[#887A94]"
+                                        className="text-base font-semibold text-[#887A94]"
                                         aria-expanded={op.expanded}
                                         href={op.link}
                                     >

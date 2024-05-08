@@ -940,7 +940,6 @@ export default function Home() {
           ]}
         />
         <GuaranteeSealSection />
-        {/* <ActionBar /> */}
         <PackagesSlider />
         <SimpleSlider
           title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"

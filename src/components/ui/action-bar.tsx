@@ -86,7 +86,7 @@ export function ActionBar({ items }: {
     return (
         <div data-action-bar>
             <div className="z-50 opacity-0 pointer-events-none transition fixed bottom-0 left-0 right-0" data-action-bar-container>
-                <div className="container bg-white rounded-t-2xl px-14 py-5 flex justify-between items-center max-[640px]:flex-col max-[640px]:gap-5">
+                <div className="container bg-white rounded-t-2xl px-14 py-5 flex justify-around items-center max-[640px]:flex-col max-[640px]:gap-5">
                     <div className="flex justify-between flex-col gap-3 items-start max-[640px]:flex-row max-[640px]:gap-5 max-[640px]:w-full">
                         <div className="max-[640px]:flex max-[640px]:justify-between max-[640px]:w-full max-[640px]:items-center">
                             <p className="font-medium text-[#8C8096] flex items-start gap-[5px] min-[980px]:hidden">

@@ -34,7 +34,8 @@ export function PackagesSlider() {
 
                     Entrega Imediata
                 </>
-            ]
+            ],
+            link: '/'
         }, {
             svg: (
                 <svg width="124" height="115" viewBox="0 0 124 115" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +66,8 @@ export function PackagesSlider() {
 
                     entrega imediata
                 </>
-            ]
+            ],
+            link: '/comprar-curtidas-instagram'
         }, {
             svg: (
                 <svg width="124" height="115" viewBox="0 0 124 115" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +116,8 @@ export function PackagesSlider() {
 
                     escolha o gênero
                 </>
-            ]
+            ],
+            link: '/comprar-comentarios-instagram'
         }, {
             svg: (
                 <svg width="124" height="115" viewBox="0 0 124 115" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +149,8 @@ export function PackagesSlider() {
 
                     entrega imediata
                 </>
-            ]
+            ],
+            link: '/comprar-visualizacoes-reels-instagram'
         }, {
             svg: (
                 <svg width="124" height="115" viewBox="0 0 124 115" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +194,8 @@ export function PackagesSlider() {
 
                     entrega imediata
                 </>
-            ]
+            ],
+            link: '/comprar-visualizacoes-stories'
         }];
 
     return (
@@ -212,6 +217,7 @@ export function PackagesSlider() {
                                     title={item.title}
                                     svg={item.svg}
                                     list={item.list}
+                                    link={item.link}
                                     key={index}
                                 />
                             );

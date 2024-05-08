@@ -61,7 +61,7 @@ export function NavigationPanel({ topics }: { topics: ITopic[] }) {
     });
 
     return (
-        <div className="bg-white rounded-[30px] h-fit px-5 py-10 sticky top-[90px] bottom-0 max-[1100px]:w-full">
+        <div className="bg-white rounded-[30px] h-fit px-5 py-10 sticky top-[90px] bottom-0 max-[1100px]:hidden">
             <h3 className="text-2xl text-[#1A002D] font-bold flex justify-between items-center max-[1100px]:justify-center max-[1100px]:gap-3">
                 Tabela de Conteúdos
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">

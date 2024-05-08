@@ -15,7 +15,7 @@ export function HeroPackageContainer({
     const { productPackage } = usePackageContext() as any;
 
     return (
-        <div className="w-full py-10 px-10 bg-white rounded-[50px]">
+        <div className="w-full py-10 px-10 bg-white rounded-[50px] h-fit">
             <ul className="grid grid-cols-4 gap-4 max-[1350px]:grid-cols-5 max-[1050px]:grid-cols-4 max-[900px]:grid-cols-3 max-[670px]:grid-cols-2 max-[400px]:grid-cols-1">
                 {children}
             </ul>
@@ -96,7 +96,7 @@ export function HeroPackageContainer({
 
 
                 <CheckoutDialog>
-                    <button id="comprar-agora" className="text-[25px] font-bold text-white bg-[#4F008E] py-5 min-[900px]:px-24 rounded-full max-[900px]:w-full max-[900px]:py-4 max-[900px]:mt-8">Comprar Agora</button>
+                    <button id="comprar-agora" className="w-full block text-[22px] font-bold text-white bg-[#4F008E] py-5 rounded-full max-[900px]:w-full max-[900px]:mt-8">Comprar Agora</button>
                 </CheckoutDialog>
             </div>
         </div >

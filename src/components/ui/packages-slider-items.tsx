@@ -1,16 +1,19 @@
+import Link from "next/link";
 import { CarouselItem } from "./carousel";
 
 export function PackagesSliderItems({
     title,
     svg,
-    list
+    list,
+    link
 }: {
     title: string,
     svg: any,
-    list: any[]
+    list: any[],
+    link: string
 }) {
     return (
-        <CarouselItem className="py-14 px-4 rounded-3xl basis-72 bg-[#E3DCEF] flex flex-col gap-5">
+        <CarouselItem className="py-14 px-4 rounded-3xl basis-[320px] max-[834px]:basis-[294px] bg-[#E3DCEF] flex flex-col gap-5">
             <div className="mx-auto">
                 {svg}
             </div>
@@ -25,7 +28,7 @@ export function PackagesSliderItems({
                     );
                 })}
             </ul>
-            <a href="#" className="text-xl font-bold text-white bg-[#4F008E] w-full block p-6 text-center rounded-full">Adquirir</a>
+            <Link href={link} className="text-xl font-bold text-white bg-[#4F008E] w-full block p-6 text-center rounded-full">Adquirir</Link>
         </CarouselItem>
     );
 }

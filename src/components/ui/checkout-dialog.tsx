@@ -19,7 +19,7 @@ export function CheckoutDialog({
 
     return (
         <Dialog>
-            <DialogTrigger>
+            <DialogTrigger className="w-full max-w-[365px]">
                 {children}
             </DialogTrigger>
 
