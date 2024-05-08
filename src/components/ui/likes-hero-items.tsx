@@ -3,6 +3,7 @@
 import { usePackageContext } from "@/providers/package-provider";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
+import { CheckoutDialog } from "./checkout-dialog";
 
 export function LikesHeroItems() {
     const packages: { payment_id: string, card_id: string, price: number, promo_price: number, likes: string }[] = [{
@@ -125,6 +126,26 @@ export function LikesHeroItems() {
                                         </span>
 
                                         <p className="w-[90px] text-center">Curtidas no Instagram</p>
+                                    </div>
+
+                                    <div className="flex flex-col items-center justify-center p-3 min-[400px]:hidden">
+                                        <p className="text-base font-medium text-[#8C8096] flex items-start gap-[5px]">
+                                            R$
+                                            <span
+                                                className="text-2xl font-bold text-[#1A002D] leading-[1]"
+                                            >{_package.price}</span>
+                                            <span
+                                                className="text-[#FF0000] line-through"
+                                            >R${_package.promo_price}</span>
+                                        </p>
+
+                                        <p className="text-[#B2ACB6] text-sm font-medium mt-3 flex gap-2 items-center text-center">3x de R$ {(_package.price / 3).toFixed(2)} sem juros no cartão</p>
+
+                                        <CheckoutDialog>
+                                            <button
+                                                className="mt-2 py-4 w-full bg-[#4F008E] text-white font-bold block rounded-full"
+                                            >Comprar Agora</button>
+                                        </CheckoutDialog>
                                     </div>
                                 </div>
                             </Link>

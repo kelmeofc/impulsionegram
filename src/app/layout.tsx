@@ -12,7 +12,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      
       <Head>
         <meta
           property="og:title"
@@ -66,11 +65,10 @@ export default function RootLayout({
         />
       </Head>
       <SeoLayoutFragment>
-        
         <GoogleTagManager gtmId="GTM-XYZ" />
-        
+
         <body>{children}</body>
-        
+
       </SeoLayoutFragment>
     </html>
   );

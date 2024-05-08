@@ -50,7 +50,7 @@ export function Header() {
                     </ul>
                 </nav>
 
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-6 max-[400px]:gap-1 justify-end">
                     <Link
                         href={'https://painel.impulsionegram.com.br/'}
                         target="_blank"
@@ -68,6 +68,8 @@ export function Header() {
                         hover:bg-[#887A94]
                         ease-in
                         duration-75
+                        max-[350px]:py-1
+                        max-[350px]:px-3
                         "
                     >Login</Link>
                     <BurgerMenu />

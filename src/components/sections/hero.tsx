@@ -121,7 +121,7 @@ export function HeroSection({
                                     })}
                                 </ul>
 
-                                <p className="min-[580px]:w-[190px]">Mais de <span>62.356</span> pessoas usam o ImpulsioneGram</p>
+                                <p className="min-[580px]:w-[190px] max-[400px]:text-center">Mais de <span>62.356</span> pessoas usam o ImpulsioneGram</p>
                             </div>
                         </div>
                     </div>

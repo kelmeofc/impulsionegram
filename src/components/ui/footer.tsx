@@ -140,8 +140,8 @@ export function Footer() {
                     </span>
 
                     <div className="flex items-center gap-14">
-                        <Image src={ReclameAquiIMG} alt="Selo ótimo reclame aqui" className="w-[125px] h-[56px]"/>
-                        <Image src={Empresa5CIMG} alt="Selo empresa 5c" className="w-[160px] h-[35px]"/>
+                        <Image src={ReclameAquiIMG} alt="Selo ótimo reclame aqui" className="w-[125px] max-[400px]:w-[90px]"/>
+                        <Image src={Empresa5CIMG} alt="Selo empresa 5c" className="w-[160px] max-[400px]:w-[100px]"/>
                     </div>
                 </div>
             </div>

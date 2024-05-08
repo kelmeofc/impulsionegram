@@ -3,6 +3,7 @@
 import { usePackageContext } from "@/providers/package-provider";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
+import { CheckoutDialog } from "./checkout-dialog";
 
 export function FollowersHeroItems() {
     const packages: { payment_id: string, card_id: string, title: string, followers: string, bonus: string, price: number, promo_price: number }[] = [{
@@ -119,7 +120,7 @@ export function FollowersHeroItems() {
                                     }}
                                 >
                                     <div
-                                        className="w-full flex items-center flex-col text-sm font-bold py-4"
+                                        className="w-full flex items-center flex-col text-sm font-bold py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-2"
                                         style={{
                                             color: activePackage.id == index ? '#ffffff' : '#1A002D',
                                             backgroundColor: activePackage.id == index ? '#4F008E' : '#F0E9FA',
@@ -144,13 +145,33 @@ export function FollowersHeroItems() {
                                         <p>Seguidores</p>
                                     </div>
 
-                                    <div className="w-full flex items-center flex-col text-sm font-bold bg-[#ffffff] text-[#1A002D] py-4">
+                                    <div className="w-full flex items-center flex-col text-sm font-bold bg-[#ffffff] text-[#1A002D] py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-3">
                                         <span className="flex items-center gap-2">
                                             <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1818 1.77295C9.84545 1.77295 8.66818 2.44113 8 3.49113C7.33182 2.44113 6.15455 1.77295 4.81818 1.77295C2.71818 1.77295 1 3.49113 1 5.59113C1 9.37749 8 13.2275 8 13.2275C8 13.2275 15 9.40931 15 5.59113C15 3.49113 13.2818 1.77295 11.1818 1.77295Z" stroke="#1A002D" strokeWidth="1.9" /></svg>
                                             {_package.bonus}
                                         </span>
 
                                         <p className="text-[#8E829A]">Curtidas Bônus</p>
+                                    </div>
+
+                                    <div className="flex flex-col items-center justify-center p-3 min-[400px]:hidden">
+                                        <p className="text-base font-medium text-[#8C8096] flex items-start gap-[5px]">
+                                            R$
+                                            <span
+                                                className="text-2xl font-bold text-[#1A002D] leading-[1]"
+                                            >{_package.price}</span>
+                                            <span
+                                                className="text-[#FF0000] line-through"
+                                            >R${_package.promo_price}</span>
+                                        </p>
+
+                                        <p className="text-[#B2ACB6] text-sm font-medium mt-3 flex gap-2 items-center text-center">3x de R$ {(_package.price / 3).toFixed(2)} sem juros no cartão</p>
+
+                                        <CheckoutDialog>
+                                            <button
+                                                className="mt-2 py-4 w-full bg-[#4F008E] text-white font-bold block rounded-full"
+                                            >Comprar Agora</button>
+                                        </CheckoutDialog>
                                     </div>
                                 </div>
                             </Link>

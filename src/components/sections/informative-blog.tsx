@@ -28,7 +28,7 @@ export function InformativeBlogSection({
 }) {
     return (
         <main id="blog">
-            <div className="min-[1100px]:container">
+            <div className="container">
                 <h2 className="section-title max-w-[1000px] mx-auto">Seu perfil mais bombado a partir de hoje!</h2>
                 <p className="text section-text-center mt-8 max-w-[870px]">Acompanhe as melhores dicas para impulsionar o seu perfil no Instagram.</p>
 
@@ -37,7 +37,7 @@ export function InformativeBlogSection({
                         topics={navigationPanelItems}
                     />
 
-                    <div data-informative-blog className="max-[1100px]:container">
+                    <div data-informative-blog>
                         {informativeBlogTopicsItems.map((topic, index) => {
                             return (<InformativeBlogTopic
                                 key={`${topic.id}-${index}`}
