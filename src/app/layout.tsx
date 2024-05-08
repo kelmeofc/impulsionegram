@@ -14,7 +14,6 @@ export default function RootLayout({
     <html lang="pt-br">
       
       <Head>
-        //* HTML OpenGraph Tags */
         <meta
           property="og:title"
           content="Crescer no Instagram é difícil e demorado? Não mais!"
@@ -30,7 +29,7 @@ export default function RootLayout({
           property="og:image"
           content="https://impulsionegram.vercel.app/images/seo/opengraph-image.jpeg"
         />
-        //* Facebook Meta Tags */
+
         <meta property="og:url" content="https://impulsionegram.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta
@@ -42,7 +41,7 @@ export default function RootLayout({
           content="O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
         />
         <meta property="og:image" content="" />
-        //* Twitter Meta Tags */
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="impulsionegram.vercel.app" />
         <meta
