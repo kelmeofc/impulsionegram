@@ -77,7 +77,7 @@ export function ViewsInstagramHeroItems() {
                     return (
                         <li
                             key={index}
-                            className="relative pt-3"
+                            className="pt-3 relative package-hero-item"
                         >
                             <Link
                                 href="#"
@@ -92,8 +92,16 @@ export function ViewsInstagramHeroItems() {
                                     })
                                 }}
                             >
+                                <span className="w-[80%] p-2 text-[10px] font-semibold text-center hidden best-selling absolute top-[-5px] left-[50%] rounded-full"
+                                    style={{
+                                        transform: 'translateX(-50%)',
+                                        background: activePackage.id == index ? '#B352FF' : '#F4F1FF',
+                                        color: activePackage.id == index ? '#ffffff' : '#A8B4C3',
+                                    }}
+                                >Mais Vendido</span>
+
                                 <div
-                                    className="rounded-[30px] overflow-hidden border-[2px] relative z-[2]"
+                                    className="rounded-[30px] overflow-hidden border-[2px] z-[2]"
                                     style={{
                                         borderColor: activePackage.id == index ? '#4F008E' : '#F0E9FA'
                                     }}

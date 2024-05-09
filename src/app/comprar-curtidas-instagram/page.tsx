@@ -285,6 +285,7 @@ export default function ReelsPackages() {
                 <AdvantagesSection
                     advantages={advantages}
                 />
+                <GuaranteeSealSection />
                 <DepoimentosSection />
                 <ActionBar
                     items={[{
@@ -346,7 +347,6 @@ export default function ReelsPackages() {
                         promo_price: 997,
                     }]}
                 />
-                <GuaranteeSealSection />
                 <HowItWorksSection />
                 <FaqSection />
                 <InformativeBlogSection

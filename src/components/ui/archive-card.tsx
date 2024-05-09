@@ -22,12 +22,12 @@ export interface IArchiveCard {
 
 export function ArchiveCard({ banner, title, category, link, author, row = false }: IArchiveCard) {
     return (
-        <Link href={link.href} className={`flex w-full p-8 rounded-[30px] bg-white ${row && 'max-[580px]:!flex-col'}`} style={{
+        <Link href={link.href} className={`flex w-full p-8 rounded-[30px] bg-white`} style={{
             flexDirection: row ? 'row' : 'column',
             gap: row ? '20px' : '0',
         }}>
             <img
-                className={`block rounded-[30px] w-full ${row && 'max-[700px]:max-w-[200px]  max-[580px]:!max-w-full'}`}
+                className={`block rounded-[30px] w-full ${row && 'max-[700px]:max-w-[200px] max-[580px]:!min-w-[100px] max-[580px]:!min-h-[100px]'}`}
                 style={{
                     maxWidth: row ? '240px' : '100%',
                     maxHeight: row ? '240px' : '100%',
@@ -42,7 +42,7 @@ export function ArchiveCard({ banner, title, category, link, author, row = false
                         marginTop: row ? '0px' : '20px',
                     }}>{category}</span>
 
-                    <h2 className="text-3xl max-[1300px]:text-lg max-[1200px]:text-sm max-[1064px]:text-2xl font-bold text-[#1A002D] mt-4">{title}</h2>
+                    <h2 className={`text-3xl max-[1300px]:text-lg max-[1200px]:text-sm max-[1064px]:text-2xl font-bold text-[#1A002D] mt-4  ${row && 'max-[580px]:text-[14px]  max-[580px]:leading-[1.3]'}`}>{title}</h2>
                 </div>
 
                 <div className="flex justify-between items-center mt-4">

@@ -55,7 +55,7 @@ body {
 
 @layer components {
   .primary-title {
-    @apply text-5xl font-bold text-[#1A002D] max-[600px]:text-3xl max-[400px]:text-[28px]
+    @apply text-[2.68rem] leading-[1.2] font-bold text-[#1A002D] max-[600px]:text-3xl max-[400px]:text-[28px]
   }
 
   .section-title {
@@ -106,6 +106,18 @@ section+main,
 main+section {
   margin-top: 60px;
 }
+
+@media screen and (max-width: 800px) {
+
+  [data-action-bar]+section,
+  section+[data-action-bar],
+  section+section,
+  section+main,
+  main+section {
+    margin-top: 50px;
+  }
+}
+
 
 @media screen and (max-width: 600px) {
 
@@ -169,4 +181,15 @@ body {
 .swiper-cards {
   overflow-x: visible;
   overflow-y: visible;
+}
+
+.package-hero-item:first-child .best-selling {
+  display: block;
+  z-index: 10;
+}
+
+@media screen and (max-width: 400px) {
+  .advantage svg {
+    width: 15px;
+  }
 }

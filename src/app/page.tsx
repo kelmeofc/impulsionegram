@@ -20,6 +20,8 @@ import { FollowersHeroItems } from "@/components/ui/followers-hero-items";
 import { InformativeBlogButton } from "@/components/ui/informative-blog-button";
 import { ITopic } from "@/components/ui/informative-blog-topic";
 import { ProviderLayout } from "@/layouts/provider.layout";
+import { FaqSection } from "@/components/sections/faq";
+import { BannerAdsSection } from "@/components/sections/banner-ads";
 
 export const metadata: Metadata = {
   title: "Comprar Seguidores Instagram | Reais Brasileiros [2024]",
@@ -28,61 +30,95 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const commentSliderItems = [{
-    title: "incrível",
-    date: "Out 24, 2023",
-    text: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
-    rating: 5,
-    profile: {
-      picture: "/images/comments/comment-1.png",
-      name: "danilo almeida",
-      at: "@danilo_almeida",
+  const commentSliderItems = [
+    {
+      title: "Consegui mais parcerias!",
+      date: "Jan 24, 2024",
+      text: "Antes era muito difícil conseguir seguidores e parcerias, mas desde o dia que comecei a usar o ImpulsioneGram meu Instagram mudou muito e ganhou mais visibilidade.",
+      rating: 5,
+      profile: {
+        picture: "/images/comments/comment-2.png",
+        name: "Tainá Montenegro",
+        at: "@richelly_groomer",
+      },
     },
-  },
-  {
-    title: "Consegui mais parcerias!",
-    date: "Out 24, 2023",
-    text: "Antes era muito difícil conseguir seguidores e parcerias, mas desde o dia que comecei a usar o ImpulsioneGram meu Instagram mudou muito e ganhou mais visibilidade.",
-    rating: 5,
-    profile: {
-      picture: "/images/comments/comment-2.png",
-      name: "Tainá Montenegro",
-      at: "@richelly_groomer",
+    {
+      title: "Tenho mais credibilidade",
+      date: "Abr 26, 2024",
+      text: "Trabalho com eventos há bastante tempo e ter encontrado o Impulsionegram foi uma baita ajuda pois consegui tanto mais seguidores, como mais curtidas e comentários nas minhas postagens, agora meu perfil passa a credibilidade que eu mereço para fechar mais e mais parcerias!",
+      rating: 5,
+      profile: {
+        picture: "/images/comments/comment-5.png",
+        name: "Giovani Teles",
+        at: "@giovanitelesoficial",
+      },
     },
-  },
-  {
-    title: "São perfis reais e brasileiros!",
-    date: "Out 24, 2023",
-    text: "Fiquei muito satisfeito com o atendimento do ImpulsioneGram e espero que outros usuários possam se beneficiar dos serviços. O atendimento on-line é bem ágil e satisfatório, vale a pena conhecer mais sobre como funciona o ImpulsioneGram para quem precisa das redes sociais, sobretudo no que se refere aos negócios.",
-    rating: 5,
-    profile: {
-      picture: "/images/comments/comment-3.png",
-      name: "Marcelo Sardinha",
-      at: "@eventos__de__ouro",
+    {
+      title: "Consegui lotar a agenda do mês",
+      date: "Mar 02, 2024",
+      text: "Antes eu tinha muita dificuldade em conseguir clientes, não bastava ter um feed bonito, com postagens bem produzidas era preciso ter mais curtidas e seguidores. Foi graças a uma indicação que descobri o ImpulsioneGram e finalmente consegui lotar minha agenda mês após mês. Obrigada pela ajuda!",
+      rating: 5,
+      profile: {
+        picture: "/images/comments/comment-6.png",
+        name: "Taise",
+        at: "@pravoceunhas",
+      },
     },
-  },
-  {
-    title: "Ganho seguidores orgânicos!",
-    date: "Out 24, 2023",
-    text: "Passava horas e horas tentando ganhar seguidores no Instagram mas só conseguia uns 15 a 20 seguidores por dia. Pesquisando no Google encontrei esse site e consegui finalmente ganhar mais de 300 seguidores por dia. Isso me ajudou muito pra aparecer na aba explorar e começar a ganhar seguidores orgânicos, sem precisar perder meu tempo. Não vivo mais sem.",
-    rating: 5,
-    profile: {
-      picture: "/images/comments/comment-4.png",
-      name: "Rafaela Martin",
-      at: "Digital Influencer",
+    {
+      title: "Mais credibilidade no meu perfil",
+      date: "Fev 14, 2024",
+      text: "Meu Instagram profissional ganhou mais visualizações desde que iniciei esta parceria e venho recebendo mais convites para cursos e palestras desde então graças ao site Impulsionegram.",
+      rating: 5,
+      profile: {
+        picture: "/images/comments/comment-7.png",
+        name: "Letícia Alvares",
+        at: "@letis.alvares",
+      },
     },
-  },
-  {
-    title: "incrível",
-    date: "Out 24, 2023",
-    text: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
-    rating: 5,
-    profile: {
-      picture: "/images/comments/comment-1.png",
-      name: "danilo almeida",
-      at: "@danilo_almeida",
+    {
+      title: "São perfis reais e brasileiros!",
+      date: "Out 24, 2023",
+      text: "Fiquei muito satisfeito com o atendimento do ImpulsioneGram e espero que outros usuários possam se beneficiar dos serviços. O atendimento on-line é bem ágil e satisfatório, vale a pena conhecer mais sobre como funciona o ImpulsioneGram para quem precisa das redes sociais, sobretudo no que se refere aos negócios.",
+      rating: 5,
+      profile: {
+        picture: "/images/comments/comment-3.png",
+        name: "Marcelo Sardinha",
+        at: "@eventos__de__ouro",
+      },
     },
-  },
+    {
+      title: "Comprei 10 mil seguidores",
+      date: "Abr 26, 2024",
+      text: "Como nutricionista, sempre busquei formas de expandir meus serviços e foi aí que eu encontrei o site brasileiro ImpulsioneGram.com.br, consegui com a ajuda do site ganhar mais de 10 mil seguidores!",
+      rating: 5,
+      profile: {
+        picture: "/images/comments/comment-8.png",
+        name: "Luciana Sabbag",
+        at: "@nutriluciaespada",
+      },
+    },
+    {
+      title: "Seguidores reais e entrega rápida",
+      date: "Fev 14, 2024",
+      text: "Sempre precisei de um perfil bombado porque eu trabalho com o Instagram, e isso gastava muito meu tempo, graças ao Impulsionegram.com.br eu consegui mudar esse jogo e eles me entregaram  em questão de minutos mais de 13 mil seguidores, são perfis reais e brasileiros interagindo com meu perfil!",
+      rating: 5,
+      profile: {
+        picture: "/images/comments/comment-9.png",
+        name: "Rayssa Hungria",
+        at: "@rayssahungria",
+      },
+    },
+    {
+      title: "Site que entrega o que promete",
+      date: "Abr 26, 2024",
+      text: "Achei o Impulsionegram no Google e ali eu vi que o site era famoso, de confiança, que os seguidores eram selecionados, tudo brasileiro com foto de perfil certinho e tal, fora isso eu achei bem barato, então nem pensei 2 vezes, fechei e graças ao trabalho do Impulsionegram eu bombei meu perfil mesmo.",
+      rating: 5,
+      profile: {
+        picture: "/images/comments/comment-10.png",
+        name: "Juliana Oliveira",
+        at: "@julianaoliveira.br",
+      },
+    },
   ];
 
   const advantages = [
@@ -871,6 +907,7 @@ export default function Home() {
           <FollowersHeroItems />
         </HeroSection>
         <AdvantagesSection advantages={advantages} />
+        <GuaranteeSealSection />
         <DepoimentosSection />
         <ActionBar
           items={[
@@ -939,7 +976,6 @@ export default function Home() {
             },
           ]}
         />
-        <GuaranteeSealSection />
         <PackagesSlider />
         <SimpleSlider
           title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
@@ -960,11 +996,14 @@ export default function Home() {
         </SimpleSlider>
         <BuyingProcessSection />
         <HowItWorksSection />
+        <FaqSection />
         <InformativeBlogSection
           navigationPanelItems={navigationPanelItems}
           informativeBlogTopicsItems={informativeBlogTopicsItems}
         />
+
         <ArticlesSection />
+        <BannerAdsSection />
       </ProviderLayout>
     </AppLayoutFragment>
   );

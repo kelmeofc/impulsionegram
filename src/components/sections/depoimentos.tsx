@@ -7,7 +7,7 @@ export function DepoimentosSection() {
 	return (
 		<section className="overflow-hidden">
 			<div className="container">
-				<h3 className="text section-text-center mt-8 max-w-[870px]">Ainda está em dúvida?</h3>
+				<h3 className="text section-text-center max-w-[870px]">Ainda está em dúvida?</h3>
 				<h2 className="section-title">Veja o que nossos clientes dizem</h2>
 
 				<div className="flex-col flex justify-center mt-4">

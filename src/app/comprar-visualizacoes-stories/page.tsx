@@ -285,7 +285,7 @@ export default function ReelsPackages() {
         <AppLayoutFragment>
             <ProviderLayout>
                 <HeroSection
-                    title="Comprar Visualizações Reels no Instagram"
+                    title="Comprar Visu1alizações Reels no Instagram"
                     description="No ImpulsioneGram você pode comprar Visualizações para Reels do Instagram de forma rápida, segura e fácil com apenas alguns cliques. Veja nossas ofertas abaixo!"
                 >
                     <ViewsInstagramHeroItems></ViewsInstagramHeroItems>
@@ -293,6 +293,7 @@ export default function ReelsPackages() {
                 <AdvantagesSection
                     advantages={advantages}
                 />
+                <GuaranteeSealSection />
                 <DepoimentosSection />
                 <ActionBar
                     items={[{
@@ -354,7 +355,6 @@ export default function ReelsPackages() {
                         promo_price: 1470,
                     }]}
                 />
-                <GuaranteeSealSection />
                 <HowItWorksSection />
                 <FaqSection />
                 <InformativeBlogSection

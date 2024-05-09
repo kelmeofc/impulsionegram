@@ -22,8 +22,8 @@ export function HeroSection({
 
     return (
         <section id="precos">
-            <div className="container py-14 flex gap-9 max-[1350px]:flex-col">
-                <div className="min-[1350px]:max-w-[480px] w-full grid max-[1350px]:grid-cols-[1fr_1fr] max-[1050px]:grid-cols-[1fr] max-[1350px]:gap-7">
+            <div className="container mt-14 flex gap-9 max-[1350px]:flex-col max-[834px]:mt-11 max-[428px]:mt-[26px]">
+                <div className="min-[1350px]:max-w-[470px] w-full grid max-[1350px]:grid-cols-[1fr_1fr] max-[1050px]:grid-cols-[1fr] max-[1350px]:gap-7">
                     <div>
                         <h1 className="primary-title max-[1050px]:text-center">{title}</h1>
                         <p className="text mt-6 max-[1050px]:text-center">{description}</p>
@@ -95,33 +95,35 @@ export function HeroSection({
                             </div>
 
                             <div className="flex items-center justify-between min-[1050px]:absolute max-[1050px]:mx-auto left-0 top-[252px] min-[580px]:w-[500px] max-[580px]:flex-col max-[580px]:gap-5">
-                                <div className="flex gap-1">
-                                    {[1, 2, 3, 4, 5].map((item, index) => {
-                                        return (
-                                            <svg key={index} width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.4097 19.5279C16.2454 19.5286 16.0833 19.4898 15.937 19.4149L10.6961 16.6711L5.45509 19.4149C5.28491 19.5044 5.09303 19.5443 4.90127 19.5302C4.70952 19.5161 4.52557 19.4484 4.37035 19.3349C4.21512 19.2215 4.09485 19.0667 4.02319 18.8883C3.95154 18.7099 3.93138 18.5149 3.96502 18.3256L4.99266 12.54L0.758777 8.42941C0.626682 8.29759 0.532975 8.13229 0.487714 7.95124C0.442453 7.7702 0.447345 7.58024 0.501867 7.40177C0.561429 7.21913 0.670992 7.05685 0.818124 6.93333C0.965255 6.80981 1.14406 6.73001 1.33426 6.70297L7.19181 5.85003L9.77118 0.578237C9.85533 0.404493 9.98672 0.257965 10.1503 0.155439C10.3139 0.052913 10.503 -0.00146484 10.6961 -0.00146484C10.8891 -0.00146484 11.0783 0.052913 11.2418 0.155439C11.4054 0.257965 11.5368 0.404493 11.6209 0.578237L14.2311 5.83976L20.0887 6.6927C20.2789 6.71973 20.4577 6.79953 20.6048 6.92305C20.752 7.04657 20.8615 7.20885 20.9211 7.39149C20.9756 7.56997 20.9805 7.75992 20.9352 7.94097C20.89 8.12201 20.7963 8.28731 20.6642 8.41913L16.4303 12.5297L17.4579 18.3153C17.4946 18.508 17.4754 18.7071 17.4026 18.8892C17.3297 19.0713 17.2063 19.2287 17.0469 19.343C16.8608 19.4734 16.6367 19.5384 16.4097 19.5279Z" fill="#F9BF10" />
-                                            </svg>
-                                        );
-                                    })}
+                                <div className="flex items-center justify-between gap-5">
+                                    <div className="flex gap-1 max-[400px]:w-[104px]">
+                                        {[1, 2, 3, 4, 5].map((item, index) => {
+                                            return (
+                                                <svg key={index} width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.4097 19.5279C16.2454 19.5286 16.0833 19.4898 15.937 19.4149L10.6961 16.6711L5.45509 19.4149C5.28491 19.5044 5.09303 19.5443 4.90127 19.5302C4.70952 19.5161 4.52557 19.4484 4.37035 19.3349C4.21512 19.2215 4.09485 19.0667 4.02319 18.8883C3.95154 18.7099 3.93138 18.5149 3.96502 18.3256L4.99266 12.54L0.758777 8.42941C0.626682 8.29759 0.532975 8.13229 0.487714 7.95124C0.442453 7.7702 0.447345 7.58024 0.501867 7.40177C0.561429 7.21913 0.670992 7.05685 0.818124 6.93333C0.965255 6.80981 1.14406 6.73001 1.33426 6.70297L7.19181 5.85003L9.77118 0.578237C9.85533 0.404493 9.98672 0.257965 10.1503 0.155439C10.3139 0.052913 10.503 -0.00146484 10.6961 -0.00146484C10.8891 -0.00146484 11.0783 0.052913 11.2418 0.155439C11.4054 0.257965 11.5368 0.404493 11.6209 0.578237L14.2311 5.83976L20.0887 6.6927C20.2789 6.71973 20.4577 6.79953 20.6048 6.92305C20.752 7.04657 20.8615 7.20885 20.9211 7.39149C20.9756 7.56997 20.9805 7.75992 20.9352 7.94097C20.89 8.12201 20.7963 8.28731 20.6642 8.41913L16.4303 12.5297L17.4579 18.3153C17.4946 18.508 17.4754 18.7071 17.4026 18.8892C17.3297 19.0713 17.2063 19.2287 17.0469 19.343C16.8608 19.4734 16.6367 19.5384 16.4097 19.5279Z" fill="#F9BF10" />
+                                                </svg>
+                                            );
+                                        })}
+                                    </div>
+
+                                    <ul className="flex max-[400px]:w-[104px]">
+                                        {profilePhotos.map((profile, index) => {
+                                            return (
+                                                <li key={index}>
+                                                    <Image
+                                                        alt="Foto de Perfil do Instagram"
+                                                        title="Foto de Perfil"
+                                                        width={37}
+                                                        height={37}
+                                                        src={`/images/profile/${profile}`}
+                                                    />
+                                                </li>
+                                            );
+                                        })}
+                                    </ul>
                                 </div>
 
-                                <ul className="flex">
-                                    {profilePhotos.map((profile, index) => {
-                                        return (
-                                            <li key={index}>
-                                                <Image
-                                                    alt="Foto de Perfil do Instagram"
-                                                    title="Foto de Perfil"
-                                                    width={37}
-                                                    height={37}
-                                                    src={`/images/profile/${profile}`}
-                                                />
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
-
-                                <p className="min-[580px]:w-[190px] max-[400px]:text-center">Mais de <span>62.356</span> pessoas usam o ImpulsioneGram</p>
+                                <p className="min-[580px]:w-[190px] max-[400px]:text-center max-[400px]:text-[14px]">Mais de <span>62.356</span> pessoas usam o ImpulsioneGram</p>
                             </div>
                         </div>
                     </div>

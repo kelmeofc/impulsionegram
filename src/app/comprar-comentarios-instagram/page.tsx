@@ -293,6 +293,7 @@ export default function ReelsPackages() {
                 <AdvantagesSection
                     advantages={advantages}
                 />
+                <GuaranteeSealSection />
                 <DepoimentosSection />
                 <ActionBar
                     items={[{
