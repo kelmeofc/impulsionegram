@@ -15,7 +15,7 @@ export function NavigationPanel({ topics }: { topics: ITopic[] }) {
         if (!element) return;
     }
 
-    const handleScroll = (topics: NodeListOf<HTMLElement>, panelItems: NodeListOf<HTMLElement>, navigationPanel: HTMLElement) => {
+    const handleScroll = (topics: NodeListOf<HTMLElement>, panel: HTMLElement, list: HTMLElement, panelItems: NodeListOf<HTMLElement>, navigationPanel: HTMLElement) => {
         topics.forEach((element, index) => {
             if (
                 (element.getBoundingClientRect().top > 0 && element.getBoundingClientRect().top < 200 && window.innerWidth > 1100) ||
@@ -27,24 +27,19 @@ export function NavigationPanel({ topics }: { topics: ITopic[] }) {
                 setTagNavigationPosition(navigationPanel);
             }
         });
+
     }
 
     const setTagNavigationPosition = (navigationPanel: HTMLElement) => {
         const item: any = document.querySelector('[data-navigation-tag]');
         const activeItem = document.querySelector('[data-panel-item].active') as HTMLElement;
+        const nav = document.querySelector('[data-navigation-nav]') as HTMLElement;
 
         if (activeItem && item && window.innerWidth > 1100) {
             item.style.top = `${(activeItem.getBoundingClientRect().top - navigationPanel.getBoundingClientRect().top) + (+activeItem.clientHeight * 0.4)}px`;
-        }
 
-        if (window.innerWidth <= 1100) {
-            const list = document.querySelector('[data-navigation-list]') as HTMLElement;
-
-            // console.log((activeItem.inner - (activeItem.getBoundingClientRect().width * 0.5)) + (list.clientWidth * 0.5));
-            console.log(list.scrollWidth);
-
-            list.scrollBy({
-                left: +`${(activeItem.getBoundingClientRect().left - (activeItem.getBoundingClientRect().width * 0.5)) + (list.clientWidth * 0.5)}`,
+            nav.scrollTo({
+                top: +`${(activeItem.getBoundingClientRect().top - navigationPanel.getBoundingClientRect().top)}`,
                 behavior: 'smooth'
             })
         }
@@ -52,16 +47,18 @@ export function NavigationPanel({ topics }: { topics: ITopic[] }) {
 
     useEffect(() => {
         const topics = document.querySelectorAll('[data-informative-blog-topics]') as NodeListOf<HTMLElement>;
+        const panel = document.querySelector('[data-informative-blog]') as HTMLElement;
+        const nav = document.querySelector('[data-navigation-nav]') as HTMLElement;
         const panelItems = document.querySelectorAll('[data-panel-item]') as NodeListOf<HTMLElement>;
         const navigationPanel = document.querySelector('[data-navigation-panel]') as HTMLElement;
 
-        window.addEventListener('scroll', (event) => handleScroll(topics, panelItems, navigationPanel));
+        window.addEventListener('scroll', (event) => handleScroll(topics, panel, nav, panelItems, navigationPanel));
 
         setTagNavigationPosition(navigationPanel);
     });
 
     return (
-        <div className="bg-white rounded-[30px] h-fit px-5 py-10 sticky top-[90px] bottom-0 max-[1100px]:hidden">
+        <div className="bg-white rounded-[30px] h-fit px-5 py-10 sticky top-[50px] bottom-0 max-[1100px]:hidden">
             <h3 className="text-2xl text-[#1A002D] font-bold flex justify-between items-center max-[1100px]:justify-center max-[1100px]:gap-3">
                 Tabela de Conteúdos
                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +67,7 @@ export function NavigationPanel({ topics }: { topics: ITopic[] }) {
                 </svg>
             </h3>
 
-            <nav className="mt-6 grid grid-cols-[16px_1fr] h-full gap-5 max-[1100px]:grid-cols-1 max-[1100px]:w-full max-[1100px]:overflow-hidden">
+            <nav className="mt-6 grid grid-cols-[16px_1fr] h-full gap-5 max-[1100px]:grid-cols-1 max-[1100px]:w-full max-[1100px]:overflow-hidden max-h-[350px] overflow-hidden" data-navigation-nav>
                 <div className="block w-[1px] h-full bg-[#1A002D] m-auto relative max-[1100px]:h-[1px] max-[1100px]:w-full max-[1100px]:mt-4" data-navigation-panel>
                     <span
                         data-navigation-tag

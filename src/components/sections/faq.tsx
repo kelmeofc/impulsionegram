@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import Logo from "../ui/logo";
 
@@ -86,7 +88,15 @@ export function FaqSection() {
                             {faqList.map((li, index) => {
                                 return (
                                     <li key={index} className="border-b border-[#DAB3FC] first:border-t">
-                                        <details>
+                                        <details data-op-faq onClick={(event) => {
+                                            const ops = Array.from(document.querySelectorAll('[data-op-faq]'));
+
+                                            ops.map(op => {
+                                                op.removeAttribute('open');
+                                            });
+
+                                            event.currentTarget.setAttribute('open-op', '');
+                                        }}>
                                             <summary
                                                 className="text-2xl text-[#1A002D] p-6 cursor-pointer list-none flex items-center justify-between">
                                                 {li.title}

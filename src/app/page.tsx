@@ -907,7 +907,6 @@ export default function Home() {
           <FollowersHeroItems />
         </HeroSection>
         <AdvantagesSection advantages={advantages} />
-        <GuaranteeSealSection />
         <DepoimentosSection />
         <ActionBar
           items={[
@@ -976,6 +975,8 @@ export default function Home() {
             },
           ]}
         />
+        <GuaranteeSealSection />
+        <BuyingProcessSection />
         <PackagesSlider />
         <SimpleSlider
           title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
@@ -994,16 +995,14 @@ export default function Home() {
             );
           })}
         </SimpleSlider>
-        <BuyingProcessSection />
         <HowItWorksSection />
         <FaqSection />
         <InformativeBlogSection
           navigationPanelItems={navigationPanelItems}
           informativeBlogTopicsItems={informativeBlogTopicsItems}
         />
-
         <ArticlesSection />
-        <BannerAdsSection />
+        <BannerAdsSection buttonText="Comprar Seguidores Agora!" />
       </ProviderLayout>
     </AppLayoutFragment>
   );

@@ -24,8 +24,32 @@ export function Header() {
         expanded: false,
     }];
 
+    useEffect(() => {
+        const header = document.querySelector('[data-header]');
+
+        var lastPosition!: number;
+
+        window.addEventListener('scroll', () => {
+            var currentPosition = window.scrollY;
+            
+            if (currentPosition > lastPosition) {
+                if (!header?.classList.contains('top-[-100%]')) {
+                    header?.classList.add('top-[-100%]')
+                    header?.classList.remove('top-[0]')
+                }
+            } else {
+                if (header?.classList.contains('top-[-100%]')) {
+                    header?.classList.remove('top-[-100%]')
+                    header?.classList.add('top-0')
+                }
+            }
+
+            lastPosition = currentPosition;
+        });
+    })
+
     return (
-        <header className="bg-white border-b-[0.5px] border-[#C0BAC8] py-5 z-[997]" data-header>
+        <header className="bg-white border-b-[0.5px] border-[#C0BAC8] py-5 z-[997] fixed left-0 right-0 top-0 transition-all transition-[.2] z-[997]" data-header>
             <div className="container relative flex items-center justify-between">
                 <Logo
                     width="198"

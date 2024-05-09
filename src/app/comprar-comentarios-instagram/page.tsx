@@ -1,5 +1,6 @@
 import { AdvantagesSection } from "@/components/sections/advantages";
 import { ArticlesSection } from "@/components/sections/articles";
+import { BannerAdsSection } from "@/components/sections/banner-ads";
 import { DepoimentosSection } from "@/components/sections/depoimentos";
 import { FaqSection } from "@/components/sections/faq";
 import { GuaranteeSealSection } from "@/components/sections/guarantee-seal";
@@ -348,13 +349,13 @@ export default function ReelsPackages() {
                         promo_price: 1439,
                     }]}
                 />
-                <GuaranteeSealSection />
                 <HowItWorksSection />
                 <FaqSection />
                 <InformativeBlogSection
                     navigationPanelItems={navigationPanelItems}
                     informativeBlogTopicsItems={informativeBlogTopicsItems}
                 />
+                <BannerAdsSection buttonText="Comprar Comentários Agora!" />
                 <ArticlesSection />
             </ProviderLayout>
         </AppLayoutFragment>
