@@ -8,23 +8,23 @@ import Empresa5CIMG from "/public/images/empresa_5_c.png";
 export function Footer() {
   const instagramMenu = [
     {
-      link: "#",
+      link: "/",
       content: "Seguidores",
     },
     {
-      link: "#",
+      link: "/comprar-curtidas-instagram",
       content: "Curtidas",
     },
     {
-      link: "#",
+      link: "/comprar-visualizacoes-reels-instagram",
       content: "Video Views",
     },
     {
-      link: "#",
+      link: "/comprar-visualizacoes-stories",
       content: "Story Views",
     },
     {
-      link: "#",
+      link: "/comprar-comentarios-instagram",
       content: "Comentários",
     },
   ];
@@ -46,15 +46,15 @@ export function Footer() {
 
   const termMenu = [
     {
-      link: "#",
+      link: "https://www.impulsionegram.com.br/privacidade/",
       content: "Políticas de Privacidade",
     },
     {
-      link: "#",
+      link: "https://www.impulsionegram.com.br/termos-de-uso/",
       content: "Termos de Compra",
     },
     {
-      link: "#",
+      link: "https://www.impulsionegram.com.br/termos-de-responsabilidade/",
       content: "Termos de Responsabilidade",
     },
   ];

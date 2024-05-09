@@ -85,60 +85,66 @@ export function VideoSwiper() {
 	];
 
 	return (
-		<>
-			<Swiper
-				effect={"cards"}
-				grabCursor={true}
-				modules={[EffectCards, Pagination]}
-				pagination={{
-					dynamicBullets: true,
-				}}
-				onSlideChange={() => {
-					const activeItem = document.querySelector(
-						".swiper-slide-active [data-video]"
-					);
-				}}
-			>
-				{vimeoStories.map((video, index) => (
-					<SwiperSlide className="relative rounded-[40px] bg-[#AF3EC4] overflow-hidden" key={index}>
-						<iframe
-							className="w-full h-full rounded-3xl"
-							src={`https://player.vimeo.com/video/${video.link}`}
-						></iframe>
+    <>
+      <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        modules={[EffectCards, Pagination]}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        onSlideChange={() => {
+          const activeItem = document.querySelector(
+            ".swiper-slide-active [data-video]"
+          );
+        }}
+      >
+        {vimeoStories.map((video, index) => (
+          <SwiperSlide
+            className="relative rounded-[40px] bg-[#AF3EC4] overflow-hidden"
+            key={index}
+          >
+            <iframe
+              className="w-full h-full rounded-3xl"
+              src={`https://player.vimeo.com/video/${video.link}?autopause=true&controls=false`}
+            ></iframe>
 
-						{/* <video className="w-full h-full rounded-3xl" src={`@/videos/${video.link}.m4a`}></video> */}
+            {/* <video className="w-full h-full rounded-3xl" src={`@/videos/${video.link}.m4a`}></video> */}
 
-						<div
-							className="w-full p-7 absolute left-0 bottom-0 z-[999] bg-[#220439] text-white flex flex-col gap-3"
-							style={{
-								backdropFilter: "blur(50px)",
-							}}
-						>
-							<h3 className="font-bold text-[18px] text-[#E5DFD9] text-center">&quot;{video.description}&quot;</h3>
+            <div
+              className="w-full p-7 absolute left-0 bottom-0 z-[999] bg-[#220439] text-white flex flex-col gap-3"
+              style={{
+                backdropFilter: "blur(50px)",
+              }}
+            >
+              <h3 className="font-bold text-[18px] text-[#E5DFD9] text-center">
+                &quot;{video.description}&quot;
+              </h3>
 
-							<div className="flex flex-row gap-2 justify-center align-middle">
-								<Star />
-								<Star />
-								<Star />
-								<Star />
-								<Star />
+              <div className="flex flex-row gap-2 justify-center align-middle">
+                <Star />
+                <Star />
+                <Star />
+                <Star />
+                <Star />
 
-								<span className="font-bold tracking-widest text-[#E5DFD9]">5/5</span>
+                <span className="font-bold tracking-widest text-[#E5DFD9]">
+                  5/5
+                </span>
 
-								<div>
-									{/* <Image
+                <div>
+                  {/* <Image
 										src={video.link}
 										alt={video.username}
 										width={20}
 										height={20}
 									/> */}
-								</div>
-							</div>
-
-						</div>
-					</SwiperSlide>
-				))}
-			</Swiper>
-		</>
-	);
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
+  );
 }

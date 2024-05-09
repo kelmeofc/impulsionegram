@@ -38,7 +38,7 @@ export function ArchiveCard({ banner, title, category, link, author, row = false
 
             <div className="flex flex-col justify-around h-full">
                 <div>
-                    <span className=" px-5 py-2 bg-[#F9BF10] font-bold text-lg text-[#1A002D] rounded-full block w-fit" style={{
+                    <span className={`px-5 py-2 bg-[#F9BF10] font-bold text-lg text-[#1A002D] rounded-full block w-fit ${row && 'text-[10px] px-2 py-1'}`} style={{
                         marginTop: row ? '0px' : '20px',
                     }}>{category}</span>
 
@@ -48,12 +48,12 @@ export function ArchiveCard({ banner, title, category, link, author, row = false
                 <div className="flex justify-between items-center mt-4">
                     <div className="flex">
                         <img
-                            className="w-14 mr-5 max-[1200px]:w-10"
+                            className={`w-14 mr-5 max-[1200px]:w-10 ${row && 'max-[580px]:w-7 max-[580px]:h-7'}`}
                             src={author.photo.src}
                             alt={author.photo.alt}
                         />
 
-                        <p className="text-base text-[#8C8096]">Escrito Por <span className="block font-bold text-xl max-[1200px]:text-sm text-[#1A002D]">{author.name}</span></p>
+                        <p className={`text-base text-[#8C8096] ${row && 'max-[580px]:text-xs'}`}>Escrito Por <span className={`block font-bold text-xl max-[1200px]:text-sm text-[#1A002D] ${row && 'max-[580px]:text-xs'}`}>{author.name}</span></p>
                     </div>
 
                     <Link
