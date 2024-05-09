@@ -21,8 +21,8 @@ export function HeroSection({
     ];
 
     return (
-        <section id="precos">
-            <div className="container mt-14 flex gap-9 max-[1350px]:flex-col max-[834px]:mt-11 max-[428px]:mt-[26px] mt-[72px]">
+        <section id="precos" className="pt-[72px]">
+            <div className="container mt-14 flex gap-9 max-[1350px]:flex-col max-[834px]:mt-11 max-[428px]:mt-[26px]">
                 <div className="min-[1350px]:max-w-[470px] w-full grid max-[1350px]:grid-cols-[1fr_1fr] max-[1050px]:grid-cols-[1fr] max-[1350px]:gap-7">
                     <div>
                         <h1 className="primary-title max-[1050px]:text-center">{title}</h1>
