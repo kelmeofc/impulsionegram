@@ -53,7 +53,7 @@ export function BurgerMenu() {
             </button>
 
             <nav
-                className="pl-8 pt-14 pb-10 pr-8 rounded-3xl absolute right-6 top-[-20px] z-[998] bg-white"
+                className="pl-8 pt-14 pb-10 pr-8 rounded-3xl absolute right-6 top-[-20px] bg-white"
                 style={{
                     boxShadow: '-4px 5px 15px 0px rgba(0,0,0,0.25)',
                     opacity: isOpen ? 1 : 0,

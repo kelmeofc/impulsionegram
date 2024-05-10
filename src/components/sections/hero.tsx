@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { HeroPackageContainer } from "../ui/hero-package-container";
-import { useContext, createContext, useState } from "react";
+import { useContext, createContext, useState, useEffect } from "react";
 
 export function HeroSection({
     title,
@@ -19,6 +19,21 @@ export function HeroSection({
         'profile-03.png',
         'profile-04.png',
     ];
+
+    useEffect(() => {
+        const ems = document.querySelectorAll('[data-em-index]');
+
+        ems[0].scrollTo({ top: 24 * 7 });
+        ems[1].scrollTo({ top: 24 * 6 });
+
+        setInterval(() => {
+            ems[3].scrollBy({ top: 24 });
+        }, 2000);
+
+        setInterval(() => {
+            ems[2].scrollBy({ top: 24 });
+        }, 16000);
+    });
 
     return (
         <section id="precos" className="pt-[72px]">
@@ -89,7 +104,28 @@ export function HeroSection({
 
                                 <ul className="flex justify-around mt-3">
                                     <li className="text-base font-semibold text-center text-[#34005B]">86 <span className="font-medium block text-center">Posts</span></li>
-                                    <li className="text-base font-semibold text-center text-[#34005B]">8.700 <span className="font-medium block text-center">Seguidores</span></li>
+                                    <li className="text-base font-semibold text-center text-[#34005B]">
+                                        <span className="flex justify-center">
+                                            {Array.from({ length: 4 }).map((value, index) => {
+                                                if (index == 4) {
+                                                    // setTimeout(() => {
+                                                    //     const em = document.querySelector(`[data-em-index=${index}]`);
+                                                    //     console.log(em)
+                                                    // }, 2000);
+                                                }
+
+                                                return (
+                                                    <em className={`flex flex-col max-h-6 overflow-hidden`} data-em-index={index}>
+                                                        {Array.from({ length: 9 }).map((value, index) => {
+                                                            return (
+                                                                <i className="not-italic">{index + 1}</i>
+                                                            );
+                                                        })}
+                                                    </em>
+                                                );
+                                            })}
+                                        </span>
+                                        <span className="font-medium block text-center">Seguidores</span></li>
                                     <li className="text-base font-semibold text-center text-[#34005B]">298 <span className="font-medium block text-center">Seguindo</span></li>
                                 </ul>
                             </div>

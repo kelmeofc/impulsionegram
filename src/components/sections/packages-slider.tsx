@@ -225,7 +225,7 @@ export function PackagesSlider() {
                         <CarouselNext className="static bg-transparent border-[#B352FF] text-[#B352FF]" />
                     </div>
 
-                    <CarouselContent className="px-5 gap-6 max-[450px]:gap-3">
+                    <CarouselContent className="px-5 gap-6 max-[450px]:gap-2">
                         {packagesSliderItems.map((item, index) => {
                             return (
                                 <PackagesSliderItems

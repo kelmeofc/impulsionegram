@@ -7,24 +7,23 @@ interface ILayoutFragmentProps {
 
 export const metadata: Metadata = {
   openGraph: {
-    title: 'Next.js',
-    description: 'The React Framework for the Web',
-    url: 'https://nextjs.org',
-    siteName: 'Next.js',
+    title: 'Crescer no Instagram é difícil e demorado? Não mais!',
+    description: 'O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques.',
+    url: 'impulsionegram.vercel.app',
+    siteName: 'ImpulsioneGram',
     images: [
       {
-        url: 'https://nextjs.org/og.png',
-        width: 800,
-        height: 600,
+        url: 'https://impulsionegram.vercel.app/images/seo/opengraph-image.jpeg',
+        width: 1000,
+        height: 500,
       },
       {
-        url: 'https://nextjs.org/og-alt.png',
-        width: 1800,
-        height: 1600,
-        alt: 'My custom alt',
+        url: 'https://impulsionegram.vercel.app/images/seo/opengraph-image.jpeg',
+        width: 1000,
+        height: 500,
       },
     ],
-    locale: 'en_US',
+    locale: 'pt_BR',
     type: 'website',
   },
 };

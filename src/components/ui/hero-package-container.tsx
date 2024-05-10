@@ -20,7 +20,7 @@ export function HeroPackageContainer({
                 {children}
             </ul>
 
-            <div className="mt-9 flex min-[900px]:items-center min-[900px]:justify-between max-[900px]:flex-col max-[900px]:mt-4">
+            <div className="mt-9 flex min-[900px]:items-center min-[900px]:justify-between max-[900px]:flex-col max-[900px]:mt-4 max-[400px]:hidden">
                 <div>
                     {productPackage.price && (
                         <p className="text-xl font-medium text-[#8C8096] flex items-start gap-[5px]">

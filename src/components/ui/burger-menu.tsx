@@ -58,13 +58,13 @@ export function BurgerMenu() {
                 </DropdownMenuTrigger>
 
                 <DropdownMenuContent
-                    className="pl-8 pt-14 pb-10 pr-8 rounded-3xl bg-white absolute right-[-20px] top-[-50px]"
+                    className="pl-8 pt-14 pb-10 pr-8 rounded-3xl bg-white absolute right-[-20px] top-[-50px] z-[999]"
                     style={{
                         boxShadow: '-4px 5px 15px 0px rgba(0,0,0,0.25)',
                     }}
                 >
                     <nav>
-                        <DropdownMenuItem className="absolute top-8 right-7 z-[999]">
+                        <DropdownMenuItem className="absolute top-8 right-7">
                             <button>
                                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 2L14.7279 14.7279" stroke="#1A002D" strokeWidth="3" strokeLinecap="round" />
@@ -77,12 +77,10 @@ export function BurgerMenu() {
                             {menu.map((li, index) => {
                                 return (
                                     <li key={index} className={`mt-6 first:mt-0 ${li.class ?? ''}`}>
-                                        <DropdownMenuItem>
-                                            <Link
-                                                className="block text-lg font-semibold text-[#473257]"
-                                                href={li.link}
-                                            >{li.content}</Link>
-                                        </DropdownMenuItem>
+                                        <Link
+                                            className="block text-lg font-semibold text-[#473257]"
+                                            href={li.link}
+                                        ><DropdownMenuItem className="cursor-pointer text-lg">{li.content}</DropdownMenuItem></Link>
                                     </li>
                                 );
                             })}
