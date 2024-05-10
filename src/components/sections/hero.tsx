@@ -115,10 +115,10 @@ export function HeroSection({
                                                 }
 
                                                 return (
-                                                    <em className={`flex flex-col max-h-6 overflow-hidden`} data-em-index={index}>
+                                                    <em className={`flex flex-col max-h-6 overflow-hidden`} data-em-index={index} key={index}>
                                                         {Array.from({ length: 9 }).map((value, index) => {
                                                             return (
-                                                                <i className="not-italic">{index + 1}</i>
+                                                                <i className="not-italic" key={index}>{index + 1}</i>
                                                             );
                                                         })}
                                                     </em>
