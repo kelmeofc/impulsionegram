@@ -24,7 +24,7 @@ export function DepoimentosSection() {
 					</p>
 				</div>
 
-				<div className="mt-16">
+				<div className="mt-16 pb-12">
 					<VideoSwiper />
 				</div>
 			</div>

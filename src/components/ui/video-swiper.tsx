@@ -118,7 +118,7 @@ export function VideoSwiper() {
 						}} className="w-full h-full rounded-3xl" src={`/videos/${video.link}.mp4`}></video>
 
 						<div
-							className="w-full py-7 px-11 absolute left-0 bottom-0 z-[999] bg-[rgba(34,4,57, .3)] text-white flex flex-col gap-3"
+							className="w-full py-7 px-11 absolute left-0 bottom-0 z-[999] bg-[rgba(34,4,57, .3)] text-white flex flex-col gap-3 max-[400px]:gap-1 max-[400px]:py-2 max-[400px]:px-2"
 							style={{
 								backdropFilter: 'blur(30px)'
 							}}
@@ -129,11 +129,11 @@ export function VideoSwiper() {
 
 							<div className="flex flex-row gap-2 justify-center align-middle">
 								<div className="flex gap-[2px]">
-									<Star />
-									<Star />
-									<Star />
-									<Star />
-									<Star />
+									<Star className="max-[400px]:w-4"/>
+									<Star className="max-[400px]:w-4"/>
+									<Star className="max-[400px]:w-4"/>
+									<Star className="max-[400px]:w-4"/>
+									<Star className="max-[400px]:w-4"/>
 								</div>
 
 								<span className="font-bold tracking-widest text-[#E5DFD9]">

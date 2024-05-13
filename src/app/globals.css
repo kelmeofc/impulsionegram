@@ -107,6 +107,10 @@ main+section {
   margin-top: 60px;
 }
 
+.swiper-pagination {
+  bottom: -30px !important;
+}
+
 @media screen and (max-width: 800px) {
 
   [data-action-bar]+section,
@@ -179,6 +183,7 @@ body {
 }
 
 .swiper-cards {
+  transform: translateX(-80px);
   overflow-x: visible;
   overflow-y: visible;
 }
