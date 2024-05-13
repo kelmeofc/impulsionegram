@@ -6,7 +6,7 @@ import * as React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css";
+import 'swiper/css';
 import "swiper/css/pagination";
 
 
@@ -38,7 +38,7 @@ export function VideoSwiper() {
 			stars: "5/5",
 		},
 		{
-			link: "803582947",
+			link: "803569955",
 			content: "video 03",
 			avatar: "https://randomuser.me/api/portraits",
 			actor: "Giovani Teles",
@@ -47,7 +47,7 @@ export function VideoSwiper() {
 			stars: "5/5",
 		},
 		{
-			link: "803569955",
+			link: "803582947",
 			content: "video 04",
 			avatar: "https://randomuser.me/api/portraits",
 			actor: "Taise",
@@ -85,66 +85,77 @@ export function VideoSwiper() {
 	];
 
 	return (
-    <>
-      <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        modules={[EffectCards, Pagination]}
-        pagination={{
-          dynamicBullets: true,
-        }}
-        onSlideChange={() => {
-          const activeItem = document.querySelector(
-            ".swiper-slide-active [data-video]"
-          );
-        }}
-      >
-        {vimeoStories.map((video, index) => (
-          <SwiperSlide
-            className="relative rounded-[40px] bg-[#AF3EC4] overflow-hidden"
-            key={index}
-          >
-            <iframe
-              className="w-full h-full rounded-3xl"
-              src={`https://player.vimeo.com/video/${video.link}?autopause=true&controls=false`}
-            ></iframe>
+		<>
+			<Swiper
+				effect={"cards"}
+				grabCursor={true}
+				modules={[EffectCards, Pagination]}
+				pagination={{
+					dynamicBullets: true,
+				}}
+				cardsEffect={{
+					perSlideOffset: window.innerWidth > 500 ? 45 : 20,
+					perSlideRotate: 3
+				}}
+				onSlideChange={() => {
+					const activeItem = document.querySelector(
+						".swiper-slide-active [data-video]"
+					);
+				}}
+			>
+				{vimeoStories.map((video, index) => (
+					<SwiperSlide
+						className="relative rounded-[40px] bg-[#AF3EC4] overflow-hidden"
+						key={index}
+					>
 
-            {/* <video className="w-full h-full rounded-3xl" src={`@/videos/${video.link}.m4a`}></video> */}
+						<video onClick={({ currentTarget }: { currentTarget: any }) => {
+							if (currentTarget.paused) {
+								currentTarget.play();
+							} else {
+								currentTarget.pause();
+							}
+						}} className="w-full h-full rounded-3xl" src={`/videos/${video.link}.mp4`}></video>
 
-            <div
-              className="w-full p-7 absolute left-0 bottom-0 z-[999] bg-[#220439] text-white flex flex-col gap-3"
-              style={{
-                backdropFilter: "blur(50px)",
-              }}
-            >
-              <h3 className="font-bold text-[18px] text-[#E5DFD9] text-center">
-                &quot;{video.description}&quot;
-              </h3>
+						<div
+							className="w-full py-7 px-11 absolute left-0 bottom-0 z-[999] bg-[rgba(34,4,57, .3)] text-white flex flex-col gap-3"
+							style={{
+								backdropFilter: 'blur(30px)'
+							}}
+						>
+							<h3 className="font-bold text-[18px] text-[#E5DFD9] text-center">
+								&quot;{video.description}&quot;
+							</h3>
 
-              <div className="flex flex-row gap-2 justify-center align-middle">
-                <Star />
-                <Star />
-                <Star />
-                <Star />
-                <Star />
+							<div className="flex flex-row gap-2 justify-center align-middle">
+								<div className="flex gap-[2px]">
+									<Star />
+									<Star />
+									<Star />
+									<Star />
+									<Star />
+								</div>
 
-                <span className="font-bold tracking-widest text-[#E5DFD9]">
-                  5/5
-                </span>
+								<span className="font-bold tracking-widest text-[#E5DFD9]">
+									5/5
+								</span>
+							</div>
 
-                <div>
-                  {/* <Image
-										src={video.link}
-										alt={video.username}
-										width={20}
-										height={20}
-									/> */}
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
-  );
+							<div className="flex gap-2 items-center justify-center">
+								<Image
+									className="w-[30px] h-[30px]"
+									src={`/images/profile/${video.link}.png`}
+									alt={video.username}
+									width={30}
+									height={30}
+								/>
+
+								<p className="text-[10px] font-bold">{video.actor} <span className="font-normal block">{video.username}</span></p>
+							</div>
+						</div>
+					</SwiperSlide>
+				))}
+			</Swiper>
+		</>
+	);
 }
