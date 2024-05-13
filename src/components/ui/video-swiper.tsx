@@ -94,7 +94,7 @@ export function VideoSwiper() {
 					dynamicBullets: true,
 				}}
 				cardsEffect={{
-					perSlideOffset: window.innerWidth > 500 ? 45 : 20,
+					perSlideOffset: 45,
 					perSlideRotate: 3
 				}}
 				onSlideChange={() => {
