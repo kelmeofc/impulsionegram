@@ -183,7 +183,6 @@ body {
 }
 
 .swiper-cards {
-  transform: translateX(-80px);
   overflow-x: visible;
   overflow-y: visible;
 }

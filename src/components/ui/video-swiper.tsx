@@ -110,6 +110,12 @@ export function VideoSwiper() {
 					>
 
 						<video onClick={({ currentTarget }: { currentTarget: any }) => {
+							const videos = document.querySelectorAll('video') as any;
+
+							Array.from(videos).map((video: any) => {
+								video.pause();
+							});
+
 							if (currentTarget.paused) {
 								currentTarget.play();
 							} else {
@@ -129,11 +135,11 @@ export function VideoSwiper() {
 
 							<div className="flex flex-row gap-2 justify-center align-middle">
 								<div className="flex gap-[2px]">
-									<Star className="max-[400px]:w-4"/>
-									<Star className="max-[400px]:w-4"/>
-									<Star className="max-[400px]:w-4"/>
-									<Star className="max-[400px]:w-4"/>
-									<Star className="max-[400px]:w-4"/>
+									<Star className="max-[400px]:w-4" />
+									<Star className="max-[400px]:w-4" />
+									<Star className="max-[400px]:w-4" />
+									<Star className="max-[400px]:w-4" />
+									<Star className="max-[400px]:w-4" />
 								</div>
 
 								<span className="font-bold tracking-widest text-[#E5DFD9]">
