@@ -112,15 +112,16 @@ export function VideoSwiper() {
 						<video onClick={({ currentTarget }: { currentTarget: any }) => {
 							const videos = document.querySelectorAll('video') as any;
 
-							Array.from(videos).map((video: any) => {
-								video.pause();
-							});
-
 							if (currentTarget.paused) {
+								Array.from(videos).map((video: any) => {
+									video.pause();
+								});
+								
 								currentTarget.play();
 							} else {
 								currentTarget.pause();
 							}
+
 						}} className="w-full h-full rounded-3xl" src={`/videos/${video.link}.mp4`}></video>
 
 						<div
