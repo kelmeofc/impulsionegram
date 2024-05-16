@@ -128,7 +128,9 @@ export function HowItWorksSection() {
                     })}
                 </ul>
 
-                <BuyFollowersButton />
+                <BuyFollowersButton
+                    text="Leva menos de 5 minutinhos!"
+                />
             </div>
         </section >
     );

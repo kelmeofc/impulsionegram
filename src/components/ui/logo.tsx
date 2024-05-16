@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Logo({ width = "199", height = "36" }) {
+export default function Logo({ width = "199", height = "36", className }: { width: string, height: string, className?: string }) {
   return (
     <>
-      <Link href="/">
+      <Link href="/" className={`${className}`}>
         <svg
           style={{
             width: `${width}px`,
@@ -15,7 +15,7 @@ export default function Logo({ width = "199", height = "36" }) {
           viewBox={`0 0 199 36`}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="max-[418px]:!w-[150px]"
+          className={`max-[418px]:!w-[150px]`}
         >
           <path
             d="M0 15.5063C0 12.6958 2.27832 10.4175 5.08878 10.4175H22.5942V11.7151C22.5942 17.9403 17.5477 22.9868 11.3225 22.9868H0V15.5063Z"

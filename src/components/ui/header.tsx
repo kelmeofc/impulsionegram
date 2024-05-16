@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Logo from "./logo";
-import { BurgerMenu } from "./burger-menu";
+import { BurgerMenu } from "./burger-menu-variant";
 import { useEffect, useState } from "react";
 
 export function Header() {

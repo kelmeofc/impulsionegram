@@ -196,8 +196,8 @@ export function BuyingProcessSection() {
                 </g>
             </svg>
         ),
-        title: 'Rapidez',
-        text: 'Após confirmação do pagamento, os seguidores começam a chegar em 5 minutos. Já as curtidas ficam em seu painel para você usar em seus posts.'
+        title: 'Reais',
+        text: 'Os seguidores vêm de uma plataforma de indicação, onde pagamos pessoas com usuários reais para fazerem as ações de seguir seu perfil.'
     }];
 
     return (

@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export function BuyFollowersButton() {
+export function BuyFollowersButton({ text }: { text?: string }) {
     return (
         <>
             <Link
@@ -9,7 +9,7 @@ export function BuyFollowersButton() {
             >
                 Comprar Seguidores Agora!
             </Link>
-            <p className="text text-center mt-8">Na compra de seguidores você ganha curtidas bônus!</p>
+            <p className="text text-center mt-8">{text ? text : 'Na compra de seguidores você ganha curtidas bônus!'}</p>
         </>
     );
 }

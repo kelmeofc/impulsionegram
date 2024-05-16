@@ -65,12 +65,15 @@ export function FaqSection() {
     return (
         <section id="faq">
             <div className="container">
-                <Logo
-                    width="374"
-                    height="66"
-                />
+                <div>
+                    <Logo
+                        width="374"
+                        height="66"
+                        className="flex max-[550px]:justify-center"
+                    />
+                </div>
 
-                <div className="grid min-[1140px]:grid-cols-[500px_1fr] gap-16 mt-14 text-lg">
+                <div className="grid min-[1140px]:grid-cols-[500px_1fr] gap-16 mt-14 max-[550px]:mt-3 text-lg">
                     <div>
                         <h2 className="max-[1140px]:text-center text-[#1A002D] font-bold text-6xl max-[550px]:text-2xl">FAQ - Perguntas frequentes</h2>
                         <p className="max-[1140px]:text-center mt-7">Estamos aqui para te ajudar e caso você não tenha sanado sua dúvida, você pode entrar em contato com o suporte no botão abaixo:</p>
@@ -98,7 +101,7 @@ export function FaqSection() {
                                             event.currentTarget.setAttribute('open-op', '');
                                         }}>
                                             <summary
-                                                className="text-2xl text-[#1A002D] p-6 cursor-pointer list-none flex items-center justify-between">
+                                                className="text-2xl text-[#1A002D] p-6 cursor-pointer list-none flex items-center justify-between font-bold">
                                                 {li.title}
                                                 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M13 0C10.4288 0 7.91543 0.762437 5.77759 2.1909C3.63975 3.61935 1.97351 5.64968 0.989572 8.02512C0.0056327 10.4006 -0.251811 13.0144 0.249797 15.5362C0.751405 18.0579 1.98953 20.3743 3.80762 22.1924C5.6257 24.0105 7.94208 25.2486 10.4638 25.7502C12.9856 26.2518 15.5995 25.9944 17.9749 25.0104C20.3503 24.0265 22.3807 22.3603 23.8091 20.2224C25.2376 18.0846 26 15.5712 26 13C25.9964 9.5533 24.6256 6.24882 22.1884 3.81163C19.7512 1.37445 16.4467 0.00363977 13 0ZM17.7075 14.7075L13.7075 18.7075C13.6146 18.8005 13.5043 18.8742 13.3829 18.9246C13.2615 18.9749 13.1314 19.0008 13 19.0008C12.8686 19.0008 12.7385 18.9749 12.6171 18.9246C12.4957 18.8742 12.3854 18.8005 12.2925 18.7075L8.29251 14.7075C8.10486 14.5199 7.99945 14.2654 7.99945 14C7.99945 13.7346 8.10486 13.4801 8.29251 13.2925C8.48015 13.1049 8.73464 12.9994 9.00001 12.9994C9.26537 12.9994 9.51987 13.1049 9.70751 13.2925L12 15.5863V8C12 7.73478 12.1054 7.48043 12.2929 7.29289C12.4804 7.10536 12.7348 7 13 7C13.2652 7 13.5196 7.10536 13.7071 7.29289C13.8946 7.48043 14 7.73478 14 8V15.5863L16.2925 13.2925C16.4801 13.1049 16.7346 12.9994 17 12.9994C17.2654 12.9994 17.5199 13.1049 17.7075 13.2925C17.8951 13.4801 18.0006 13.7346 18.0006 14C18.0006 14.2654 17.8951 14.5199 17.7075 14.7075Z" fill="#4F008E" />
