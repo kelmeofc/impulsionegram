@@ -29,12 +29,12 @@ export function VideoSwiper() {
 			stars: "5/5",
 		},
 		{
-			link: "833881036",
+			link: "803582947",
 			content: "video 02",
 			avatar: "https://randomuser.me/api/portraits",
 			actor: "Rayssa Hungria",
 			username: "@rayssahungria",
-			description: "Melhor experiência da minha vida",
+			description: "Tenho muito mais visibilidade e clientes",
 			stars: "5/5",
 		},
 		{
@@ -52,7 +52,7 @@ export function VideoSwiper() {
 			avatar: "https://randomuser.me/api/portraits",
 			actor: "Taise",
 			username: "@pravoceunhas",
-			description: "Meu salão de beleza tá bombando",
+			description: "Melhor experiência da minha vida",
 			stars: "5/5",
 		},
 		{
@@ -61,7 +61,7 @@ export function VideoSwiper() {
 			avatar: "https://randomuser.me/api/portraits",
 			actor: "Ana Carolina",
 			username: "@richelly_groomer",
-			description: "Hoje fecho muito mais parcerias",
+			description: "Meu salão de beleza tá bombando",
 			stars: "5/5",
 		},
 		{
@@ -70,7 +70,7 @@ export function VideoSwiper() {
 			avatar: "https://randomuser.me/api/portraits",
 			actor: "Karin Hermann",
 			username: "@k_herrmann8",
-			description: "Minha presença está muito mais forte!",
+			description: "Hoje fecho muito mais parcerias",
 			stars: "5/5",
 		},
 		{

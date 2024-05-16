@@ -1,5 +1,8 @@
+'use client'
+
 import Image from "next/image";
-import { Carousel, CarouselContent, CarouselNext, CarouselPrevious } from "../ui/carousel";
+import { Carousel, CarouselApi, CarouselContent, CarouselNext, CarouselPrevious } from "../ui/carousel";
+import React from "react";
 
 export function SimpleSlider({
     title,
@@ -16,6 +19,23 @@ export function SimpleSlider({
         'profile-03.png',
         'profile-04.png',
     ];
+
+    const [api, setApi] = React.useState<CarouselApi>()
+    const [current, setCurrent] = React.useState(0)
+    const [count, setCount] = React.useState(0)
+
+    React.useEffect(() => {
+        if (!api) {
+            return
+        }
+
+        setCount(api.scrollSnapList().length)
+        setCurrent(api.selectedScrollSnap() + 1)
+
+        api.on("select", () => {
+            setCurrent(api.selectedScrollSnap() + 1)
+        })
+    }, [api])
 
     return (
         <section>
@@ -53,7 +73,7 @@ export function SimpleSlider({
                 <h2 className="section-title max-[550px]:mt-2">{title}</h2>
                 <p className="text section-text-center mt-8 max-w-[870px]">{description}</p>
 
-                <Carousel className="mt-9">
+                <Carousel className="mt-9" setApi={setApi}>
                     <div className="flex justify-end gap-3">
                         <CarouselPrevious className="static bg-transparent border-[#B352FF] text-[#B352FF]" />
                         <CarouselNext className="static bg-transparent border-[#B352FF] text-[#B352FF]" />
@@ -63,6 +83,18 @@ export function SimpleSlider({
                         {children}
                     </CarouselContent>
                 </Carousel>
+
+                <div className="flex items-center justify-center gap-1 mt-6 max-[550px]:mt-1">
+                    {Array.from({ length: count }).map((i: any, index) => {
+                        return (
+                            <span key={index} className="block w-3 h-3 bg-[#F9BF10] opacity-50 rounded-full" style={{
+                                opacity: current - 1 == index ? 1 : 0.5,
+                                background: current - 1 == index ? '#4F008E' : '#F9BF10'
+                            }}>
+                            </span>
+                        );
+                    })}
+                </div>
             </div>
         </section>
     );
