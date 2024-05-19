@@ -6,9 +6,8 @@ import * as React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 import "swiper/css/pagination";
-
 
 // import required modules
 import { Pagination } from "swiper/modules";
@@ -21,65 +20,65 @@ export function VideoSwiper() {
 	const vimeoStories = [
 		{
 			link: "803570100",
-			content: "video 01",
+			content: "Vídeo 01",
 			avatar: "images/avatars/juliana.png",
 			actor: "Juliana Oliveira",
 			username: "@julianaoliveira.br",
-			description: "Seguidores de alta qualidade",
+			description: "Seguidores de alta qualidade!",
 			stars: "5/5",
 		},
 		{
 			link: "803582947",
-			content: "video 02",
-			avatar: "https://randomuser.me/api/portraits",
+			content: "Vídeo 02",
+			avatar: "images/avatars/rayssa.png",
 			actor: "Rayssa Hungria",
 			username: "@rayssahungria",
-			description: "Tenho muito mais visibilidade e clientes",
+			description: "Tenho muito mais visibilidade e clientes!",
 			stars: "5/5",
 		},
 		{
 			link: "803569955",
-			content: "video 03",
-			avatar: "https://randomuser.me/api/portraits",
+			content: "Vídeo 03",
+			avatar: "images/avatars/giovani.png",
 			actor: "Giovani Teles",
 			username: "@giovanitelesoficial",
-			description: "Meu negócio dobrou de tamanho",
-			stars: "5/5",
-		},
-		{
-			link: "803582947",
-			content: "video 04",
-			avatar: "https://randomuser.me/api/portraits",
-			actor: "Taise",
-			username: "@pravoceunhas",
-			description: "Melhor experiência da minha vida",
+			description: "Meu negócio dobrou de tamanho!",
 			stars: "5/5",
 		},
 		{
 			link: "803582703",
-			content: "video 05",
-			avatar: "https://randomuser.me/api/portraits",
-			actor: "Ana Carolina",
-			username: "@richelly_groomer",
-			description: "Meu salão de beleza tá bombando",
+			content: "Vídeo 04",
+			avatar: "images/avatars/taise.png",
+			actor: "Taise",
+			username: "@pravoceunhas",
+			description: "Melhor experiência da minha vida!",
 			stars: "5/5",
 		},
 		{
 			link: "803569834",
-			content: "video 05",
-			avatar: "https://randomuser.me/api/portraits",
-			actor: "Karin Hermann",
-			username: "@k_herrmann8",
-			description: "Hoje fecho muito mais parcerias",
+			content: "Vídeo 05",
+			avatar: "images/avatars/ana.png",
+			actor: "Ana Carolina",
+			username: "@richelly_groomer",
+			description: "Meu salão de beleza tá bombando!",
 			stars: "5/5",
 		},
 		{
 			link: "833881088",
-			content: "video 05",
-			avatar: "",
+			content: "Vídeo 06",
+			avatar: "images/avatars/ana-carolina.png",
 			actor: "Karin Hermann",
 			username: "@k_herrmann8",
 			description: "Minha presença está muito mais forte!",
+			stars: "5/5",
+		},
+		{
+			link: "833881036",
+			content: "Vídeo 07",
+			avatar: "images/avatars/karin.png",
+			actor: "Luciana Sabbag",
+			username: "@nutriluciaespada",
+			description: "Tenho muito mais visibilidade e clientes!",
 			stars: "5/5",
 		},
 	];
@@ -90,12 +89,14 @@ export function VideoSwiper() {
 				effect={"cards"}
 				grabCursor={true}
 				modules={[EffectCards, Pagination]}
+				/* centeredSlides={true} */
+				loop={true}
 				pagination={{
 					dynamicBullets: true,
 				}}
 				cardsEffect={{
 					perSlideOffset: 45,
-					perSlideRotate: 3
+					perSlideRotate: 3,
 				}}
 				onSlideChange={() => {
 					const activeItem = document.querySelector(
@@ -105,29 +106,31 @@ export function VideoSwiper() {
 			>
 				{vimeoStories.map((video, index) => (
 					<SwiperSlide
-						className="relative rounded-[40px] bg-[#AF3EC4] overflow-hidden"
+						className="relative rounded-[32px] bg-[#AF3EC4] overflow-hidden w-[337.5px] h-[600px]"
 						key={index}
 					>
+						<video
+							onClick={({ currentTarget }: { currentTarget: any }) => {
+								const videos = document.querySelectorAll("video") as any;
 
-						<video onClick={({ currentTarget }: { currentTarget: any }) => {
-							const videos = document.querySelectorAll('video') as any;
+								if (currentTarget.paused) {
+									Array.from(videos).map((video: any) => {
+										video.pause();
+									});
 
-							if (currentTarget.paused) {
-								Array.from(videos).map((video: any) => {
-									video.pause();
-								});
-								
-								currentTarget.play();
-							} else {
-								currentTarget.pause();
-							}
-
-						}} className="w-full h-full rounded-3xl" src={`/videos/${video.link}.mp4`}></video>
+									currentTarget.play();
+								} else {
+									currentTarget.pause();
+								}
+							}}
+							className="w-[337.5px] h-[600px]"
+							src={`/videos/${video.link}.webm`}
+						></video>
 
 						<div
 							className="w-full py-7 px-11 absolute left-0 bottom-0 z-[999] bg-[rgba(34,4,57, .3)] text-white flex flex-col gap-3 max-[400px]:gap-1 max-[400px]:py-2 max-[400px]:px-2"
 							style={{
-								backdropFilter: 'blur(30px)'
+								backdropFilter: "blur(30px)",
 							}}
 						>
 							<h3 className="font-bold text-[18px] text-[#E5DFD9] text-center">
@@ -151,13 +154,16 @@ export function VideoSwiper() {
 							<div className="flex gap-2 items-center justify-center">
 								<Image
 									className="w-[30px] h-[30px]"
-									src={`/images/profile/${video.link}.png`}
+									src={`/images/avatars/${video.avatar}.png`}
 									alt={video.username}
 									width={30}
 									height={30}
 								/>
 
-								<p className="text-[10px] font-bold">{video.actor} <span className="font-normal block">{video.username}</span></p>
+								<p className="text-[10px] font-bold">
+									{video.actor}{" "}
+									<span className="font-normal block">{video.username}</span>
+								</p>
 							</div>
 						</div>
 					</SwiperSlide>
