@@ -66,7 +66,7 @@ export function VideoSwiper() {
 		{
 			link: "833881088",
 			content: "Vídeo 06",
-			avatar: "images/avatars/ana-carolina.png",
+			avatar: "images/avatars/karin.png",
 			actor: "Karin Hermann",
 			username: "@k_herrmann8",
 			description: "Minha presença está muito mais forte!",
@@ -75,7 +75,7 @@ export function VideoSwiper() {
 		{
 			link: "833881036",
 			content: "Vídeo 07",
-			avatar: "images/avatars/karin.png",
+			avatar: "images/avatars/luciana.png",
 			actor: "Luciana Sabbag",
 			username: "@nutriluciaespada",
 			description: "Tenho muito mais visibilidade e clientes!",
@@ -106,7 +106,7 @@ export function VideoSwiper() {
 			>
 				{vimeoStories.map((video, index) => (
 					<SwiperSlide
-						className="relative rounded-[32px] bg-[#AF3EC4] overflow-hidden w-[337.5px] h-[600px]"
+						className="relative rounded-[32px] bg-[#AF3EC4] overflow-hidden"
 						key={index}
 					>
 						<video
@@ -123,12 +123,12 @@ export function VideoSwiper() {
 									currentTarget.pause();
 								}
 							}}
-							className="w-[337.5px] h-[600px]"
+							className="w-full"
 							src={`/videos/${video.link}.webm`}
 						></video>
 
 						<div
-							className="w-full py-7 px-11 absolute left-0 bottom-0 z-[999] bg-[rgba(34,4,57, .3)] text-white flex flex-col gap-3 max-[400px]:gap-1 max-[400px]:py-2 max-[400px]:px-2"
+							className="w-full py-7 px-10 absolute left-0 bottom-0 z-[999] bg-[rgba(34,4,57, .3)] text-white flex flex-col gap-3 max-[400px]:gap-1 max-[400px]:py-2 max-[400px]:px-2"
 							style={{
 								backdropFilter: "blur(30px)",
 							}}
@@ -154,7 +154,7 @@ export function VideoSwiper() {
 							<div className="flex gap-2 items-center justify-center">
 								<Image
 									className="w-[30px] h-[30px]"
-									src={`/images/avatars/${video.avatar}.png`}
+									src={`/${video.avatar}`}
 									alt={video.username}
 									width={30}
 									height={30}

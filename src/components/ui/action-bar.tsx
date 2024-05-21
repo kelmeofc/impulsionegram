@@ -61,6 +61,7 @@ export function ActionBar({ items }: {
     }
 
     useEffect(() => {
+        const effectContainer = document.querySelector('[data-gradient]');
         setSelectedPackage(items[0] as any);
 
         window.addEventListener('scroll', (event) => {
@@ -131,27 +132,37 @@ export function ActionBar({ items }: {
 
                     <div className="flex flex-col gap-5">
                         <div className="max-w-[350px] relative">
-                            <button
-                                className="absolute left-8 top-1/2 w-[50px] h-[50px] bg-white text-[#34005B] text-4xl rounded-full"
+                            <div
+                                data-gradient
+                                className="absolute top-[-2px] bottom-[-2px] left-[-2px] right-[-2px] z-[50] block rounded-full"
                                 style={{
-                                    transform: 'translateY(-50%)'
+                                    background: `conic-gradient(from 0deg, #F9BF10 0%, #6c3994, #F9BF10 ${360 / (items.length - 1) * packageIndex}deg, #fff ${360 / (items.length - 1) * packageIndex}deg)`,
                                 }}
-                                onClick={regress}
-                            >-</button>
+                            ></div>
 
-                            <div className="bg-[#F0E9FA] rounded-full text-center text-[#1A002D] flex flex-col py-1 min-w-[350px]">
-                                <span className="text-sm font-bold">{selectedPackage.label}</span>
-                                <span className="text-2xl font-bold">{selectedPackage.amount}</span>
-                                <span className="text-sm font-medium">{selectedPackage.subtitle || '‎'}</span>
+                            <div className="z-[51] relative">
+                                <button
+                                    className="absolute left-8 top-1/2 w-[50px] h-[50px] bg-white text-[#34005B] text-4xl rounded-full"
+                                    style={{
+                                        transform: 'translateY(-50%)'
+                                    }}
+                                    onClick={regress}
+                                >-</button>
+
+                                <div className="bg-[#F0E9FA] rounded-full text-center text-[#1A002D] flex flex-col py-1 min-w-[350px]">
+                                    <span className="text-sm font-bold">{selectedPackage.label}</span>
+                                    <span className="text-2xl font-bold">{selectedPackage.amount}</span>
+                                    <span className="text-sm font-medium">{selectedPackage.subtitle || '‎'}</span>
+                                </div>
+
+                                <button
+                                    className="absolute right-8 top-1/2 w-[50px] h-[50px] bg-white text-[#34005B] text-4xl rounded-full"
+                                    style={{
+                                        transform: 'translateY(-50%)'
+                                    }}
+                                    onClick={pass}
+                                >+</button>
                             </div>
-
-                            <button
-                                className="absolute right-8 top-1/2 w-[50px] h-[50px] bg-white text-[#34005B] text-4xl rounded-full"
-                                style={{
-                                    transform: 'translateY(-50%)'
-                                }}
-                                onClick={pass}
-                            >+</button>
                         </div>
                         <CheckoutDialog>
                             <button
