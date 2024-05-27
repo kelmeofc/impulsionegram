@@ -100,7 +100,7 @@ export function FollowersHeroItems() {
                                 }}
                             >
                                 <div
-                                    className="w-full rounded-[30px] pt-4 pb-16 absolute top-0 z-[1]"
+                                    className="w-full rounded-[30px] pt-1 pb-16 absolute top-[16px] z-[1]"
                                     style={{
                                         backgroundColor: activePackage.id == index ? '#B352FF' : '#F4F1FF',
                                     }}
@@ -120,7 +120,7 @@ export function FollowersHeroItems() {
                                     }}
                                 >
                                     <div
-                                        className="w-full flex items-center flex-col text-sm font-bold py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-2"
+                                        className="w-full flex items-center flex-col text-sm font-bold py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-2 max-[400px]:text-xl"
                                         style={{
                                             color: activePackage.id == index ? '#ffffff' : '#1A002D',
                                             backgroundColor: activePackage.id == index ? '#4F008E' : '#F0E9FA',
@@ -142,10 +142,10 @@ export function FollowersHeroItems() {
                                             {_package.followers}
                                         </span>
 
-                                        <p>Seguidores</p>
+                                        <p className="font-semibold">Seguidores</p>
                                     </div>
 
-                                    <div className="w-full flex items-center flex-col text-sm font-bold bg-[#ffffff] text-[#1A002D] py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-3">
+                                    <div className="w-full flex items-center flex-col text-md font-semibold bg-[#ffffff] text-[#1A002D] py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-5">
                                         <span className="flex items-center gap-2">
                                             <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1818 1.77295C9.84545 1.77295 8.66818 2.44113 8 3.49113C7.33182 2.44113 6.15455 1.77295 4.81818 1.77295C2.71818 1.77295 1 3.49113 1 5.59113C1 9.37749 8 13.2275 8 13.2275C8 13.2275 15 9.40931 15 5.59113C15 3.49113 13.2818 1.77295 11.1818 1.77295Z" stroke="#EF6262" strokeWidth="1.9" /></svg>
                                             {_package.bonus}
@@ -161,7 +161,7 @@ export function FollowersHeroItems() {
                                                 className="text-2xl font-bold text-[#1A002D] leading-[1]"
                                             >{_package.price}</span>
                                             <span
-                                                className="text-[#FF0000] line-through"
+                                                className="text-[#FF0000] line-through opacity-60"
                                             >R${_package.promo_price}</span>
                                         </p>
 
@@ -169,16 +169,16 @@ export function FollowersHeroItems() {
 
                                         <CheckoutDialog>
                                             <button
-                                                className="mt-2 py-4 w-full bg-[#4F008E] text-white font-bold block rounded-full"
+                                                className="mt-2 py-4 w-full bg-[#4F008E] text-white font-bold block rounded-full bg-[]"
                                             >Comprar Agora</button>
                                         </CheckoutDialog>
 
                                     </div>
 
-                                    <span className="w-full p-2 text-[10px] font-semibold text-center hidden best-selling"
+                                    <span className="w-full p-2 text-sm font-light text-center hidden best-selling"
                                         style={{
-                                            background: activePackage.id == index ? '#4F008E' : '#F0E9FA',
-                                            color: activePackage.id == index ? '#ffffff' : '#A8B4C3',
+                                            background: activePackage.id == index ? '#f4f1ff' : '#f4f1ff',
+                                            color: activePackage.id == index ? '#8E829A' : '#8E829A',
                                         }}
                                     >Mais Vendido 🔥</span>
                                 </div>

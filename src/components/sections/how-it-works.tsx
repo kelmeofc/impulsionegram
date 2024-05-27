@@ -111,7 +111,7 @@ export function HowItWorksSection() {
                 <h2 className="section-title max-w-[1000px] mx-auto mt-4">Você está há poucos passos da popularidade no Instagram!</h2>
                 <p className="text section-text-center max-w-[820px] mt-8">Para celebridades e marcas já conhecidas, crescer no Instagram pode ser fácil. Mas para a grande maioria das pessoas é um processo complexo, lento e incerto. Por isso, você deve confiar na compra de seguidores para seu perfil:</p>
 
-                <ul className="bg-[#E3DCEF] w-full py-14 px-14 mt-24 rounded-[80px] max-w-[980px] mx-auto">
+                <ul className="bg-[#E3DCEF] w-full py-14 px-14 mt-24 rounded-[80px] max-w-[980px] mx-auto max-[400px]:!my-6">
                     {howItWorksP.map((how, index) => {
                         return (
                             <li className="flex max-[750px]:!flex-col max-[750px]:items-center relative gap-10 py-12 before:content-[''] before:w-full before:h-[1px] before:bg-[#CCBAE0] before:block last:before:hidden before:absolute before:bottom-0" key={index} style={{

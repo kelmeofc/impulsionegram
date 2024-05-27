@@ -55,7 +55,7 @@ body {
 
 @layer components {
   .primary-title {
-    @apply text-[2.68rem] leading-[1.2] font-bold text-[#1A002D] max-[600px]:text-3xl max-[400px]:text-[28px]
+    @apply text-[2.68rem] leading-[1.2] font-bold text-[#1A002D] max-[600px]:text-3xl max-[400px]:text-[28px] max-[400px]:text-center
   }
 
   .section-title {
@@ -82,6 +82,10 @@ body {
     @apply mt-3
   }
 
+  .informative-content-blog a {
+    @apply text-[#473bf0]
+  }
+
   .informative-content-blog h2 {
     @apply text-lg font-bold text-[#1A002D] my-3
   }
@@ -103,8 +107,9 @@ body {
 section+[data-action-bar],
 section+section,
 section+main,
-main+section {
-  margin-top: 60px;
+main+section,
+section+footer {
+  margin-top: 110px;
 }
 
 .swiper-pagination {
@@ -117,8 +122,9 @@ main+section {
   section+[data-action-bar],
   section+section,
   section+main,
-  main+section {
-    margin-top: 50px;
+  main+section,
+  section+footer {
+    margin-top: 80px;
   }
 }
 
@@ -129,8 +135,9 @@ main+section {
   section+[data-action-bar],
   section+section,
   section+main,
-  main+section {
-    margin-top: 40px;
+  main+section,
+  section+footer {
+    margin-top: 60px;
   }
 }
 
@@ -192,8 +199,16 @@ body {
   z-index: 10;
 }
 
-@media screen and (max-width: 400px) {
-  .advantage svg {
-    width: 15px;
+
+@media screen and (max-width: 600px) {
+
+  .i-full svg {
+    width: 100%;
   }
+}
+
+details[open="true"] .arrow-icon {
+  opacity: .6;
+  transform: rotate(180deg);
+  transition: .3s ease;
 }

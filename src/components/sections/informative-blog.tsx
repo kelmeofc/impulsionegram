@@ -28,7 +28,7 @@ export function InformativeBlogSection({
 }) {
     return (
         <main id="blog">
-            <div className="container">
+            <div className="container max-[400px]:mt-24">
                 <h2 className="section-title max-w-[1000px] mx-auto">Seu perfil mais bombado a partir de hoje!</h2>
                 <p className="text section-text-center mt-8 max-w-[870px]">Acompanhe as melhores dicas para impulsionar o seu perfil no Instagram.</p>
 

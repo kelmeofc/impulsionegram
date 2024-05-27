@@ -24,7 +24,7 @@ export function VideoSwiper() {
 			avatar: "images/avatars/juliana.png",
 			actor: "Juliana Oliveira",
 			username: "@julianaoliveira.br",
-			description: "Seguidores de alta qualidade!",
+			description: "Seguidores de alta qualidade",
 			stars: "5/5",
 		},
 		{
@@ -42,7 +42,7 @@ export function VideoSwiper() {
 			avatar: "images/avatars/giovani.png",
 			actor: "Giovani Teles",
 			username: "@giovanitelesoficial",
-			description: "Meu negócio dobrou de tamanho!",
+			description: "Meu negócio dobrou de tamanho",
 			stars: "5/5",
 		},
 		{
@@ -51,7 +51,7 @@ export function VideoSwiper() {
 			avatar: "images/avatars/taise.png",
 			actor: "Taise",
 			username: "@pravoceunhas",
-			description: "Melhor experiência da minha vida!",
+			description: "Meu salão de beleza tá bombando",
 			stars: "5/5",
 		},
 		{
@@ -60,7 +60,7 @@ export function VideoSwiper() {
 			avatar: "images/avatars/ana.png",
 			actor: "Ana Carolina",
 			username: "@richelly_groomer",
-			description: "Meu salão de beleza tá bombando!",
+			description: "Hoje fecho muito mais parcerias",
 			stars: "5/5",
 		},
 		{
@@ -78,10 +78,12 @@ export function VideoSwiper() {
 			avatar: "images/avatars/luciana.png",
 			actor: "Luciana Sabbag",
 			username: "@nutriluciaespada",
-			description: "Tenho muito mais visibilidade e clientes!",
+			description: "Tenho muito mais visibilidade e clientes",
 			stars: "5/5",
 		},
 	];
+
+	const [play, setPlay] = React.useState(0);
 
 	return (
 		<>
@@ -118,8 +120,10 @@ export function VideoSwiper() {
 										video.pause();
 									});
 
+									setPlay(index+1);
 									currentTarget.play();
 								} else {
+									setPlay(0);
 									currentTarget.pause();
 								}
 							}}
@@ -127,7 +131,7 @@ export function VideoSwiper() {
 							src={`/videos/${video.link}.webm`}
 						></video>
 
-						<div
+						{!(play == index+1) && <div
 							className="w-full py-7 px-10 absolute left-0 bottom-0 z-[999] bg-[rgba(34,4,57, .3)] text-white flex flex-col gap-3 max-[400px]:gap-1 max-[400px]:py-2 max-[400px]:px-2"
 							style={{
 								backdropFilter: "blur(30px)",
@@ -165,7 +169,7 @@ export function VideoSwiper() {
 									<span className="font-normal block">{video.username}</span>
 								</p>
 							</div>
-						</div>
+						</div>}
 					</SwiperSlide>
 				))}
 			</Swiper>

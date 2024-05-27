@@ -13,7 +13,7 @@ export function PackagesSliderItems({
     link: string
 }) {
     return (
-        <CarouselItem className="py-14 px-4 rounded-3xl basis-[320px] max-[834px]:basis-[294px] bg-[#E3DCEF] flex flex-col gap-5 max-[450px]:basis-[168px] max-[450px]:px-3 max-[450px]:py-6 max-[450px]:h-fit max-[450px]:gap-4">
+        <CarouselItem className="py-14 px-4 rounded-3xl basis-[320px] max-[834px]:basis-[294px] bg-[#E3DCEF] flex flex-col gap-5 max-[450px]:basis-[210px] max-[450px]:px-3 max-[450px]:py-6 max-[450px]:h-fit max-[450px]:gap-4">
             <div className="mx-auto max-[450px]:w-16">
                 {svg}
             </div>
@@ -22,7 +22,7 @@ export function PackagesSliderItems({
             <ul className="flex flex-col gap-2 max-[450px]:gap-1">
                 {list.map((item, index) => {
                     return (
-                        <li key={index} className="px-4 py-2 flex items-center gap-2 bg-white rounded-3xl text-xs font-bold max-[450px]:text-[8px] max-[450px]:py-1 max-[450px]:px-2">
+                        <li key={index} className="px-4 py-2 flex items-center gap-2 bg-white rounded-3xl text-xs font-bold max-[450px]:text-[12px] max-[450px]:py-1 max-[450px]:px-2">
                             {item}
                         </li>
                     );

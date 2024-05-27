@@ -182,12 +182,14 @@ export default function SeoLayoutFragment({ children }: ILayoutFragmentProps) {
 
   return (
     <>
+    
+    {children}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      {children}
+
     </>
   );
 }

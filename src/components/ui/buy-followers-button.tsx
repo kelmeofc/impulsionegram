@@ -5,7 +5,7 @@ export function BuyFollowersButton({ text }: { text?: string }) {
         <>
             <Link
                 href={'#comprar-agora'}
-                className="button mx-auto mt-14"
+                className="button max-[400px]:py-4 mx-auto mt-14"
             >
                 Comprar Seguidores Agora!
             </Link>

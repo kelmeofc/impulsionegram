@@ -84,7 +84,7 @@ export function SimpleSlider({
                     </CarouselContent>
                 </Carousel>
 
-                <div className="flex items-center justify-center gap-1 mt-6 max-[550px]:mt-1">
+                <div className="flex items-center justify-center gap-1 mt-6 max-[550px]:mt-5">
                     {Array.from({ length: count }).map((i: any, index) => {
                         return (
                             <span key={index} className="block w-3 h-3 bg-[#F9BF10] opacity-50 rounded-full" style={{
