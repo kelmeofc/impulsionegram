@@ -7,7 +7,7 @@ class ChatwootWidget extends React.Component {
     window.chatwootSettings = {
       hideMessageBubble: false,
       position: "right", // This can be left or right
-      locale: "pt-br", // Language to be set
+      locale: "pt-BE", // Language to be set
       type: "standard", // [standard, expanded_bubble]
     };
 
@@ -23,7 +23,7 @@ class ChatwootWidget extends React.Component {
       g.async = true;
       g.onload = function () {
         window.chatwootSDK.run({
-          websiteToken: "GTM-NM5H6G4",
+          websiteToken: "ejbByTyfqjsdJB78KjKj2M3Y",
           baseUrl: BASE_URL,
         });
       };

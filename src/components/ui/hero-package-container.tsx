@@ -27,10 +27,12 @@ export function HeroPackageContainer({
                             R$
                             <span
                                 className="text-4xl font-bold text-[#1A002D] leading-[1]"
-                            >{productPackage.price}</span>
-                            <span
-                                className="text-[#FF0000] line-through"
-                            >R${productPackage.promo_price}</span>
+                            >{productPackage.price % 1 == 0 ? productPackage.price : productPackage.price.toFixed(2)}</span>
+                            {productPackage.promo_price > 0 && (
+                                <span
+                                    className="text-[#FF0000] line-through opacity-60"
+                                >R${productPackage.promo_price % 1 == 0 ? productPackage.promo_price : productPackage.promo_price.toFixed(2)}</span>
+                            )}
                         </p>
                     ) || (
                             <HeroPriceSkeleton />

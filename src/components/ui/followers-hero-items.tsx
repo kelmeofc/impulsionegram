@@ -7,13 +7,13 @@ import { CheckoutDialog } from "./checkout-dialog";
 
 export function FollowersHeroItems() {
     const packages: { payment_id: string, card_id: string, title: string, followers: string, bonus: string, price: number, promo_price: number }[] = [{
-        payment_id: '10179',
-        card_id: 'DXP177580',
-        title: 'Premium',
-        followers: '2.500',
-        bonus: '1.500',
-        price: 127,
-        promo_price: 235
+        payment_id: '535706',
+        card_id: 'DRM287523',
+        title: 'Piloto',
+        followers: '100',
+        bonus: '50',
+        price: 7.90,
+        promo_price: 0
     }, {
         payment_id: '376129',
         card_id: 'DLZ243515',
@@ -38,6 +38,14 @@ export function FollowersHeroItems() {
         bonus: '750',
         price: 69,
         promo_price: 94
+    }, {
+        payment_id: '10179',
+        card_id: 'DXP177580',
+        title: 'Premium',
+        followers: '2.500',
+        bonus: '1.500',
+        price: 127,
+        promo_price: 235
     }, {
         payment_id: '10180',
         card_id: 'DDT177581',
@@ -159,10 +167,12 @@ export function FollowersHeroItems() {
                                             R$
                                             <span
                                                 className="text-2xl font-bold text-[#1A002D] leading-[1]"
-                                            >{_package.price}</span>
-                                            <span
-                                                className="text-[#FF0000] line-through opacity-60"
-                                            >R${_package.promo_price}</span>
+                                            >{_package.price % 1 == 0 ? _package.price : _package.price.toFixed(2)}</span>
+                                            {_package.promo_price > 0 && (
+                                                <span
+                                                    className="text-[#FF0000] line-through opacity-60"
+                                                >R${_package.promo_price % 1 == 0 ? _package.promo_price : _package.promo_price.toFixed(2)}</span>
+                                            )}
                                         </p>
 
                                         <p className="text-[#B2ACB6] text-sm font-medium mt-3 flex gap-2 items-center text-center">3x de R$ {(_package.price / 3).toFixed(2)} sem juros no cartão</p>

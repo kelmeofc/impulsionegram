@@ -14,6 +14,7 @@ import { PackagesSlider } from "@/components/sections/packages-slider";
 
 import { DepoimentosSection } from "@/components/sections/depoimentos";
 
+import Script from "next/script";
 import { SimpleSlider } from "@/components/sections/simple-slider";
 import { CommentSliderItem } from "@/components/ui/comment-slider-item";
 import { ActionBar } from "@/components/ui/action-bar";
@@ -875,7 +876,7 @@ export default function Home() {
               <p>
                 Ainda em dúvidas? Faça um teste grátis com 25 seguidores! É
                 muito fácil, basta acessar o link: <Link href={'https://www.impulsionegram.com.br/comprar-seguidores-teste-gratis/'}>comprar seguidores teste
-                grátis.</Link>
+                  grátis.</Link>
               </p>
               <p>
                 Mais do que isso, vai ser possível confiar que a compra desses
@@ -908,13 +909,13 @@ export default function Home() {
           <ActionBar
             items={[
               {
-                payment_id: "10179",
-                card_id: "DXP177580",
-                label: "Premium",
-                amount: "2.500",
-                subtitle: "+ 1.500 cutidas bônus",
-                price: 127,
-                promo_price: 235,
+                payment_id: '535706',
+                card_id: 'DRM287523',
+                label: 'Piloto',
+                subtitle: "+ 50 cutidas bônus",
+                amount: '100',
+                price: 7.90,
+                promo_price: 0
               },
               {
                 payment_id: "376129",
@@ -942,6 +943,15 @@ export default function Home() {
                 subtitle: "+ 750 cutidas bônus",
                 price: 69,
                 promo_price: 94,
+              },
+              {
+                payment_id: "10179",
+                card_id: "DXP177580",
+                label: "Premium",
+                amount: "2.500",
+                subtitle: "+ 1.500 cutidas bônus",
+                price: 127,
+                promo_price: 235,
               },
               {
                 payment_id: "10180",
@@ -1001,6 +1011,7 @@ export default function Home() {
           />
           <ArticlesSection />
           <BannerAdsSection buttonText="Comprar Seguidores Agora!" />
+
         </ProviderLayout>
       </AppLayoutFragment>
     </div>
