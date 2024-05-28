@@ -9,16 +9,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Crescer no Instagram é difícil e demorado? Não mais!',
     description: 'O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques.',
-    url: 'impulsionegram.vercel.app',
+    url: 'https://impulsionegram.com.br',
     siteName: 'ImpulsioneGram',
     images: [
       {
-        url: 'https://impulsionegram.vercel.app/images/seo/opengraph-image.jpeg',
+        url: 'https://impulsionegram.com.br/images/seo/opengraph-image.jpeg',
         width: 1000,
         height: 500,
       },
       {
-        url: 'https://impulsionegram.vercel.app/images/seo/opengraph-image.jpeg',
+        url: 'https://impulsionegram.com.br/images/seo/opengraph-image.jpeg',
         width: 1000,
         height: 500,
       },
@@ -33,7 +33,7 @@ export default function SeoLayoutFragment({ children }: ILayoutFragmentProps) {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: "Comprar Seguidores, Curtidas, Visualizações e Comentários no Instagram",
-    image: "https://impulsionegram.vercel.app/icon.png",
+    image: "https://impulsionegram.com.br/icon.png",
     description:
       "Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores, curtidas, visualizações e comentários, reais e brasileiros, para crescer seu perfil em poucos cliques",
     brand: {

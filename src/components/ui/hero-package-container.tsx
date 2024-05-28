@@ -15,7 +15,7 @@ export function HeroPackageContainer({
     const { productPackage } = usePackageContext() as any;
 
     return (
-        <div className="w-full p-10 max-[450px]:p-4 bg-white rounded-[50px] h-fit">
+        <div className="w-full p-5 max-[450px]:p-4 bg-white rounded-[50px] h-fit">
             <ul className="grid grid-cols-4 gap-4 max-[1350px]:grid-cols-5 max-[1050px]:grid-cols-4 max-[900px]:grid-cols-3 max-[670px]:grid-cols-2 max-[400px]:grid-cols-1">
                 {children}
             </ul>

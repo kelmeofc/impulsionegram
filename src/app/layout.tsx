@@ -4,7 +4,6 @@ import { Header } from "@/components/ui/header";
 import Head from "next/head";
 import SeoLayoutFragment from "@/layouts/seo.layout";
 import { GoogleTagManager } from "@next/third-parties/google";
-import  ChatwootWidget  from "@/components/ui/chatwoot-widget";
 
 export default function RootLayout({
   children,
@@ -71,7 +70,7 @@ export default function RootLayout({
 				</Head>
 
 				<GoogleTagManager
-					gtmId="GTM-NWSMZ9PG"
+					gtmId="GTM-NM5H6G4"
 				/>
 
 				<body>{children}</body>

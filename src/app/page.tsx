@@ -7,8 +7,6 @@ import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { InformativeBlogSection } from "@/components/sections/informative-blog";
 import AppLayoutFragment from "@/layouts/app.layout";
 
-import ChatwootWidget from "../components/ui/chatwoot-widget";
-
 import type { Metadata } from "next";
 import { PackagesSlider } from "@/components/sections/packages-slider";
 
@@ -25,7 +23,7 @@ import { ProviderLayout } from "@/layouts/provider.layout";
 import { FaqSection } from "@/components/sections/faq";
 import { BannerAdsSection } from "@/components/sections/banner-ads";
 import Link from "next/link";
-import ChatwootNextScript from "../components/ui/chatwoot-widget";
+import { ChatwootWidget } from "@/components/ui/chatwoot-widget";
 
 export const metadata: Metadata = {
 	title: "Comprar Seguidores Instagram | Reais Brasileiros [2024]",
@@ -361,19 +359,7 @@ export default function Home() {
 					</p>
 
 					<p>
-						Diversos influencers e empresas utilizam da compra de seguidores
-						para impulsionar suas outras plataformas digitais, como o{" "}
-						<Link href={"https://tecnoblog.net/responde/o-que-e-tiktok/"}>
-							TikTok
-						</Link>
-						,{" "}
-						<Link href={"https://canaltech.com.br/empresa/youtube/"}>
-							Youtube
-						</Link>{" "}
-						e{" "}
-						<Link href={"https://pt.wikipedia.org/wiki/Twitter/"}>Twitter</Link>{" "}
-						aumentando de forma rápida a visibilidade dos perfis em todas essas
-						ferramentas.
+						Diversos influencers e empresas utilizam da compra de seguidores para impulsionar suas outras plataformas digitais, como o <Link href={"https://tecnoblog.net/responde/o-que-e-tiktok/"}>TikTok</Link>, <Link href={"https://canaltech.com.br/empresa/youtube/"}>Youtube</Link> e <Link href={"https://pt.wikipedia.org/wiki/Twitter/"}>Twitter</Link> aumentando de forma rápida a visibilidade dos perfis em todas essas ferramentas.
 					</p>
 				</>
 			),
@@ -1018,128 +1004,121 @@ export default function Home() {
 	];
 
 	return (
-		<div className="flex flex-col gap-96">
-			<AppLayoutFragment>
-				<ProviderLayout>
-					<HeroSection
-						title="Comprar Seguidores no Instagram Reais e Brasileiros"
-						description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
-					>
-						<FollowersHeroItems />
-					</HeroSection>
-					<AdvantagesSection advantages={advantages} />
-					<DepoimentosSection />
-					<ActionBar
-						items={[
-							{
-								payment_id: "535706",
-								card_id: "DRM287523",
-								label: "Piloto",
-								subtitle: "+ 50 cutidas bônus",
-								amount: "100",
-								price: 7.9,
-								promo_price: 0,
-							},
-							{
-								payment_id: "376129",
-								card_id: "DLZ243515",
-								label: "Essencial",
-								amount: "250",
-								subtitle: "+ 100 cutidas bônus",
-								price: 19,
-								promo_price: 27,
-							},
-							{
-								payment_id: "10176",
-								card_id: "DKS177578",
-								label: "Iniciante",
-								amount: "500",
-								subtitle: "+ 250 cutidas bônus",
-								price: 37,
-								promo_price: 47,
-							},
-							{
-								payment_id: "10177",
-								card_id: "DAG177579",
-								label: "Básico",
-								amount: "1.000",
-								subtitle: "+ 750 cutidas bônus",
-								price: 69,
-								promo_price: 94,
-							},
-							{
-								payment_id: "10179",
-								card_id: "DXP177580",
-								label: "Premium",
-								amount: "2.500",
-								subtitle: "+ 1.500 cutidas bônus",
-								price: 127,
-								promo_price: 235,
-							},
-							{
-								payment_id: "10180",
-								card_id: "DDT177581",
-								label: "Profissional",
-								amount: "5.000",
-								subtitle: "+ 3.500 cutidas bônus",
-								price: 247,
-								promo_price: 470,
-							},
-							{
-								payment_id: "10244",
-								card_id: "DXT177583",
-								label: "Elite",
-								amount: "10.000",
-								subtitle: "+ 7.500 cutidas bônus",
-								price: 497,
-								promo_price: 940,
-							},
-							{
-								payment_id: "10179",
-								card_id: "DAS177592",
-								label: "Influencer",
-								amount: "20.000",
-								subtitle: "+ 10.000 cutidas bônus",
-								price: 897,
-								promo_price: 1880,
-							},
-						]}
-					/>
-					<GuaranteeSealSection />
-					<ChatwootNextScript
-						async={true}
-						defer={undefined}
-						token="ejbByTyfqjsdJB78KjKj2M3Y"
-					/>
-					<BuyingProcessSection />
-					<PackagesSlider />
-					<SimpleSlider
-						title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
-						description="Criado por uma equipe de especialistas em redes sociais, o ImpulsioneGram nasceu para transformar a realidade de todos que querem mais visibilidade sem esperar meses para isso!"
-					>
-						{commentSliderItems.map((item, index) => {
-							return (
-								<CommentSliderItem
-									title={item.title}
-									text={item.text}
-									date={item.date}
-									profile={item.profile}
-									rating={item.rating}
-									key={index}
-								/>
-							);
-						})}
-					</SimpleSlider>
-					<HowItWorksSection />
-					<FaqSection />
-					<InformativeBlogSection
-						navigationPanelItems={navigationPanelItems}
-						informativeBlogTopicsItems={informativeBlogTopicsItems}
-					/>
-					<ArticlesSection />
-					<BannerAdsSection buttonText="Comprar Seguidores Agora!" />
-				</ProviderLayout>
-			</AppLayoutFragment>
-		</div>
+		<AppLayoutFragment>
+			<ProviderLayout>
+				<HeroSection
+					title="Comprar Seguidores no Instagram Reais e Brasileiros"
+					description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
+				>
+					<FollowersHeroItems />
+				</HeroSection>
+				<AdvantagesSection advantages={advantages} />
+				<DepoimentosSection />
+				<ActionBar
+					items={[
+						{
+							payment_id: "535706",
+							card_id: "DRM287523",
+							label: "Piloto",
+							subtitle: "+ 50 cutidas bônus",
+							amount: "100",
+							price: 7.9,
+							promo_price: 0,
+						},
+						{
+							payment_id: "376129",
+							card_id: "DLZ243515",
+							label: "Essencial",
+							amount: "250",
+							subtitle: "+ 100 cutidas bônus",
+							price: 19,
+							promo_price: 27,
+						},
+						{
+							payment_id: "10176",
+							card_id: "DKS177578",
+							label: "Iniciante",
+							amount: "500",
+							subtitle: "+ 250 cutidas bônus",
+							price: 37,
+							promo_price: 47,
+						},
+						{
+							payment_id: "10177",
+							card_id: "DAG177579",
+							label: "Básico",
+							amount: "1.000",
+							subtitle: "+ 750 cutidas bônus",
+							price: 69,
+							promo_price: 94,
+						},
+						{
+							payment_id: "10179",
+							card_id: "DXP177580",
+							label: "Premium",
+							amount: "2.500",
+							subtitle: "+ 1.500 cutidas bônus",
+							price: 127,
+							promo_price: 235,
+						},
+						{
+							payment_id: "10180",
+							card_id: "DDT177581",
+							label: "Profissional",
+							amount: "5.000",
+							subtitle: "+ 3.500 cutidas bônus",
+							price: 247,
+							promo_price: 470,
+						},
+						{
+							payment_id: "10244",
+							card_id: "DXT177583",
+							label: "Elite",
+							amount: "10.000",
+							subtitle: "+ 7.500 cutidas bônus",
+							price: 497,
+							promo_price: 940,
+						},
+						{
+							payment_id: "10179",
+							card_id: "DAS177592",
+							label: "Influencer",
+							amount: "20.000",
+							subtitle: "+ 10.000 cutidas bônus",
+							price: 897,
+							promo_price: 1880,
+						},
+					]}
+				/>
+				<GuaranteeSealSection />
+				<BuyingProcessSection />
+				<PackagesSlider />
+				<SimpleSlider
+					title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
+					description="Criado por uma equipe de especialistas em redes sociais, o ImpulsioneGram nasceu para transformar a realidade de todos que querem mais visibilidade sem esperar meses para isso!"
+				>
+					{commentSliderItems.map((item, index) => {
+						return (
+							<CommentSliderItem
+								title={item.title}
+								text={item.text}
+								date={item.date}
+								profile={item.profile}
+								rating={item.rating}
+								key={index}
+							/>
+						);
+					})}
+				</SimpleSlider>
+				<HowItWorksSection />
+				<FaqSection />
+				<InformativeBlogSection
+					navigationPanelItems={navigationPanelItems}
+					informativeBlogTopicsItems={informativeBlogTopicsItems}
+				/>
+				<ArticlesSection />
+				<BannerAdsSection buttonText="Comprar Seguidores Agora!" />
+			</ProviderLayout>
+		</AppLayoutFragment>
 	);
 }

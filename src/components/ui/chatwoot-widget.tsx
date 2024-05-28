@@ -1,30 +1,35 @@
 "use client";
 
-import React from "react";
-import Script from "next/script";
+import { useEffect } from "react";
 
-export interface ChatwootNextProps {
-	token: string;
-	async: true | undefined;
-	defer: true | undefined;
-}
-declare global {
-	interface Window {
-		chatwootSDK: any;
-	}
-}
-function ChatwootNextScript(props: ChatwootNextProps) {
-	const { token, ...restProps } = props;
-	const BASE_URL = "https://app.chatwoot.com";
-	const SCRIPT_URL = BASE_URL + "/packs/js/sdk.js";
-	onload = function () {
-		window.chatwootSDK.run({
-			websiteToken: "<your-website-token>",
-			baseUrl: BASE_URL,
-		});
-	};
+export function ChatwootWidget() {
+	useEffect(() => {
+		{
+			window.chatwootSettings = {
+				baseDomain: '.impulsionegram.com.br',
+				hideMessageBubble: false,
+				locale: 'pt_br',
+				type: 'standard'
+			};
 
-	return <Script id="chatwood-script" src={SCRIPT_URL} {...restProps} />;
-}
+			(function (d, t) {
+				var BASE_URL = "https://app.chatwoot.com";
+				var g = d.createElement(t) as any, s = d.getElementsByTagName(t)[0] as any;
+				g.src = BASE_URL + "/packs/js/sdk.js";
+				g.defer = true;
+				g.async = true;
+				s.parentNode.insertBefore(g, s);
+				g.onload = function () {
+					window.chatwootSDK.run({
+						websiteToken: '5kBk14FSYfqc7X8GWnBFxD8t',
+						baseUrl: BASE_URL
+					})
+				}
+			})(document, "script")
+		}
+	})
 
-export default ChatwootNextScript;
+	return (
+		<></>
+	)
+}

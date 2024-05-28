@@ -4,7 +4,7 @@ export function InformativeBlogButton({ text, link }: { text: React.ReactNode, l
     return (
         <Link
             href={link}
-            className="button text-lg px-3 w-full my-6 block max-w-[600px] mx-auto rounded-full"
+            className="button text-lg px-3 w-full my-6 block max-w-[600px] mx-auto rounded-full !text-white"
         >{text}</Link>
     );
 }
