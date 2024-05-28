@@ -492,9 +492,9 @@ export function FollowersHeroItems() {
                                     </div>
 
                                     <ul className="flex flex-col items-center justify-center gap-3 my-2 min-[400px]:hidden">
-                                        {packagesList.map((li) => {
+                                        {packagesList.map((li, index) => {
                                             return (
-                                                <li className="text-[#8E829A] flex gap-2 justify-center max-[400px]:text-[12px] font-medium">
+                                                <li className="text-[#8E829A] flex gap-2 justify-center max-[400px]:text-[12px] font-medium" key={index}>
                                                     {li}
                                                 </li>
                                             );
