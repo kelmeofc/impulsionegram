@@ -1,38 +1,30 @@
-'use client'
+"use client";
+
 import React from "react";
+import Script from "next/script";
 
-class ChatwootWidget extends React.Component {
-  componentDidMount() {
-    // Add Chatwoot Settings
-    window.chatwootSettings = {
-      hideMessageBubble: false,
-      position: "right", // This can be left or right
-      locale: "pt-BE", // Language to be set
-      type: "standard", // [standard, expanded_bubble]
-    };
+export interface ChatwootNextProps {
+	token: string;
+	async: true | undefined;
+	defer: true | undefined;
+}
+declare global {
+	interface Window {
+		chatwootSDK: any;
+	}
+}
+function ChatwootNextScript(props: ChatwootNextProps) {
+	const { token, ...restProps } = props;
+	const BASE_URL = "https://app.chatwoot.com";
+	const SCRIPT_URL = BASE_URL + "/packs/js/sdk.js";
+	onload = function () {
+		window.chatwootSDK.run({
+			websiteToken: "<your-website-token>",
+			baseUrl: BASE_URL,
+		});
+	};
 
-    // Paste the script from inbox settings except the <script> tag
-    (function (d, t) {
-      var BASE_URL = ".";
-      var g = d.createElement(t) as HTMLScriptElement,
-      s = d.getElementsByTagName(t)[0] as HTMLElement | null;
-      g.src = BASE_URL + "/packs/js/sdk.js";
-      if (s) {
-        s.parentNode?.insertBefore(g, s);
-      }
-      g.async = true;
-      g.onload = function () {
-        window.chatwootSDK.run({
-          websiteToken: "ejbByTyfqjsdJB78KjKj2M3Y",
-          baseUrl: BASE_URL,
-        });
-      };
-    })(document, "script");
-  }
-
-  render() {
-    return null;
-  }
+	return <Script id="chatwood-script" src={SCRIPT_URL} {...restProps} />;
 }
 
-export default ChatwootWidget;
+export default ChatwootNextScript;

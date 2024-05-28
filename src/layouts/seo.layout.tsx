@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
-
+import Script from "next/script";
 interface ILayoutFragmentProps {
   children: React.ReactNode;
 }
@@ -184,7 +184,8 @@ export default function SeoLayoutFragment({ children }: ILayoutFragmentProps) {
     <>
     
     {children}
-      <script
+      <Script
+        id="schema-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
