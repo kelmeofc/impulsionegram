@@ -176,9 +176,11 @@ export function ActionBar({ items }: {
                             <span
                                 className="text-4xl font-bold text-[#1A002D] leading-[1]"
                             >{productPackage.price}</span>
-                            <span
-                                className="text-[#FF0000] line-through"
-                            >R${productPackage.promo_price}</span>
+                            {productPackage.promo_price > 0 && (
+                                <span
+                                    className="text-[#FF0000] line-through opacity-60"
+                                >R${productPackage.promo_price % 1 == 0 ? productPackage.promo_price : productPackage.promo_price.toFixed(2)}</span>
+                            )}
                         </p>
 
                         <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(productPackage.price / 3).toFixed(2)} sem juros no cartão</p>

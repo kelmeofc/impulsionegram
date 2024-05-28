@@ -518,7 +518,7 @@ export function FollowersHeroItems() {
 
                                         <CheckoutDialog>
                                             <button
-                                                className="mt-2 py-4 w-full bg-[#4F008E] text-white font-bold block rounded-full bg-[]"
+                                                className={`mt-2 py-4 w-full bg-[#4F008E] text-white font-bold block rounded-full ${_package.best_selling && 'is-glowing is-shaking'}`}
                                             >Comprar Agora</button>
                                         </CheckoutDialog>
                                     </div>
