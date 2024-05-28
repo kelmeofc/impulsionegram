@@ -98,7 +98,7 @@ export function HeroPackageContainer({
 
 
                 <CheckoutDialog>
-                    <button id="comprar-agora" className="w-full block text-[22px] font-bold text-white bg-[#4F008E] py-5 rounded-full max-[900px]:w-full max-[900px]:mt-4">Comprar Agora</button>
+                    <button id="comprar-agora" className="w-full block text-[22px] font-bold text-white bg-[#4F008E] py-5 rounded-full max-[900px]:w-full max-[900px]:mt-4 is-glowing is-shaking">Comprar Agora</button>
                 </CheckoutDialog>
             </div>
         </div >

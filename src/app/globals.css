@@ -216,3 +216,170 @@ details[open="true"] .arrow-icon {
 .woot-widget-bubble {
   z-index: 49 !important;
 }
+
+.is-shaking {
+ -webkit-animation:button-shake 2.5s ease-in-out infinite; 
+   animation:button-shake 2.5s ease-in-out infinite
+}
+
+.is-glowing:before {
+  --glow-size: 12px;
+  --glow-color: rgb(1 205 176);
+  --glow-color-transparent: rgba(255, 244, 0, 0);
+  -webkit-animation: glow 2.5s ease-in-out infinite;
+  animation: glow 2.5s ease-in-out infinite
+}
+
+.btn-signup.is-glowing:before {
+  --glow-color: rgb(252 129 83);
+  --glow-size: 10px
+}
+
+.is-glowing {
+  position: relative;
+  z-index: 1
+}
+
+.is-glowing:before {
+  background: 0 0;
+  border-radius: 9999px;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1
+}
+
+@-webkit-keyframes button-shake {
+  0% {
+    transform: translateZ(0);
+  }
+
+  5% {
+    transform: translate(-1px)
+  }
+
+  10% {
+    transform: translate(3px)
+  }
+
+  15% {
+    transform: translate(-5px)
+  }
+
+  20% {
+    transform: translate(5px)
+  }
+
+  25% {
+    transform: translateZ(0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+@keyframes button-shake {
+  0% {
+    transform: translateZ(0)
+  }
+
+  5% {
+    transform: translate(-1px)
+  }
+
+  10% {
+    transform: translate(3px)
+  }
+
+  15% {
+    transform: translate(-5px)
+  }
+
+  20% {
+    transform: translate(5px)
+  }
+
+  25% {
+    transform: translateZ(0)
+  }
+
+  to {
+    transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 var(--glow-color)
+  }
+
+  50% {
+    box-shadow: 0 0 0 var(--glow-size) var(--glow-color-transparent)
+  }
+
+  70% {
+    box-shadow: 0 0 0 0 var(--glow-color-transparent)
+  }
+
+  to {
+    box-shadow: 0 0 0 0 var(--glow-color-transparent)
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 var(--glow-color)
+  }
+
+  50% {
+    box-shadow: 0 0 0 var(--glow-size) var(--glow-color-transparent)
+  }
+
+  70% {
+    box-shadow: 0 0 0 0 var(--glow-color-transparent)
+  }
+
+  to {
+    box-shadow: 0 0 0 0 var(--glow-color-transparent)
+  }
+}
+
+@-webkit-keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 var(--glow-color)
+  }
+
+  50% {
+    box-shadow: 0 0 0 var(--glow-size) var(--glow-color-transparent)
+  }
+
+  70% {
+    box-shadow: 0 0 0 0 var(--glow-color-transparent)
+  }
+
+  to {
+    box-shadow: 0 0 0 0 var(--glow-color-transparent)
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 var(--glow-color)
+  }
+
+  50% {
+    box-shadow: 0 0 0 var(--glow-size) var(--glow-color-transparent)
+  }
+
+  70% {
+    box-shadow: 0 0 0 0 var(--glow-color-transparent)
+  }
+
+  to {
+    box-shadow: 0 0 0 0 var(--glow-color-transparent)
+  }
+}
