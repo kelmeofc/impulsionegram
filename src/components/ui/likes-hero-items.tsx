@@ -6,6 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { CheckoutDialog } from "./checkout-dialog";
 
 export function LikesHeroItems() {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const packages: { payment_id: string, card_id: string, price: number, promo_price: number, likes: string }[] = [{
         card_id: 'DGZ148559',
         payment_id: '879',
@@ -66,7 +67,7 @@ export function LikesHeroItems() {
             price: packages[0].price,
             promo_price: packages[0].promo_price,
         });
-    }, []);
+    }, [handlePackage, packages]);
 
     return (
         <>

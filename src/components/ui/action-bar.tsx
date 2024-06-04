@@ -82,7 +82,7 @@ export function ActionBar({ items }: {
                 }
             }
         });
-    }, []);
+    }, [items]);
 
     return (
         <div data-action-bar>
