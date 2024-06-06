@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 export function Header() {
     const menu = [{
         text: 'Seguidores',
-        link: '/',
+        link: '/pacotes-seguidores-instagram',
         expanded: false,
     }, {
         text: 'Curtidas',

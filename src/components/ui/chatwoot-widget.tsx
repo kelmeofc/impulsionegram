@@ -5,31 +5,38 @@ import { useEffect } from "react";
 export function ChatwootWidget() {
 	useEffect(() => {
 		{
+			
 			window.chatwootSettings = {
-				baseDomain: '.impulsionegram.com.br',
+				baseDomain: ".impulsionegram.com.br",
 				hideMessageBubble: false,
-				locale: 'pt_br',
-				type: 'standard'
+				locale: "pt_br",
+				type: "standard",
 			};
-
+   		
 			(function (d, t) {
 				var BASE_URL = "https://app.chatwoot.com";
-				var g = d.createElement(t) as any, s = d.getElementsByTagName(t)[0] as any;
+				var g = d.createElement(t) as any,
+					s = d.getElementsByTagName(t)[0] as any;
 				g.src = BASE_URL + "/packs/js/sdk.js";
 				g.defer = true;
 				g.async = true;
 				s.parentNode.insertBefore(g, s);
 				g.onload = function () {
 					window.chatwootSDK.run({
-						websiteToken: '5kBk14FSYfqc7X8GWnBFxD8t',
-						baseUrl: BASE_URL
-					})
-				}
-			})(document, "script")
+						websiteToken: "5kBk14FSYfqc7X8GWnBFxD8t",
+						baseUrl: BASE_URL,
+					});
+				};
+			})(document, "script");
+
+			const widget = document.querySelector("[woot-widget-bubble ]");
+			if (widget) {
+				widget?.classList.add("!z-[1]");
+			}
 		}
 	})
 
 	return (
-		<></>
+		<div className="z-[0]"></div>
 	)
 }

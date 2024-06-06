@@ -271,6 +271,7 @@ export function HeroSection({
 												</span>
 											}
 										>
+											
 											<HeroCounter />
 										</Suspense>
 
