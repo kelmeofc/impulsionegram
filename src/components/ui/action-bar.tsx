@@ -123,11 +123,15 @@ export function ActionBar({
 							<p className="font-medium text-[#8C8096] flex items-start gap-[5px] min-[980px]:hidden">
 								R$
 								<span className="text-4xl font-bold text-[#1A002D] leading-[1]">
-									{selectedPackage.price}
+									{productPackage.price % 1 == 0
+										? productPackage.price
+										: productPackage.price.toFixed(2).replace('.', ',')}
 								</span>
 								{selectedPackage.promo_price !== 0 && (
 									<span className="text-[#FF0000] line-through">
-										R${selectedPackage.promo_price}
+										R${productPackage.promo_price % 1 == 0
+											? productPackage.promo_price
+											: productPackage.promo_price.toFixed(2).replace('.', ',')}
 									</span>
 								)}
 							</p>
@@ -184,9 +188,8 @@ export function ActionBar({
 							<div
 								className="z-[51] relative rounded-full"
 								style={{
-									background: `linear-gradient(90deg,#DFD7F2 ${
-										(packageIndex / (items.length - 1)) * 100
-									}%,#ECE6F9 ${(packageIndex / (items.length - 1)) * 100}%)`,
+									background: `linear-gradient(90deg,#DFD7F2 ${(packageIndex / (items.length - 1)) * 100
+										}%,#ECE6F9 ${(packageIndex / (items.length - 1)) * 100}%)`,
 								}}
 							>
 								<button
@@ -233,20 +236,22 @@ export function ActionBar({
 						<p className="text-xl font-medium text-[#8C8096] flex items-start gap-[5px]">
 							R$
 							<span className="text-4xl font-bold text-[#1A002D] leading-[1]">
-								{productPackage.price}
+								{productPackage.price % 1 == 0
+									? productPackage.price
+									: productPackage.price.toFixed(2).replace('.', ',')}
 							</span>
 							{productPackage.promo_price > 0 && (
 								<span className="text-[#FF0000] line-through opacity-60">
 									R$
 									{productPackage.promo_price % 1 == 0
 										? productPackage.promo_price
-										: productPackage.promo_price.toFixed(2)}
+										: productPackage.promo_price.toFixed(2).replace('.', ',')}
 								</span>
 							)}
 						</p>
 
 						<p className="text-[#B2ACB6] text-base font-medium mt-3">
-							3x de R$ {(productPackage.price / 3).toFixed(2)} sem juros no
+							3x de R$ {(productPackage.price / 3).toFixed(2).replace('.', ',')} sem juros no
 							cartão
 						</p>
 

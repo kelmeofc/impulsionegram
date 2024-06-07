@@ -16,7 +16,7 @@ export function HeroPackageContainer({
 
     return (
         <div className="w-full p-5 max-[450px]:p-4 bg-white rounded-[50px] h-fit">
-            <ul className="grid grid-cols-4 gap-4 max-[1350px]:grid-cols-5 max-[1050px]:grid-cols-4 max-[900px]:grid-cols-3 max-[670px]:grid-cols-2 max-[400px]:grid-cols-1">
+            <ul className="grid grid-cols-4 gap-4 max-[1350px]:grid-cols-5 max-[1050px]:grid-cols-4 max-[900px]:grid-cols-3 max-[670px]:grid-cols-2 max-[400px]:flex max-[400px]:flex-col">
                 {children}
             </ul>
 
@@ -27,11 +27,11 @@ export function HeroPackageContainer({
                             R$
                             <span
                                 className="text-4xl font-bold text-[#1A002D] leading-[1]"
-                            >{productPackage.price % 1 == 0 ? productPackage.price : productPackage.price.toFixed(2)}</span>
+                            >{productPackage.price % 1 == 0 ? productPackage.price : productPackage.price.toFixed(2).replace('.', ',')}</span>
                             {productPackage.promo_price > 0 && (
                                 <span
                                     className="text-[#FF0000] line-through opacity-60"
-                                >R${productPackage.promo_price % 1 == 0 ? productPackage.promo_price : productPackage.promo_price.toFixed(2)}</span>
+                                >R${productPackage.promo_price % 1 == 0 ? productPackage.promo_price : productPackage.promo_price.toFixed(2).replace('.', ',')}</span>
                             )}
                         </p>
                     ) || (
@@ -39,7 +39,7 @@ export function HeroPackageContainer({
                         )}
 
                     {productPackage.price && (
-                        <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(productPackage.price / 3).toFixed(2)}  sem juros no cartão</p>
+                        <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(productPackage.price / 3).toFixed(2).replace('.', ',')}  sem juros no cartão</p>
                     ) || (
                             <p className="text-[#B2ACB6] text-base font-medium mt-3 flex gap-2 items-center">3x de R$ <HeroInstallmentPriceSkeleton />  sem juros no cartão</p>
                         )}

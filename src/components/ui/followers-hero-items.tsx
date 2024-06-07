@@ -6,14 +6,15 @@ import { useContext, useEffect, useState } from "react";
 import { CheckoutDialog } from "./checkout-dialog";
 
 export function FollowersHeroItems() {
-    const packages: { payment_id: string, card_id: string, title: string, followers: string, bonus: string, price: number, promo_price: number, best_selling?: boolean }[] = [{
+    const packages: { payment_id: string, card_id: string, title: string, followers: string, bonus: string, price: number, promo_price: number, best_selling?: boolean, order: number }[] = [{
         payment_id: '535706',
         card_id: 'DRM287523',
         title: 'Piloto',
         followers: '100',
         bonus: '50',
         price: 7.90,
-        promo_price: 0
+        promo_price: 0,
+        order: 2
     }, {
         payment_id: '376129',
         card_id: 'DLZ243515',
@@ -21,7 +22,8 @@ export function FollowersHeroItems() {
         followers: '250',
         bonus: '100',
         price: 19,
-        promo_price: 27
+        promo_price: 27,
+        order: 3
     }, {
         payment_id: '10176',
         card_id: 'DKS177578',
@@ -29,7 +31,8 @@ export function FollowersHeroItems() {
         followers: '500',
         bonus: '250',
         price: 37,
-        promo_price: 47
+        promo_price: 47,
+        order: 4
     }, {
         payment_id: '10177',
         card_id: 'DAG177579',
@@ -38,7 +41,8 @@ export function FollowersHeroItems() {
         bonus: '750',
         price: 69,
         promo_price: 94,
-        best_selling: true
+        best_selling: true,
+        order: 1
     }, {
         payment_id: '10179',
         card_id: 'DXP177580',
@@ -46,7 +50,8 @@ export function FollowersHeroItems() {
         followers: '2.500',
         bonus: '1.500',
         price: 127,
-        promo_price: 235
+        promo_price: 235,
+        order: 5
     }, {
         payment_id: '10180',
         card_id: 'DDT177581',
@@ -54,7 +59,8 @@ export function FollowersHeroItems() {
         followers: '5.000',
         bonus: '3.500',
         price: 247,
-        promo_price: 470
+        promo_price: 470,
+        order: 6
     }, {
         payment_id: '10244',
         card_id: 'DXT177583',
@@ -62,7 +68,8 @@ export function FollowersHeroItems() {
         followers: '10.000',
         bonus: '7.500',
         price: 497,
-        promo_price: 940
+        promo_price: 940,
+        order: 7
     }, {
         payment_id: '10179',
         card_id: 'DAS177592',
@@ -70,7 +77,8 @@ export function FollowersHeroItems() {
         followers: '20.000',
         bonus: '10.000',
         price: 897,
-        promo_price: 1880
+        promo_price: 1880,
+        order: 8
     }];
 
     const packagesList = [(
@@ -421,7 +429,7 @@ export function FollowersHeroItems() {
                     return (
                         <li
                             key={index}
-                            className="relative pt-12 package-hero-item"
+                            className={`relative pt-12 package-hero-item max-[400px]:order-${_package.order}`}
                         >
                             <Link
                                 href="#"
@@ -506,15 +514,15 @@ export function FollowersHeroItems() {
                                             R$
                                             <span
                                                 className="text-2xl font-bold text-[#1A002D] leading-[1]"
-                                            >{_package.price % 1 == 0 ? _package.price : _package.price.toFixed(2)}</span>
+                                            >{_package.price % 1 == 0 ? _package.price : _package.price.toFixed(2).replace('.', ',')}</span>
                                             {_package.promo_price > 0 && (
                                                 <span
                                                     className="text-[#FF0000] line-through opacity-60"
-                                                >R${_package.promo_price % 1 == 0 ? _package.promo_price : _package.promo_price.toFixed(2)}</span>
+                                                >R${_package.promo_price % 1 == 0 ? _package.promo_price : _package.promo_price.toFixed(2).replace('.', ',')}</span>
                                             )}
                                         </p>
 
-                                        <p className="text-[#B2ACB6] text-sm font-medium mt-3 flex gap-2 items-center text-center">3x de R$ {(_package.price / 3).toFixed(2)} sem juros no cartão</p>
+                                        <p className="text-[#B2ACB6] text-sm font-medium mt-3 flex gap-2 items-center text-center">3x de R$ {(_package.price / 3).toFixed(2).replace('.', ',')} sem juros no cartão</p>
 
                                         <CheckoutDialog>
                                             <button

@@ -140,7 +140,7 @@ export function ViewsStoriesInstagramHeroItems() {
                                             >R${_package.promo_price}</span>
                                         </p>
 
-                                        <p className="text-[#B2ACB6] text-sm font-medium mt-3 flex gap-2 items-center text-center">3x de R$ {(_package.price / 3).toFixed(2)} sem juros no cartão</p>
+                                        <p className="text-[#B2ACB6] text-sm font-medium mt-3 flex gap-2 items-center text-center">3x de R$ {(_package.price / 3).toFixed(2).replace('.', ',')} sem juros no cartão</p>
 
                                         <CheckoutDialog>
                                             <button
