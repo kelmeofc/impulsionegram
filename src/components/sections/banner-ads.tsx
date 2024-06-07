@@ -8,7 +8,7 @@ export function BannerAdsSection({
 	return (
 		<section>
 			<div className="container">
-				<div className="flex flex-col justify-center align-middle text-center gap-2 lg:gap-6 w-full lg:bg-[url('/images/bg-banner-ads.png')] bg-cover bg-center  lg:px-24 lg:py-20 py-8 px-6 bg-[#F9BF10] rounded-[30px]">
+				<div className="flex flex-col justify-center align-middle text-center gap-2 lg:gap-6 w-full lg:bg-[url('/images/bg-banner-ads.avif')] bg-cover bg-center  lg:px-24 lg:py-20 py-8 px-6 bg-[#F9BF10] rounded-[30px]">
 					<div className="justify-center">
 						<h2 className="section-title max-w-[830px] m-auto text-center w-auto">
 							Você está pronto para bombar o seu Instagram?

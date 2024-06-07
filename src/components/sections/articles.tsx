@@ -14,7 +14,7 @@ export function ArticlesSection() {
                         author={{
                             name: 'Bruna Dias',
                             photo: {
-                                src: 'images/profile/profile-05.png',
+                                src: 'images/profile/profile-05.avif',
                                 alt: 'Imagem Bruna Dias'
                             },
                         }}
@@ -22,7 +22,7 @@ export function ArticlesSection() {
                             href: 'https://www.impulsionegram.com.br/blog/como-aumentar-visualizacoes-stories/'
                         }}
                         banner={{
-                            src: 'images/archives-banners/archive-01.png',
+                            src: 'images/archives-banners/archive-01.avif',
                             alt: 'Imagem - Como aumentar os views nos stories do insta: 7 truques'
                         }}
                     />
@@ -35,7 +35,7 @@ export function ArticlesSection() {
                             author={{
                                 name: 'Bruna Dias',
                                 photo: {
-                                    src: 'images/profile/profile-05.png',
+                                    src: 'images/profile/profile-05.avif',
                                     alt: 'Imagem Bruna Dias'
                                 },
                             }}
@@ -43,7 +43,7 @@ export function ArticlesSection() {
                                 href: 'https://www.impulsionegram.com.br/blog/marketing-digital-instagram/'
                             }}
                             banner={{
-                                src: 'images/archives-banners/archive-02.png',
+                                src: 'images/archives-banners/archive-02.avif',
                                 alt: 'Imagem - Marketing digital Instagram: Bombe seu perfil em 2023'
                             }}
                         />
@@ -55,7 +55,7 @@ export function ArticlesSection() {
                             author={{
                                 name: 'Bruna Dias',
                                 photo: {
-                                    src: 'images/profile/profile-05.png',
+                                    src: 'images/profile/profile-05.avif',
                                     alt: 'Imagem Bruna Dias'
                                 },
                             }}
@@ -63,7 +63,7 @@ export function ArticlesSection() {
                                 href: 'https://www.impulsionegram.com.br/blog/como-vender-pelo-instagram/'
                             }}
                             banner={{
-                                src: 'images/archives-banners/archive-03.png',
+                                src: 'images/archives-banners/archive-03.avif',
                                 alt: 'Image - Como vender pelo Instagram: conheça 11 táticas comprovadas!'
                             }}
                         />

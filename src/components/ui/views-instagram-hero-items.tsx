@@ -56,15 +56,19 @@ export function ViewsInstagramHeroItems() {
         views: '500.000',
     }];
 
-    const [activePackage, setActivePackage] = useState({ id: 0 });
-    const { handlePackage } = usePackageContext() as any;
+    // const [activePackage, setActivePackage] = useState({ id: 0 });
+    const { productPackage, handlePackage } = usePackageContext() as any;
 
     useEffect(() => {
         handlePackage({
+            index: 0,
             payment_id: packages[0].payment_id,
             card_id: packages[0].card_id,
             price: packages[0].price,
             promo_price: packages[0].promo_price,
+            label: 'Visualizações Reels',
+            amount: packages[0].views,
+            subtitle: ``,
         });
     }, []);
 
@@ -83,41 +87,45 @@ export function ViewsInstagramHeroItems() {
                                 href="#"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    setActivePackage({ id: index });
+                                    // setActivePackage({ id: index });
                                     handlePackage({
+                                        index: index,
                                         payment_id: _package.payment_id,
                                         card_id: _package.card_id,
                                         price: _package.price,
                                         promo_price: _package.promo_price,
+                                        label: 'Visualizações Reels',
+                                        amount: _package.views,
+                                        subtitle: ``,
                                     })
                                 }}
                             >
-                                <span className="w-[80%] p-2 text-[10px] font-semibold text-center hidden best-selling absolute top-[-5px] left-[50%] rounded-full"
+                                <span className={`w-[80%] p-2 text-[10px] font-semibold text-center hidden absolute top-[-5px] left-[50%] rounded-full ${index == 3 ? 'best-selling' : ''}`}
                                     style={{
                                         transform: 'translateX(-50%)',
-                                        background: activePackage.id == index ? '#B352FF' : '#F4F1FF',
-                                        color: activePackage.id == index ? '#ffffff' : '#A8B4C3',
+                                        background: productPackage.index == index ? '#B352FF' : '#F4F1FF',
+                                        color: productPackage.index == index ? '#ffffff' : '#A8B4C3',
                                     }}
                                 >Mais Vendido</span>
 
                                 <div
                                     className="rounded-[30px] overflow-hidden border-[2px] z-[2]"
                                     style={{
-                                        borderColor: activePackage.id == index ? '#4F008E' : '#F0E9FA'
+                                        borderColor: productPackage.index == index ? '#4F008E' : '#F0E9FA'
                                     }}
                                 >
                                     <div
                                         className="w-full flex items-center flex-col text-base font-bold py-7 gap-3"
                                         style={{
-                                            color: activePackage.id == index ? '#ffffff' : '#1A002D',
-                                            backgroundColor: activePackage.id == index ? '#4F008E' : '#F0E9FA',
+                                            color: productPackage.index == index ? '#ffffff' : '#1A002D',
+                                            backgroundColor: productPackage.index == index ? '#4F008E' : '#F0E9FA',
                                         }}
                                     >
                                         <span className="flex items-center gap-2 text-2xl">
                                             <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M14 0.601562C8.93691 0.601562 4.34541 3.37162 0.957336 7.87097C0.680888 8.2396 0.680888 8.75459 0.957336 9.12319C4.34541 13.6279 8.93691 16.398 14 16.398C19.0631 16.398 23.6546 13.6279 27.0427 9.12863C27.3191 8.75999 27.3191 8.24501 27.0427 7.87638C23.6546 3.37162 19.0631 0.601562 14 0.601562ZM14.3632 14.0616C11.0022 14.273 8.22674 11.503 8.43818 8.13661C8.61163 5.3611 10.8613 3.11143 13.6368 2.93798C16.9978 2.72654 19.7733 5.49661 19.5618 8.86299C19.3829 11.6331 17.1333 13.8827 14.3632 14.0616ZM14.1951 11.4921C12.3846 11.606 10.8884 10.1152 11.0077 8.30465C11.0998 6.80846 12.3141 5.5996 13.8103 5.50205C15.6208 5.3882 17.117 6.87895 16.9977 8.68954C16.9002 10.1911 15.6859 11.4 14.1951 11.4921Z"
                                                     style={{
-                                                        fill: activePackage.id == index ? "#ffffff" : '#1A002D',
+                                                        fill: productPackage.index == index ? "#ffffff" : '#1A002D',
                                                     }}
                                                 />
                                             </svg>

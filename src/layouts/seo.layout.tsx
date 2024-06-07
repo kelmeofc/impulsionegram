@@ -33,7 +33,7 @@ export default function SeoLayoutFragment({ children }: ILayoutFragmentProps) {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: "Comprar Seguidores, Curtidas, Visualizações e Comentários no Instagram",
-    image: "https://impulsionegram.com.br/icon.png",
+    image: "https://impulsionegram.com.br/icon.avif",
     description:
       "Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores, curtidas, visualizações e comentários, reais e brasileiros, para crescer seu perfil em poucos cliques",
     brand: {

@@ -8,12 +8,6 @@ import { CheckoutDialog } from "./checkout-dialog";
 export function LikesHeroItems() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const packages: { payment_id: string, card_id: string, price: number, promo_price: number, likes: string }[] = [{
-        card_id: 'DGZ148559',
-        payment_id: '879',
-        price: 67,
-        promo_price: 135,
-        likes: '2.500',
-    }, {
         card_id: 'KAH323273',
         payment_id: '379649',
         price: 17,
@@ -31,6 +25,12 @@ export function LikesHeroItems() {
         price: 37,
         promo_price: 54,
         likes: '1.000',
+    }, {
+        card_id: 'DGZ148559',
+        payment_id: '879',
+        price: 67,
+        promo_price: 135,
+        likes: '2.500',
     }, {
         card_id: 'DJU148560',
         payment_id: '880',
@@ -57,17 +57,21 @@ export function LikesHeroItems() {
         likes: '20.000',
     }];
 
-    const [activePackage, setActivePackage] = useState({ id: 0 });
-    const { handlePackage } = usePackageContext() as any;
+    // const [activePackage, setActivePackage] = useState({ id: 0 });
+    const { productPackage, handlePackage } = usePackageContext() as any;
 
     useEffect(() => {
         handlePackage({
+            index: 0,
             card_id: packages[0].card_id,
             payment_id: packages[0].payment_id,
             price: packages[0].price,
             promo_price: packages[0].promo_price,
+            label: 'Curtidas',
+            amount: packages[0].likes,
+            subtitle: ``,
         });
-    }, [handlePackage, packages]);
+    }, []);
 
     return (
         <>
@@ -84,34 +88,37 @@ export function LikesHeroItems() {
                                 href="#"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    setActivePackage({ id: index })
                                     handlePackage({
+                                        index: index,
                                         card_id: _package.card_id,
                                         payment_id: _package.payment_id,
                                         price: _package.price,
                                         promo_price: _package.promo_price,
+                                        label: 'Curtidas',
+                                        amount: _package.likes,
+                                        subtitle: ``,
                                     })
                                 }}
                             >
-                                <span className="w-[80%] p-2 text-[10px] font-semibold text-center hidden best-selling absolute top-[-5px] left-[50%] rounded-full"
+                                <span className={`w-[80%] p-2 text-[10px] font-semibold text-center hidden absolute top-[-5px] left-[50%] rounded-full ${index == 3 ? 'best-selling' : ''}`}
                                     style={{
                                         transform: 'translateX(-50%)',
-                                        background: activePackage.id == index ? '#B352FF' : '#F4F1FF',
-                                        color: activePackage.id == index ? '#ffffff' : '#A8B4C3',
+                                        background: productPackage.index == index ? '#B352FF' : '#F4F1FF',
+                                        color: productPackage.index == index ? '#ffffff' : '#A8B4C3',
                                     }}
                                 >Mais Vendido</span>
 
                                 <div
                                     className="rounded-[30px] overflow-hidden border-[2px] relative z-[2]"
                                     style={{
-                                        borderColor: activePackage.id == index ? '#4F008E' : '#F0E9FA'
+                                        borderColor: productPackage.index == index ? '#4F008E' : '#F0E9FA'
                                     }}
                                 >
                                     <div
                                         className="w-full flex items-center flex-col text-base font-bold py-7 gap-3"
                                         style={{
-                                            color: activePackage.id == index ? '#ffffff' : '#1A002D',
-                                            backgroundColor: activePackage.id == index ? '#4F008E' : '#F0E9FA',
+                                            color: productPackage.index == index ? '#ffffff' : '#1A002D',
+                                            backgroundColor: productPackage.index == index ? '#4F008E' : '#F0E9FA',
                                         }}
                                     >
                                         <span className="flex items-center gap-2 text-2xl">
@@ -125,7 +132,7 @@ export function LikesHeroItems() {
                                                     d="M9.65634 3.30978L10.5 4.63553L11.3437 3.30978C12.1137 2.09971 13.4765 1.31836 15.0455 1.31836C17.4932 1.31836 19.5 3.32519 19.5 5.7729C19.5 6.83566 19.0076 7.99205 18.1311 9.18722C17.2623 10.372 16.082 11.5047 14.8668 12.4989C13.6564 13.4892 12.4411 14.3182 11.5256 14.9008C11.1114 15.1644 10.7605 15.3763 10.5019 15.5286C10.243 15.3751 9.89157 15.1615 9.47664 14.8959C8.56085 14.3096 7.34508 13.4762 6.13429 12.4828C4.91854 11.4853 3.73771 10.3508 2.86843 9.1674C1.99096 7.97285 1.5 6.82266 1.5 5.7729C1.5 3.32519 3.50683 1.31836 5.95455 1.31836C7.52349 1.31836 8.88629 2.09971 9.65634 3.30978Z"
                                                     stroke="#E71D1B"
                                                     style={{
-                                                        fill: activePackage.id == index ? "#FF0200" : '#ffffff',
+                                                        fill: productPackage.index == index ? "#FF0200" : '#ffffff',
                                                     }}
                                                     stroke-width="2"
                                                 />

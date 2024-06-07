@@ -21,7 +21,7 @@ export function VideoSwiper() {
 		{
 			link: "803570100",
 			content: "Vídeo 01",
-			avatar: "images/avatars/juliana.png",
+			avatar: "images/avatars/juliana.avif",
 			actor: "Juliana Oliveira",
 			username: "@julianaoliveira.br",
 			description: "Seguidores de alta qualidade",
@@ -30,7 +30,7 @@ export function VideoSwiper() {
 		{
 			link: "803582947",
 			content: "Vídeo 02",
-			avatar: "images/avatars/rayssa.png",
+			avatar: "images/avatars/rayssa.avif",
 			actor: "Rayssa Hungria",
 			username: "@rayssahungria",
 			description: "Tenho muito mais visibilidade e clientes!",
@@ -39,7 +39,7 @@ export function VideoSwiper() {
 		{
 			link: "803569955",
 			content: "Vídeo 03",
-			avatar: "images/avatars/giovani.png",
+			avatar: "images/avatars/giovani.avif",
 			actor: "Giovani Teles",
 			username: "@giovanitelesoficial",
 			description: "Meu negócio dobrou de tamanho",
@@ -48,7 +48,7 @@ export function VideoSwiper() {
 		{
 			link: "803582703",
 			content: "Vídeo 04",
-			avatar: "images/avatars/taise.png",
+			avatar: "images/avatars/taise.avif",
 			actor: "Taise",
 			username: "@pravoceunhas",
 			description: "Meu salão de beleza tá bombando",
@@ -57,7 +57,7 @@ export function VideoSwiper() {
 		{
 			link: "803569834",
 			content: "Vídeo 05",
-			avatar: "images/avatars/ana.png",
+			avatar: "images/avatars/ana.avif",
 			actor: "Ana Carolina",
 			username: "@richelly_groomer",
 			description: "Hoje fecho muito mais parcerias",
@@ -66,7 +66,7 @@ export function VideoSwiper() {
 		{
 			link: "833881088",
 			content: "Vídeo 06",
-			avatar: "images/avatars/karin.png",
+			avatar: "images/avatars/karin.avif",
 			actor: "Karin Hermann",
 			username: "@k_herrmann8",
 			description: "Minha presença está muito mais forte!",
@@ -75,7 +75,7 @@ export function VideoSwiper() {
 		{
 			link: "833881036",
 			content: "Vídeo 07",
-			avatar: "images/avatars/luciana.png",
+			avatar: "images/avatars/luciana.avif",
 			actor: "Luciana Sabbag",
 			username: "@nutriluciaespada",
 			description: "Tenho muito mais visibilidade e clientes",

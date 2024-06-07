@@ -1,29 +1,41 @@
-import { AdvantagesSection } from "@/components/sections/advantages";
-import { ArticlesSection } from "@/components/sections/articles";
-import { BuyingProcessSection } from "@/components/sections/buying-process";
-import { GuaranteeSealSection } from "@/components/sections/guarantee-seal";
-import { HeroSection } from "@/components/sections/hero";
-import { HowItWorksSection } from "@/components/sections/how-it-works";
-import { InformativeBlogSection } from "@/components/sections/informative-blog";
+
 import AppLayoutFragment from "@/layouts/app.layout";
 
 import type { Metadata } from "next";
 import { PackagesSlider } from "@/components/sections/packages-slider";
+import dynamic from "next/dynamic";
 
+//Sections 
+import { HeroSection } from "@/components/sections/hero";
+import { AdvantagesSection } from "@/components/sections/advantages";
+import { ArticlesSection } from "@/components/sections/articles";
+import { BuyingProcessSection } from "@/components/sections/buying-process";
+import { GuaranteeSealSection } from "@/components/sections/guarantee-seal";
+import { HowItWorksSection } from "@/components/sections/how-it-works";
+
+import { BannerAdsSection } from "@/components/sections/banner-ads";
 import { DepoimentosSection } from "@/components/sections/depoimentos";
+import { FaqSection } from "@/components/sections/faq";
 
-import Script from "next/script";
+
+
 import { SimpleSlider } from "@/components/sections/simple-slider";
 import { CommentSliderItem } from "@/components/ui/comment-slider-item";
 import { ActionBar } from "@/components/ui/action-bar";
-import { FollowersHeroItems } from "@/components/ui/followers-hero-items";
+import { MostLikedFollowersHeroItems } from "@/components/ui/most-liked-followers-hero-items";
 import { InformativeBlogButton } from "@/components/ui/informative-blog-button";
 import { ITopic } from "@/components/ui/informative-blog-topic";
 import { ProviderLayout } from "@/layouts/provider.layout";
-import { FaqSection } from "@/components/sections/faq";
-import { BannerAdsSection } from "@/components/sections/banner-ads";
+
+
 import Link from "next/link";
 import { ChatwootWidget } from "@/components/ui/chatwoot-widget";
+import { usePackageContext } from "@/providers/package-provider";
+
+const InformativeBlogSection = dynamic(
+  () => import('@/components/sections/informative-blog'),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
 	title: "Comprar Seguidores Instagram | Reais Brasileiros [2024]",
@@ -32,6 +44,9 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+	
+ 
+ 
 	const commentSliderItems = [
 		{
 			title: "Consegui mais parcerias!",
@@ -39,7 +54,7 @@ export default function Home() {
 			text: "Antes era muito difícil conseguir seguidores e parcerias, mas desde o dia que comecei a usar o ImpulsioneGram meu Instagram mudou muito e ganhou mais visibilidade.",
 			rating: 5,
 			profile: {
-				picture: "/images/comments/comment-2.png",
+				picture: "/images/comments/comment-2.avif",
 				name: "Tainá Montenegro",
 				at: "@richelly_groomer",
 			},
@@ -50,7 +65,7 @@ export default function Home() {
 			text: "Trabalho com eventos há bastante tempo e ter encontrado o Impulsionegram foi uma baita ajuda pois consegui tanto mais seguidores, como mais curtidas e comentários nas minhas postagens, agora meu perfil passa a credibilidade que eu mereço para fechar mais e mais parcerias!",
 			rating: 5,
 			profile: {
-				picture: "/images/comments/comment-5.png",
+				picture: "/images/comments/comment-5.avif",
 				name: "Giovani Teles",
 				at: "@giovanitelesoficial",
 			},
@@ -61,7 +76,7 @@ export default function Home() {
 			text: "Antes eu tinha muita dificuldade em conseguir clientes, não bastava ter um feed bonito, com postagens bem produzidas era preciso ter mais curtidas e seguidores. Foi graças a uma indicação que descobri o ImpulsioneGram e finalmente consegui lotar minha agenda mês após mês. Obrigada pela ajuda!",
 			rating: 5,
 			profile: {
-				picture: "/images/comments/comment-6.png",
+				picture: "/images/comments/comment-6.avif",
 				name: "Taise",
 				at: "@pravoceunhas",
 			},
@@ -72,7 +87,7 @@ export default function Home() {
 			text: "Meu Instagram profissional ganhou mais visualizações desde que iniciei esta parceria e venho recebendo mais convites para cursos e palestras desde então graças ao site Impulsionegram.",
 			rating: 5,
 			profile: {
-				picture: "/images/comments/comment-7.png",
+				picture: "/images/comments/comment-7.avif",
 				name: "Letícia Alvares",
 				at: "@letis.alvares",
 			},
@@ -83,7 +98,7 @@ export default function Home() {
 			text: "Fiquei muito satisfeito com o atendimento do ImpulsioneGram e espero que outros usuários possam se beneficiar dos serviços. O atendimento on-line é bem ágil e satisfatório, vale a pena conhecer mais sobre como funciona o ImpulsioneGram para quem precisa das redes sociais, sobretudo no que se refere aos negócios.",
 			rating: 5,
 			profile: {
-				picture: "/images/comments/comment-3.png",
+				picture: "/images/comments/comment-3.avif",
 				name: "Marcelo Sardinha",
 				at: "@eventos__de__ouro",
 			},
@@ -94,7 +109,7 @@ export default function Home() {
 			text: "Como nutricionista, sempre busquei formas de expandir meus serviços e foi aí que eu encontrei o site brasileiro ImpulsioneGram.com.br, consegui com a ajuda do site ganhar mais de 10 mil seguidores!",
 			rating: 5,
 			profile: {
-				picture: "/images/comments/comment-8.png",
+				picture: "/images/comments/comment-8.avif",
 				name: "Luciana Sabbag",
 				at: "@nutriluciaespada",
 			},
@@ -105,7 +120,7 @@ export default function Home() {
 			text: "Sempre precisei de um perfil bombado porque eu trabalho com o Instagram, e isso gastava muito meu tempo, graças ao Impulsionegram.com.br eu consegui mudar esse jogo e eles me entregaram  em questão de minutos mais de 13 mil seguidores, são perfis reais e brasileiros interagindo com meu perfil!",
 			rating: 5,
 			profile: {
-				picture: "/images/comments/comment-9.png",
+				picture: "/images/comments/comment-9.avif",
 				name: "Rayssa Hungria",
 				at: "@rayssahungria",
 			},
@@ -116,7 +131,7 @@ export default function Home() {
 			text: "Achei o Impulsionegram no Google e ali eu vi que o site era famoso, de confiança, que os seguidores eram selecionados, tudo brasileiro com foto de perfil certinho e tal, fora isso eu achei bem barato, então nem pensei 2 vezes, fechei e graças ao trabalho do Impulsionegram eu bombei meu perfil mesmo.",
 			rating: 5,
 			profile: {
-				picture: "/images/comments/comment-10.png",
+				picture: "/images/comments/comment-10.avif",
 				name: "Juliana Oliveira",
 				at: "@julianaoliveira.br",
 			},
@@ -364,7 +379,7 @@ export default function Home() {
 				</>
 			),
 			banner: {
-				path: "/images/blog-banners/banner-01.png",
+				path: "/images/blog-banners/banner-01.avif",
 				alt: "O guia definitivo para comprar seguidores no Instagram em 2023",
 			},
 		},
@@ -465,7 +480,7 @@ export default function Home() {
 				</>
 			),
 			banner: {
-				path: "/images/blog-banners/banner-02.png",
+				path: "/images/blog-banners/banner-02.avif",
 				alt: "Vale a pena comprar seguidores para o Instagram?",
 			},
 			sub_topics: [
@@ -658,7 +673,7 @@ export default function Home() {
 			),
 			banner: {
 				alt: "Como garantir a segurança da sua compra de seguidores do Instagram?",
-				path: "/images/blog-banners/banner_como-garantir-a-seguranca.png",
+				path: "/images/blog-banners/banner_como-garantir-a-seguranca.avif",
 			},
 			sub_topics: [
 				{
@@ -870,7 +885,7 @@ export default function Home() {
 			),
 			banner: {
 				alt: "Como encontrar o melhor site para comprar seguidores com bom custo/benefício e confiáveis?",
-				path: "/images/blog-banners/banner_como-garantir-o-melhor-site.png",
+				path: "/images/blog-banners/banner_como-garantir-o-melhor-site.avif",
 			},
 		},
 		{
@@ -931,7 +946,7 @@ export default function Home() {
 			),
 			banner: {
 				alt: "Como encontrar o melhor site para comprar seguidores com bom custo/benefício e confiáveis?",
-				path: "/images/blog-banners/banner_como-melhorar-o-site.png",
+				path: "/images/blog-banners/banner_como-melhorar-o-site.avif",
 			},
 			sub_topics: [
 				{
@@ -1003,6 +1018,81 @@ export default function Home() {
 		},
 	];
 
+	const packages = [
+		{
+			payment_id: "535706",
+			card_id: "DRM287523",
+			label: "Piloto",
+			subtitle: "+ 50 cutidas bônus",
+			amount: "100",
+			price: 7.9,
+			promo_price: 0,
+		},
+		{
+			payment_id: "376129",
+			card_id: "DLZ243515",
+			label: "Essencial",
+			amount: "250",
+			subtitle: "+ 100 cutidas bônus",
+			price: 19,
+			promo_price: 27,
+		},
+		{
+			payment_id: "10176",
+			card_id: "DKS177578",
+			label: "Iniciante",
+			amount: "500",
+			subtitle: "+ 250 cutidas bônus",
+			price: 37,
+			promo_price: 47,
+		},
+		{
+			payment_id: "10177",
+			card_id: "DAG177579",
+			label: "Básico",
+			amount: "1.000",
+			subtitle: "+ 750 cutidas bônus",
+			price: 69,
+			promo_price: 94,
+		},
+		{
+			payment_id: "10179",
+			card_id: "DXP177580",
+			label: "Premium",
+			amount: "2.500",
+			subtitle: "+ 1.500 cutidas bônus",
+			price: 127,
+			promo_price: 235,
+		},
+		{
+			payment_id: "10180",
+			card_id: "DDT177581",
+			label: "Profissional",
+			amount: "5.000",
+			subtitle: "+ 3.500 cutidas bônus",
+			price: 247,
+			promo_price: 470,
+		},
+		{
+			payment_id: "10244",
+			card_id: "DXT177583",
+			label: "Elite",
+			amount: "10.000",
+			subtitle: "+ 7.500 cutidas bônus",
+			price: 497,
+			promo_price: 940,
+		},
+		{
+			payment_id: "10179",
+			card_id: "DAS177592",
+			label: "Influencer",
+			amount: "20.000",
+			subtitle: "+ 10.000 cutidas bônus",
+			price: 897,
+			promo_price: 1880,
+		},
+	];
+
 	return (
 		<AppLayoutFragment>
 			<ProviderLayout>
@@ -1010,85 +1100,12 @@ export default function Home() {
 					title="Comprar Seguidores no Instagram Reais e Brasileiros"
 					description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
 				>
-					<FollowersHeroItems />
+					<MostLikedFollowersHeroItems />
 				</HeroSection>
 				<AdvantagesSection advantages={advantages} />
 				<DepoimentosSection />
 				<ActionBar
-					items={[
-						{
-							payment_id: "535706",
-							card_id: "DRM287523",
-							label: "Piloto",
-							subtitle: "+ 50 cutidas bônus",
-							amount: "100",
-							price: 7.9,
-							promo_price: 0,
-						},
-						{
-							payment_id: "376129",
-							card_id: "DLZ243515",
-							label: "Essencial",
-							amount: "250",
-							subtitle: "+ 100 cutidas bônus",
-							price: 19,
-							promo_price: 27,
-						},
-						{
-							payment_id: "10176",
-							card_id: "DKS177578",
-							label: "Iniciante",
-							amount: "500",
-							subtitle: "+ 250 cutidas bônus",
-							price: 37,
-							promo_price: 47,
-						},
-						{
-							payment_id: "10177",
-							card_id: "DAG177579",
-							label: "Básico",
-							amount: "1.000",
-							subtitle: "+ 750 cutidas bônus",
-							price: 69,
-							promo_price: 94,
-						},
-						{
-							payment_id: "10179",
-							card_id: "DXP177580",
-							label: "Premium",
-							amount: "2.500",
-							subtitle: "+ 1.500 cutidas bônus",
-							price: 127,
-							promo_price: 235,
-						},
-						{
-							payment_id: "10180",
-							card_id: "DDT177581",
-							label: "Profissional",
-							amount: "5.000",
-							subtitle: "+ 3.500 cutidas bônus",
-							price: 247,
-							promo_price: 470,
-						},
-						{
-							payment_id: "10244",
-							card_id: "DXT177583",
-							label: "Elite",
-							amount: "10.000",
-							subtitle: "+ 7.500 cutidas bônus",
-							price: 497,
-							promo_price: 940,
-						},
-						{
-							payment_id: "10179",
-							card_id: "DAS177592",
-							label: "Influencer",
-							amount: "20.000",
-							subtitle: "+ 10.000 cutidas bônus",
-							price: 897,
-							promo_price: 1880,
-						},
-					]}
+					items={packages}
 				/>
 				<GuaranteeSealSection />
 				<BuyingProcessSection />

@@ -102,7 +102,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_comprar-curtidas-instagram-reais-e-brasileiras-em-2024.png',
+            path: '/images/blog-banners/banner_comprar-curtidas-instagram-reais-e-brasileiras-em-2024.avif',
             alt: 'Comprar Curtidas Instagram Reais e Brasileiras em 2024'
         }
     }, {
@@ -135,7 +135,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_a-compra-de-likes-no-instagram-como-e-que-funciona.png',
+            path: '/images/blog-banners/banner_a-compra-de-likes-no-instagram-como-e-que-funciona.avif',
             alt: 'A compra de likes no Instagram: Como é que funciona?'
         }
     }, {
@@ -210,7 +210,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_por-que-os-clientes-optam-pelo-impulsionegram.png',
+            path: '/images/blog-banners/banner_por-que-os-clientes-optam-pelo-impulsionegram.avif',
             alt: 'Por que os clientes optam pelo Impulsionegram?'
         }
     }, {
@@ -269,7 +269,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_como-essa-pratica-pode-me-ajudar-a-crescer-meu-perfil-do-instagram.png',
+            path: '/images/blog-banners/banner_como-essa-pratica-pode-me-ajudar-a-crescer-meu-perfil-do-instagram.avif',
             alt: 'Como essa prática pode me ajudar a crescer meu perfil do Instagram?'
         }
     }];
@@ -280,6 +280,7 @@ export default function ReelsPackages() {
                 <HeroSection
                     title="Comprar Curtidas no Instagram"
                     description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
+                    banner={false}
                 >
                     <LikesHeroItems></LikesHeroItems>
                 </HeroSection>
@@ -290,14 +291,6 @@ export default function ReelsPackages() {
                 <DepoimentosSection />
                 <ActionBar
                     items={[{
-                        label: 'Curtidas',
-                        amount: '2.500',
-                        subtitle: 'Mais vendido!',
-                        card_id: 'DGZ148559',
-                        payment_id: '879',
-                        price: 67,
-                        promo_price: 135,
-                    }, {
                         label: 'Curtidas',
                         amount: '250',
                         card_id: 'KAH323273',
@@ -318,6 +311,14 @@ export default function ReelsPackages() {
                         payment_id: '877',
                         price: 37,
                         promo_price: 54,
+                    }, {
+                        label: 'Curtidas',
+                        amount: '2.500',
+                        subtitle: 'Mais vendido!',
+                        card_id: 'DGZ148559',
+                        payment_id: '879',
+                        price: 67,
+                        promo_price: 135,
                     }, {
                         label: 'Curtidas',
                         amount: '5.000',

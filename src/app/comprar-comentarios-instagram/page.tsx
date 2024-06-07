@@ -110,7 +110,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_comprar-curtidas-instagram-reais-e-brasileiras-em-2024.png',
+            path: '/images/blog-banners/banner_comprar-curtidas-instagram-reais-e-brasileiras-em-2024.avif',
             alt: 'Comprar Curtidas Instagram Reais e Brasileiras em 2024'
         }
     }, {
@@ -143,7 +143,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_a-compra-de-likes-no-instagram-como-e-que-funciona.png',
+            path: '/images/blog-banners/banner_a-compra-de-likes-no-instagram-como-e-que-funciona.avif',
             alt: 'A compra de likes no Instagram: Como é que funciona?'
         }
     }, {
@@ -218,7 +218,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_por-que-os-clientes-optam-pelo-impulsionegram.png',
+            path: '/images/blog-banners/banner_por-que-os-clientes-optam-pelo-impulsionegram.avif',
             alt: 'Por que os clientes optam pelo Impulsionegram?'
         }
     }, {
@@ -277,7 +277,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_como-essa-pratica-pode-me-ajudar-a-crescer-meu-perfil-do-instagram.png',
+            path: '/images/blog-banners/banner_como-essa-pratica-pode-me-ajudar-a-crescer-meu-perfil-do-instagram.avif',
             alt: 'Como essa prática pode me ajudar a crescer meu perfil do Instagram?'
         }
     }];
@@ -288,6 +288,7 @@ export default function ReelsPackages() {
                 <HeroSection
                     title="Comprar Comentários Personalizados Instagram Reais e Brasileiros em 2023"
                     description="No ImpulsioneGram você pode comprar comentários para Instagram de forma rápida, segura e fácil com apenas alguns cliques. Veja nossas ofertas abaixo!"
+                    banner={false}
                 >
                     <CommentsHeroItems />
                 </HeroSection>
@@ -298,14 +299,6 @@ export default function ReelsPackages() {
                 <DepoimentosSection />
                 <ActionBar
                     items={[{
-                        label: 'Comentários Instagram',
-                        amount: '60',
-                        subtitle: 'Mais vendido!',
-                        payment_id: '172137',
-                        card_id: 'DAQ175817',
-                        price: 77,
-                        promo_price: 108,
-                    }, {
                         label: 'Comentários Instagram',
                         amount: '15',
                         payment_id: '172112',
@@ -319,6 +312,14 @@ export default function ReelsPackages() {
                         card_id: 'DXX175816',
                         price: 47,
                         promo_price: 54,
+                    }, {
+                        label: 'Comentários Instagram',
+                        amount: '60',
+                        subtitle: 'Mais vendido!',
+                        payment_id: '172137',
+                        card_id: 'DAQ175817',
+                        price: 77,
+                        promo_price: 108,
                     }, {
                         label: 'Comentários Instagram',
                         amount: '100',

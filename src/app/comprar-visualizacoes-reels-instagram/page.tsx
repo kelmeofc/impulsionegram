@@ -109,7 +109,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_comprar-curtidas-instagram-reais-e-brasileiras-em-2024.png',
+            path: '/images/blog-banners/banner_comprar-curtidas-instagram-reais-e-brasileiras-em-2024.avif',
             alt: 'Comprar Curtidas Instagram Reais e Brasileiras em 2024'
         }
     }, {
@@ -142,7 +142,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_a-compra-de-likes-no-instagram-como-e-que-funciona.png',
+            path: '/images/blog-banners/banner_a-compra-de-likes-no-instagram-como-e-que-funciona.avif',
             alt: 'A compra de likes no Instagram: Como é que funciona?'
         }
     }, {
@@ -217,7 +217,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_por-que-os-clientes-optam-pelo-impulsionegram.png',
+            path: '/images/blog-banners/banner_por-que-os-clientes-optam-pelo-impulsionegram.avif',
             alt: 'Por que os clientes optam pelo Impulsionegram?'
         }
     }, {
@@ -276,7 +276,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_como-essa-pratica-pode-me-ajudar-a-crescer-meu-perfil-do-instagram.png',
+            path: '/images/blog-banners/banner_como-essa-pratica-pode-me-ajudar-a-crescer-meu-perfil-do-instagram.avif',
             alt: 'Como essa prática pode me ajudar a crescer meu perfil do Instagram?'
         }
     }];
@@ -287,6 +287,7 @@ export default function ReelsPackages() {
                 <HeroSection
                     title="Comprar Visualizações Reels no Instagram"
                     description="No ImpulsioneGram você pode comprar Visualizações para Reels do Instagram de forma rápida, segura e fácil com apenas alguns cliques. Veja nossas ofertas abaixo!"
+                    banner={false}
                 >
                     <ViewsInstagramHeroItems></ViewsInstagramHeroItems>
                 </HeroSection>

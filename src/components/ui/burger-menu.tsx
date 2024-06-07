@@ -35,7 +35,7 @@ export function BurgerMenu() {
         link: '#faq'
     }, {
         content: 'Suporte',
-        link: 'javascript:void(0)',
+        link: '',
         action: "window.$chatwoot.toggle('open');window.$chatwoot.toggleBubbleVisibility('show')",
     }, {
         content: 'Blog',

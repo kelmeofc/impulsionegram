@@ -68,6 +68,7 @@ export default function StoriesPackages() {
                 <HeroSection
                     title="Comprar Visualizações Stories Instagram Rápido e Garantido 2023"
                     description="Compre Visualizações do mundo inteiro para seus Stories e tenha influência global com o Impulsionegram. Compre de forma rápida, segura e fácil com apenas alguns cliques."
+                    banner={false}
                 >
                     <ViewsStoriesInstagramHeroItems></ViewsStoriesInstagramHeroItems>
                 </HeroSection>

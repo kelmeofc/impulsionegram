@@ -25,7 +25,7 @@ export function CheckoutDialog({
                 {children}
             </DialogTrigger>
 
-            <DialogContent className="bg-[#D5B8EC] overflow-auto max-h-[90vh] z-[999]" style={{
+            <DialogContent className="bg-[#D5B8EC] overflow-auto max-h-[95vh] w-[95%] z-[999] p-3 rounded-3xl" style={{
                 scrollbarWidth: 'thin',
                 scrollbarColor: '#5A11AF #D5B8EC',
             }}>
@@ -58,8 +58,8 @@ export function CheckoutDialog({
                 </label>
 
                 {!checked && (
-                    <span className="text-lg text-[#D21919] font-medium max-w-[356px] text-center mx-auto relative">
-                        <svg width="44" height="54" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-[30%] left-[-50px]">
+                    <span className="text-lg text-[#D21919] font-medium px-14 w-full text-center mx-auto relative">
+                        <svg width="44" height="54" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-[30%] left-[0%]">
                             <path d="M15.8762 0.438769L14.2496 1.8238L0.612793 13.98L3.20393 17.5093L12.9338 8.83584L12.6543 11.4949C10.4465 32.501 24.1824 51.2101 43.2866 53.2181L43.7575 48.7377C26.8536 46.9611 14.7755 30.5099 16.729 11.9232L17.0087 9.26187L24.7224 19.771L27.9907 16.8575L17.1793 2.13173L15.8762 0.438769Z" fill="#D21919" />
                         </svg>
 

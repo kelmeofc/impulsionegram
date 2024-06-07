@@ -4,7 +4,7 @@ import { useInView, useMotionValue, useSpring, motion } from "framer-motion";
 export default function HeroCounter({
 	startValue = 8799,
 	endValue = 99999,
-	duration = 3000, // 12 minutes in seconds
+	duration = 30000, // 12 minutes in seconds
 }: {
 	startValue?: number;
 	endValue?: number;

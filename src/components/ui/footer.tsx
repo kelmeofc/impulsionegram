@@ -2,8 +2,8 @@ import Link from "next/link";
 import Logo from "./logo";
 import Image from "next/image";
 
-import ReclameAquiIMG from "/public/images/reclame_aqui.png";
-import Empresa5CIMG from "/public/images/empresa_5_c.png";
+import ReclameAquiIMG from "/public/images/reclame_aqui.avif";
+import Empresa5CIMG from "/public/images/empresa_5_c.avif";
 
 export function Footer() {
   const instagramMenu = [

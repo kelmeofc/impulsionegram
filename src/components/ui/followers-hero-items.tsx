@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { CheckoutDialog } from "./checkout-dialog";
 
 export function FollowersHeroItems() {
-    const packages: { payment_id: string, card_id: string, title: string, followers: string, bonus: string, price: number, promo_price: number, best_selling?: boolean, order: number }[] = [{
+    const packages: { payment_id: string, card_id: string, title: string, followers: string, bonus: string, price: number, promo_price: number, best_selling?: boolean, order?: number }[] = [{
         payment_id: '535706',
         card_id: 'DRM287523',
         title: 'Piloto',
@@ -14,7 +14,6 @@ export function FollowersHeroItems() {
         bonus: '50',
         price: 7.90,
         promo_price: 0,
-        order: 2
     }, {
         payment_id: '376129',
         card_id: 'DLZ243515',
@@ -23,7 +22,6 @@ export function FollowersHeroItems() {
         bonus: '100',
         price: 19,
         promo_price: 27,
-        order: 3
     }, {
         payment_id: '10176',
         card_id: 'DKS177578',
@@ -32,7 +30,6 @@ export function FollowersHeroItems() {
         bonus: '250',
         price: 37,
         promo_price: 47,
-        order: 4
     }, {
         payment_id: '10177',
         card_id: 'DAG177579',
@@ -42,7 +39,7 @@ export function FollowersHeroItems() {
         price: 69,
         promo_price: 94,
         best_selling: true,
-        order: 1
+        order: -1
     }, {
         payment_id: '10179',
         card_id: 'DXP177580',
@@ -51,7 +48,6 @@ export function FollowersHeroItems() {
         bonus: '1.500',
         price: 127,
         promo_price: 235,
-        order: 5
     }, {
         payment_id: '10180',
         card_id: 'DDT177581',
@@ -60,7 +56,6 @@ export function FollowersHeroItems() {
         bonus: '3.500',
         price: 247,
         promo_price: 470,
-        order: 6
     }, {
         payment_id: '10244',
         card_id: 'DXT177583',
@@ -69,7 +64,6 @@ export function FollowersHeroItems() {
         bonus: '7.500',
         price: 497,
         promo_price: 940,
-        order: 7
     }, {
         payment_id: '10179',
         card_id: 'DAS177592',
@@ -78,7 +72,6 @@ export function FollowersHeroItems() {
         bonus: '10.000',
         price: 897,
         promo_price: 1880,
-        order: 8
     }];
 
     const packagesList = [(
@@ -409,15 +402,19 @@ export function FollowersHeroItems() {
         </>
     )]
 
-    const [activePackage, setActivePackage] = useState({ id: '0' })
-    const { handlePackage } = usePackageContext() as any;
+    const { productPackage, handlePackage } = usePackageContext() as any;
+    // const [activePackage, setActivePackage] = useState({ id: productPackage });
 
     useEffect(() => {
         handlePackage({
-            payment_id: packages[0].payment_id,
-            card_id: packages[0].card_id,
-            price: packages[0].price,
-            promo_price: packages[0].promo_price,
+            index: 3,
+            payment_id: packages[3].payment_id,
+            card_id: packages[3].card_id,
+            price: packages[3].price,
+            promo_price: packages[3].promo_price,
+            label: packages[3].title,
+            amount: packages[3].followers,
+            subtitle: `+ ${packages[3].bonus} cutidas bônus`,
         });
     }, []);
 
@@ -429,31 +426,35 @@ export function FollowersHeroItems() {
                     return (
                         <li
                             key={index}
-                            className={`relative pt-12 package-hero-item max-[400px]:order-${_package.order}`}
+                            className={`relative pt-12 package-hero-item max-[400px]:${_package.order ? _package.order : 'order-1'}`}
                         >
                             <Link
                                 href="#"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    setActivePackage({ id: index });
+                                    // setActivePackage({ id: index });
                                     handlePackage({
+                                        index,
                                         payment_id: _package.payment_id,
                                         card_id: _package.card_id,
                                         price: _package.price,
                                         promo_price: _package.promo_price,
+                                        label: _package.title,
+                                        amount: _package.price,
+                                        subtitle: `+ ${_package.bonus} cutidas bônus`,
                                     });
                                 }}
                             >
                                 <div
                                     className="w-full rounded-[30px] pt-1 pb-16 absolute top-[16px] z-[1]"
                                     style={{
-                                        backgroundColor: activePackage.id == index ? '#B352FF' : '#F4F1FF',
+                                        backgroundColor: productPackage.index == index ? '#B352FF' : '#F4F1FF',
                                     }}
                                 >
                                     <span
                                         className="block text-center font-medium"
                                         style={{
-                                            color: activePackage.id == index ? '#ffffff' : '#708898'
+                                            color: productPackage.index == index ? '#ffffff' : '#708898'
                                         }}
                                     >{_package.title}</span>
                                 </div>
@@ -461,26 +462,26 @@ export function FollowersHeroItems() {
                                 <div
                                     className="rounded-[30px] overflow-hidden border-[2px] relative z-[2]"
                                     style={{
-                                        borderColor: activePackage.id == index ? '#4F008E' : '#F0E9FA'
+                                        borderColor: productPackage.index == index ? '#4F008E' : '#F0E9FA'
                                     }}
                                 >
                                     <div
                                         className="w-full flex items-center flex-col text-sm font-bold py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-2 max-[400px]:text-xl"
                                         style={{
-                                            color: activePackage.id == index ? '#ffffff' : '#1A002D',
-                                            backgroundColor: activePackage.id == index ? '#4F008E' : '#F0E9FA',
+                                            color: productPackage.index == index ? '#ffffff' : '#1A002D',
+                                            backgroundColor: productPackage.index == index ? '#4F008E' : '#F0E9FA',
                                         }}
                                     >
                                         <span className="flex items-center gap-2">
                                             <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fillRule="evenodd" clipRule="evenodd" d="M3.54359 0C1.86266 0 0.5 1.36266 0.5 3.04359V12.2196C0.5 13.9005 1.86266 15.2632 3.54359 15.2632H8.19839L9.67087 17.8136C10.1915 18.7154 11.4932 18.7154 12.0138 17.8136L13.4863 15.2632H17.4564C19.1373 15.2632 20.5 13.9005 20.5 12.2196V3.04359C20.5 1.36266 19.1373 0 17.4564 0H3.54359Z"
                                                     style={{
-                                                        fill: activePackage.id == index ? "#EF6262" : '#EF6262'
+                                                        fill: productPackage.index == index ? "#EF6262" : '#EF6262'
                                                     }}
                                                 />
                                                 <path d="M6.56143 12.3421C6.56143 12.3421 5.76318 12.3421 5.76318 11.5439C5.76318 10.7456 6.56143 8.3509 10.5527 8.3509C14.5439 8.3509 15.3421 10.7456 15.3421 11.5439C15.3421 12.3421 14.5439 12.3421 14.5439 12.3421H6.56143ZM10.5527 7.55266C11.1878 7.55266 11.7969 7.30036 12.246 6.85126C12.6951 6.40215 12.9474 5.79304 12.9474 5.15792C12.9474 4.5228 12.6951 3.91369 12.246 3.46459C11.7969 3.01549 11.1878 2.76318 10.5527 2.76318C9.91753 2.76318 9.30842 3.01549 8.85932 3.46459C8.41022 3.91369 8.15792 4.5228 8.15792 5.15792C8.15792 5.79304 8.41022 6.40215 8.85932 6.85126C9.30842 7.30036 9.91753 7.55266 10.5527 7.55266Z"
                                                     style={{
-                                                        fill: activePackage.id == index ? "#ffffff" : '#ffffff'
+                                                        fill: productPackage.index == index ? "#ffffff" : '#ffffff'
                                                     }}
                                                 />
                                             </svg>
@@ -534,8 +535,8 @@ export function FollowersHeroItems() {
                                     {_package.best_selling && _package.best_selling == true && (
                                         <span className="w-full p-2 text-sm font-light text-center block best-selling"
                                             style={{
-                                                background: activePackage.id == index ? '#f4f1ff' : '#f4f1ff',
-                                                color: activePackage.id == index ? '#8E829A' : '#8E829A',
+                                                background: productPackage.index == index ? '#f4f1ff' : '#f4f1ff',
+                                                color: productPackage.index == index ? '#8E829A' : '#8E829A',
                                             }}
                                         >Mais Vendido 🔥</span>
                                     )}
