@@ -440,7 +440,7 @@ export function MostLikedFollowersHeroItems() {
                                         price: _package.price,
                                         promo_price: _package.promo_price,
                                         label: _package.title,
-                                        amount: _package.price,
+                                        amount: _package.followers,
                                         subtitle: `+ ${_package.bonus} cutidas bônus`,
                                     });
                                 }}

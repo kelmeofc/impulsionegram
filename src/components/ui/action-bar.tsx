@@ -144,7 +144,7 @@ export function ActionBar({
       >
         {/* {items.filter((_item) => _item.card_id == (selectedPackage as any).card_id)[0].promo_price} */}
         <div className="container bg-white rounded-t-2xl px-14 py-5 flex justify-around items-center max-[640px]:flex-col max-[640px]:gap-5">
-          <div className="flex justify-between flex-col gap-3 items-start max-[640px]:flex-row max-[640px]:gap-5 max-[640px]:w-full">
+          <div className="flex justify-between flex-col gap-3 items-start max-[640px]:flex-row max-[640px]:gap-5 max-[640px]:w-full align-middle">
             <div className="max-[640px]:flex max-[640px]:justify-between max-[640px]:w-full max-[640px]:items-center">
               <p className="font-medium text-[#8C8096] flex items-start gap-[5px] min-[980px]:hidden">
                 R$
@@ -190,7 +190,7 @@ export function ActionBar({
               width={114}
               height={38}
               src="/images/avatars.avif"
-              className="w-auto max-w-[114px] sm:h-[28px] min-[400px]:h-[18px] h-[12px] "
+              className="w-auto max-w-[114px] sm:h-[28px] sm:flex min-[400px]:h-[18px] h-[12px] hidden "
             />
 
             <p className="min-[580px]:w-[190px] max-[640px]:hidden">

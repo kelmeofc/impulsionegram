@@ -6,38 +6,34 @@ import { useContext, useEffect, useState } from "react";
 import { CheckoutDialog } from "./checkout-dialog";
 
 export function FollowersHeroItems() {
-    const packages: { payment_id: string, card_id: string, title: string, followers: string, bonus: string, price: number, promo_price: number, best_selling?: boolean, order?: number }[] = [{
-        payment_id: '535706',
-        card_id: 'DRM287523',
+    const packages: { payment_id: string, card_id: string, title: string, followers: string, price: number, promo_price: number, best_selling?: boolean, order?: number }[] = [{
+        payment_id: '427111',
+        card_id: 'DUB260303',
         title: 'Piloto',
         followers: '100',
-        bonus: '50',
-        price: 7.90,
+        price: 7,
         promo_price: 0,
     }, {
-        payment_id: '376129',
-        card_id: 'DLZ243515',
+        payment_id: '371292',
+        card_id: 'DQV241089',
         title: 'Essencial',
         followers: '250',
-        bonus: '100',
-        price: 19,
-        promo_price: 27,
+        price: 17,
+        promo_price: 32 ,
     }, {
-        payment_id: '10176',
-        card_id: 'DKS177578',
+        payment_id: '1916',
+        card_id: 'DUX148619',
         title: 'Iniciante',
         followers: '500',
-        bonus: '250',
-        price: 37,
-        promo_price: 47,
+        price: 27,
+        promo_price: 44,
     }, {
-        payment_id: '10177',
-        card_id: 'DAG177579',
+        payment_id: '1919',
+        card_id: 'DXT148624',
         title: 'Básico',
         followers: '1.000',
-        bonus: '750',
-        price: 69,
-        promo_price: 94,
+        price: 49,
+        promo_price: 85,
         best_selling: true,
         order: -1
     }, {
@@ -45,33 +41,29 @@ export function FollowersHeroItems() {
         card_id: 'DXP177580',
         title: 'Premium',
         followers: '2.500',
-        bonus: '1.500',
-        price: 127,
-        promo_price: 235,
+        price: 117,
+        promo_price: 220,
     }, {
-        payment_id: '10180',
-        card_id: 'DDT177581',
+        payment_id: '1920',
+        card_id: 'DTY148626',
         title: 'Profissional',
         followers: '5.000',
-        bonus: '3.500',
-        price: 247,
-        promo_price: 470,
+        price: 227,
+        promo_price: 440,
     }, {
-        payment_id: '10244',
-        card_id: 'DXT177583',
+        payment_id: '1936',
+        card_id: 'DQJ148635',
         title: 'Elite',
         followers: '10.000',
-        bonus: '7.500',
-        price: 497,
-        promo_price: 940,
+        price: 427,
+        promo_price: 880,
     }, {
-        payment_id: '10179',
-        card_id: 'DAS177592',
+        payment_id: '1937',
+        card_id: 'DWZ148636',
         title: 'Influencer',
         followers: '20.000',
-        bonus: '10.000',
-        price: 897,
-        promo_price: 1880,
+        price: 797,
+        promo_price: 1760,
     }];
 
     const packagesList = [(
@@ -414,7 +406,7 @@ export function FollowersHeroItems() {
             promo_price: packages[3].promo_price,
             label: packages[3].title,
             amount: packages[3].followers,
-            subtitle: `+ ${packages[3].bonus} cutidas bônus`,
+            subtitle: ``,
         });
     }, []);
 
@@ -440,8 +432,8 @@ export function FollowersHeroItems() {
                                         price: _package.price,
                                         promo_price: _package.promo_price,
                                         label: _package.title,
-                                        amount: _package.price,
-                                        subtitle: `+ ${_package.bonus} cutidas bônus`,
+                                        amount: _package.followers,
+                                        subtitle: ``,
                                     });
                                 }}
                             >
@@ -466,7 +458,7 @@ export function FollowersHeroItems() {
                                     }}
                                 >
                                     <div
-                                        className="w-full flex items-center flex-col text-sm font-bold py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-2 max-[400px]:text-xl"
+                                        className="w-full flex items-center flex-col text-lg font-bold py-6 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-2 max-[400px]:text-xl"
                                         style={{
                                             color: productPackage.index == index ? '#ffffff' : '#1A002D',
                                             backgroundColor: productPackage.index == index ? '#4F008E' : '#F0E9FA',
@@ -491,14 +483,14 @@ export function FollowersHeroItems() {
                                         <p className="font-semibold">Seguidores</p>
                                     </div>
 
-                                    <div className="w-full flex items-center flex-col text-md font-semibold bg-[#ffffff] text-[#1A002D] py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-5">
+                                    {/* <div className="w-full flex items-center flex-col text-md font-semibold bg-[#ffffff] text-[#1A002D] py-4 max-[400px]:flex-row max-[400px]:gap-2 max-[400px]:justify-center max-[400px]:py-5">
                                         <span className="flex items-center gap-2">
                                             <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.1818 1.77295C9.84545 1.77295 8.66818 2.44113 8 3.49113C7.33182 2.44113 6.15455 1.77295 4.81818 1.77295C2.71818 1.77295 1 3.49113 1 5.59113C1 9.37749 8 13.2275 8 13.2275C8 13.2275 15 9.40931 15 5.59113C15 3.49113 13.2818 1.77295 11.1818 1.77295Z" stroke="#EF6262" strokeWidth="1.9" /></svg>
                                             {_package.bonus}
                                         </span>
 
                                         <p className="text-[#8E829A]">Curtidas Bônus</p>
-                                    </div>
+                                    </div> */}
 
                                     <ul className="flex flex-col items-center justify-center gap-3 my-2 min-[400px]:hidden">
                                         {packagesList.map((li, index) => {

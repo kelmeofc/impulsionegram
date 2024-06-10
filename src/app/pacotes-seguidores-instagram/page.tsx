@@ -12,80 +12,73 @@ import AppLayoutFragment from "@/layouts/app.layout";
 import { ProviderLayout } from "@/layouts/provider.layout";
 
 export default function Page() {
-    const packages = [
-        {
-            payment_id: "535706",
-            card_id: "DRM287523",
-            label: "Piloto",
-            subtitle: "+ 50 cutidas bônus",
-            amount: "100",
-            price: 7.9,
-            promo_price: 0,
-        },
-        {
-            payment_id: "376129",
-            card_id: "DLZ243515",
-            label: "Essencial",
-            amount: "250",
-            subtitle: "+ 100 cutidas bônus",
-            price: 19,
-            promo_price: 27,
-        },
-        {
-            payment_id: "10176",
-            card_id: "DKS177578",
-            label: "Iniciante",
-            amount: "500",
-            subtitle: "+ 250 cutidas bônus",
-            price: 37,
-            promo_price: 47,
-        },
-        {
-            payment_id: "10177",
-            card_id: "DAG177579",
-            label: "Básico",
-            amount: "1.000",
-            subtitle: "+ 750 cutidas bônus",
-            price: 69,
-            promo_price: 94,
-        },
-        {
-            payment_id: "10179",
-            card_id: "DXP177580",
-            label: "Premium",
-            amount: "2.500",
-            subtitle: "+ 1.500 cutidas bônus",
-            price: 127,
-            promo_price: 235,
-        },
-        {
-            payment_id: "10180",
-            card_id: "DDT177581",
-            label: "Profissional",
-            amount: "5.000",
-            subtitle: "+ 3.500 cutidas bônus",
-            price: 247,
-            promo_price: 470,
-        },
-        {
-            payment_id: "10244",
-            card_id: "DXT177583",
-            label: "Elite",
-            amount: "10.000",
-            subtitle: "+ 7.500 cutidas bônus",
-            price: 497,
-            promo_price: 940,
-        },
-        {
-            payment_id: "10179",
-            card_id: "DAS177592",
-            label: "Influencer",
-            amount: "20.000",
-            subtitle: "+ 10.000 cutidas bônus",
-            price: 897,
-            promo_price: 1880,
-        },
-    ];
+    const packages: {
+        payment_id: string;
+        card_id: string;
+        label: string;
+        amount: string;
+        promo_price: number;
+        price: number;
+        subtitle?: string;
+    }[] = [{
+                payment_id: '427111',
+                card_id: 'DUB260303',
+                label: 'Piloto',
+                amount: '100',
+                price: 7,
+                promo_price: 0,
+            }, {
+                payment_id: '371292',
+                card_id: 'DQV241089',
+                label: 'Essencial',
+                amount: '250',
+                price: 17,
+                promo_price: 32,
+            }, {
+                payment_id: '1916',
+                card_id: 'DUX148619',
+                label: 'Iniciante',
+                amount: '500',
+                price: 27,
+                promo_price: 44,
+            }, {
+                payment_id: '1919',
+                card_id: 'DXT148624',
+                label: 'Básico',
+                amount: '1.000',
+                price: 49,
+                promo_price: 85,
+                subtitle: 'Mais Vendido!'
+            }, {
+                payment_id: '10179',
+                card_id: 'DXP177580',
+                label: 'Premium',
+                amount: '2.500',
+                price: 117,
+                promo_price: 220,
+            }, {
+                payment_id: '1920',
+                card_id: 'DTY148626',
+                label: 'Profissional',
+                amount: '5.000',
+                price: 227,
+                promo_price: 440,
+            }, {
+                payment_id: '1936',
+                card_id: 'DQJ148635',
+                label: 'Elite',
+                amount: '10.000',
+                price: 427,
+                promo_price: 880,
+            }, {
+                payment_id: '1937',
+                card_id: 'DWZ148636',
+                label: 'Influencer',
+                amount: '20.000',
+                price: 797,
+                promo_price: 1760,
+            }
+        ];
 
     const advantages = [
         {

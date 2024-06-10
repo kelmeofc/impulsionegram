@@ -51,7 +51,7 @@ export function HeroSection({
         <div
           className={`min-[1350px]:max-w-[470px] w-full grid max-[1350px]:grid-cols-[1fr_1fr] max-[1050px]:grid-cols-[1fr] max-[1350px]:gap-7 ${
             !banner
-              ? "h-fit max-[1350px]:grid-cols-[1fr] max-[1350px]:text-center"
+              ? "h-fit max-[1350px]:!grid-cols-[1fr] max-[1350px]:text-center"
               : ""
           }`}
         >

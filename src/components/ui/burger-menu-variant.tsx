@@ -16,6 +16,11 @@ export function BurgerMenu() {
       link: "#como-funciona",
     },
     {
+      content: "Comprar Seguidores",
+      link: "/pacotes-seguidores-instagram",
+      class: "lg:hidden",
+    },
+    {
       content: "Comprar Curtidas",
       link: "/comprar-curtidas-instagram",
       class: "lg:hidden",
