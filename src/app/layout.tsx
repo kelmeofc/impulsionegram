@@ -68,7 +68,7 @@ export default function RootLayout({
 						crossOrigin=""
 					/>
 				</Head>
-
+				
 				<GoogleTagManager
 					gtmId="GTM-NM5H6G4"
 				/>

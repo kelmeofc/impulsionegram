@@ -255,7 +255,7 @@ export function ActionBar({
             </CheckoutDialog>
           </div>
 
-          <div className="max-[980px]:hidden">
+          <div className="max-[980px]:hidden min-[980px]:w-60 ">
             <p className="text-xl font-medium text-[#8C8096] flex items-start gap-[5px]">
               R$
               <span className="text-4xl font-bold text-[#1A002D] leading-[1]">

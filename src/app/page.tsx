@@ -12,7 +12,7 @@ import { ArticlesSection } from "@/components/sections/articles";
 import { BuyingProcessSection } from "@/components/sections/buying-process";
 import { GuaranteeSealSection } from "@/components/sections/guarantee-seal";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
-
+import { InformativeBlogSection } from "@/components/sections/informative-blog"
 import { BannerAdsSection } from "@/components/sections/banner-ads";
 import { DepoimentosSection } from "@/components/sections/depoimentos";
 import { FaqSection } from "@/components/sections/faq";
@@ -32,10 +32,6 @@ import Link from "next/link";
 import { ChatwootWidget } from "@/components/ui/chatwoot-widget";
 import { usePackageContext } from "@/providers/package-provider";
 
-const InformativeBlogSection = dynamic(
-  () => import('@/components/sections/informative-blog'),
-  { ssr: false }
-);
 
 export const metadata: Metadata = {
 	title: "Comprar Seguidores Instagram | Reais Brasileiros [2024]",
@@ -44,9 +40,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-	
- 
- 
+
 	const commentSliderItems = [
 		{
 			title: "Consegui mais parcerias!",

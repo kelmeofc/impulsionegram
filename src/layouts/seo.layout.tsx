@@ -184,6 +184,7 @@ export default function SeoLayoutFragment({ children }: ILayoutFragmentProps) {
     <>
     
     {children}
+
       <Script
         id="schema-data"
         type="application/ld+json"
