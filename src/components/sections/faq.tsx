@@ -83,7 +83,7 @@ export function FaqSection() {
                         <h2 className="max-[1140px]:text-center text-[#1A002D] font-bold text-6xl max-[550px]:text-2xl">FAQ - Perguntas frequentes</h2>
                         <p className="max-[1140px]:text-center mt-7">Estamos aqui para te ajudar e caso você não tenha sanado sua dúvida, você pode entrar em contato com o suporte no botão abaixo:</p>
                         <Link
-                            href={'javascript:void(0)'}
+                            href={''}
                             className="text-2xl max-[1140px]:py-5 py-7 w-full block mt-16 text-center text-[#4F008E] border-[#4F008E] border-[3px] rounded-full font-bold hover:bg-[#4F008E] hover:text-[#ffffff]"
                             onClick={() => {
                                 window.$chatwoot.toggle('open');window.$chatwoot.toggleBubbleVisibility('show')
