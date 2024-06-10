@@ -20,7 +20,7 @@ export function CheckoutDialog({
  
     const { productPackage } = usePackageContext() as any;
 
-   const handleUsernameChange = (event) => {
+   const handleUsernameChange = (event: any) => {
     setUser(event.target.value);
   };
     
