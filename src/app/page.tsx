@@ -12,7 +12,7 @@ import { ArticlesSection } from "@/components/sections/articles";
 import { BuyingProcessSection } from "@/components/sections/buying-process";
 import { GuaranteeSealSection } from "@/components/sections/guarantee-seal";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
-import { InformativeBlogSection } from "@/components/sections/informative-blog"
+
 import { BannerAdsSection } from "@/components/sections/banner-ads";
 import { DepoimentosSection } from "@/components/sections/depoimentos";
 import { FaqSection } from "@/components/sections/faq";
@@ -23,15 +23,31 @@ import { SimpleSlider } from "@/components/sections/simple-slider";
 import { CommentSliderItem } from "@/components/ui/comment-slider-item";
 import { ActionBar } from "@/components/ui/action-bar";
 import { MostLikedFollowersHeroItems } from "@/components/ui/most-liked-followers-hero-items";
-import { InformativeBlogButton } from "@/components/ui/informative-blog-button";
+// Remove the duplicate import statement for InformativeBlogButton
 import { ITopic } from "@/components/ui/informative-blog-topic";
 import { ProviderLayout } from "@/layouts/provider.layout";
 
 
 import Link from "next/link";
-import { ChatwootWidget } from "@/components/ui/chatwoot-widget";
-import { usePackageContext } from "@/providers/package-provider";
 
+
+
+const InformativeBlogSection = dynamic(
+	() =>
+		import("@/components/sections/informative-blog").then(
+			(mod) => mod.InformativeBlogSection
+		),
+	{
+		loading: () => <p>Loading...</p>,
+	}
+);
+
+const InformativeBlogButton = dynamic(
+  () => import('@/components/ui/informative-blog-button').then((mod) => mod.InformativeBlogButton),
+  {
+    loading: () => <p>Loading...</p>,
+  }
+);
 
 export const metadata: Metadata = {
 	title: "Comprar Seguidores Instagram | Reais Brasileiros [2024]",
@@ -1096,6 +1112,7 @@ export default function Home() {
 				>
 					<MostLikedFollowersHeroItems />
 				</HeroSection>
+				
 				<AdvantagesSection advantages={advantages} />
 				<DepoimentosSection />
 				<ActionBar
