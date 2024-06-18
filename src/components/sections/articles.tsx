@@ -22,7 +22,7 @@ export function ArticlesSection() {
                             href: 'https://www.impulsionegram.com.br/blog/como-aumentar-visualizacoes-stories/'
                         }}
                         banner={{
-                            src: 'images/archives-banners/archive-01.avif',
+                            src: '/images/archives-banners/archive-01.avif',
                             alt: 'Imagem - Como aumentar os views nos stories do insta: 7 truques'
                         }}
                     />
@@ -43,7 +43,7 @@ export function ArticlesSection() {
                                 href: 'https://www.impulsionegram.com.br/blog/marketing-digital-instagram/'
                             }}
                             banner={{
-                                src: 'images/archives-banners/archive-02.avif',
+                                src: '/images/archives-banners/archive-02.avif',
                                 alt: 'Imagem - Marketing digital Instagram: Bombe seu perfil em 2023'
                             }}
                         />
@@ -63,7 +63,7 @@ export function ArticlesSection() {
                                 href: 'https://www.impulsionegram.com.br/blog/como-vender-pelo-instagram/'
                             }}
                             banner={{
-                                src: 'images/archives-banners/archive-03.avif',
+                                src: '/images/archives-banners/archive-03.avif',
                                 alt: 'Image - Como vender pelo Instagram: conheça 11 táticas comprovadas!'
                             }}
                         />

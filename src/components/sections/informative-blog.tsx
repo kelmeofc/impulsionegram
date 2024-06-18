@@ -1,5 +1,5 @@
-import { InformativeBlogButton } from "../ui/informative-blog-button";
-import { ITopic, InformativeBlogTopic } from "../ui/informative-blog-topic";
+import { InformativeBlogTopic } from "../ui/informative-blog-topic";
+import dynamic from "next/dynamic";
 import { NavigationPanel } from "../ui/navigation-panel";
 
 export interface ITopics {
@@ -18,6 +18,13 @@ export interface IBlogTopics {
     },
     sub_topics?: IBlogTopics[]
 }
+
+// const NavigationPanel = dynamic(
+//     () => import('../ui/navigation-panel').then((mod) => mod.NavigationPanel),
+//     {
+//         loading: () => <p>Loading...</p>,
+//     }
+// )
 
 export function InformativeBlogSection({
     navigationPanelItems,

@@ -3,6 +3,14 @@
 import Image from "next/image";
 import { Carousel, CarouselApi, CarouselContent, CarouselNext, CarouselPrevious } from "../ui/carousel";
 import React from "react";
+import dynamic from "next/dynamic";
+
+// const Carousel = dynamic(
+//   () => import('../ui/carousel').then((mod) => mod.Carousel),
+//   {
+//     loading: () => <p>Loading...</p>,
+//   }
+// )
 
 export function SimpleSlider({
     title,

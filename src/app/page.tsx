@@ -30,8 +30,6 @@ import { ProviderLayout } from "@/layouts/provider.layout";
 
 import Link from "next/link";
 
-
-
 const InformativeBlogSection = dynamic(
 	() =>
 		import("@/components/sections/informative-blog").then(

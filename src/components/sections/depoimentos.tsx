@@ -1,7 +1,17 @@
 import Star from "@/components/icons/star";
-
-import { VideoSwiper } from "../ui/video-swiper";
+import dynamic from "next/dynamic";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import { Suspense } from "react";
+
+const VideoSwiper = dynamic(
+	() =>
+		import("../ui/video-swiper").then(
+			(mod) => mod.VideoSwiper
+		),
+	{
+		loading: () => <p>Loading...</p>,
+	}
+);
 
 export function DepoimentosSection() {
 	return (
@@ -25,7 +35,10 @@ export function DepoimentosSection() {
 				</div>
 
 				<div className="mt-16 pb-12">
-					<VideoSwiper />
+					<Suspense fallback="loading...">
+						<VideoSwiper />
+					</Suspense>
+					
 				</div>
 			</div>
 		</section >
