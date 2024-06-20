@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: http://impulsionegram.com.br/
+
+User-agent: ia_archiver
+Disallow: /pacotes-seguidores-curtidas.html

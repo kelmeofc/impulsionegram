@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="567" height="337" viewBox="0 0 567 337">
+    <defs>
+        <filter id="a" width="135.7%" height="169.4%" x="-17.9%" y="-34.7%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.96596 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(0 -4)">
+        <ellipse cx="445.297" cy="13.492" fill="#A8AEF0" fill-rule="nonzero" rx="7.5" ry="9.5" transform="rotate(-20 445.297 13.492)"/>
+        <ellipse cx="8.5" cy="170" fill="#FFE7A5" fill-rule="nonzero" rx="8.5" ry="7"/>
+        <text fill="#242424" font-family="AppleColorEmoji, Apple Color Emoji" font-size="32" letter-spacing="-.457">
+            <tspan x="65" y="203">🎉</tspan>
+        </text>
+        <text fill="#242424" font-family="AppleColorEmoji, Apple Color Emoji" font-size="24" letter-spacing="-.343" transform="rotate(-20 77.5 52)">
+            <tspan x="65" y="60">❤️</tspan>
+        </text>
+        <text fill="#242424" font-family="AppleColorEmoji, Apple Color Emoji" font-size="36" letter-spacing="-.514" transform="rotate(10 487.125 323.789)">
+            <tspan x="469.125" y="336.289">🎊</tspan>
+        </text>
+        <ellipse cx="234.5" cy="193.5" fill="#EEEADE" fill-rule="nonzero" filter="url(#a)" rx="16.5" ry="8.5" transform="rotate(-20 234.5 193.5)"/>
+        <ellipse cx="538.309" cy="259.281" fill="#A8AEF0" fill-rule="nonzero" rx="11" ry="8.5" transform="rotate(10 538.309 259.281)"/>
+        <circle cx="434.5" cy="136.5" r="16.5" fill="#FFE7A5" fill-rule="nonzero"/>
+        <ellipse cx="446.045" cy="236.579" fill="#FF7750" fill-rule="nonzero" rx="34" ry="14" transform="rotate(-40 446.045 236.58)"/>
+        <ellipse cx="138.025" cy="264.246" fill="#A8AEF0" fill-rule="nonzero" rx="39" ry="20.5" transform="rotate(30 138.025 264.246)"/>
+        <ellipse cx="148.235" cy="25.187" fill="#3FD8FF" fill-rule="nonzero" rx="14" ry="22.5" transform="rotate(-50 148.235 25.187)"/>
+        <ellipse cx="122.106" cy="119.825" fill="#FF7750" fill-rule="nonzero" rx="16" ry="12.5" transform="rotate(-30 122.106 119.825)"/>
+        <ellipse cx="49.5" cy="101.5" fill="#A8AEF0" fill-rule="nonzero" rx="9.5" ry="7.5" transform="matrix(1 0 0 -1 0 203)"/>
+        <ellipse cx="66.191" cy="330.544" fill="#FFE7A5" fill-rule="nonzero" rx="13.5" ry="9" transform="rotate(-30 66.191 330.544)"/>
+        <text fill="#242424" font-family="AppleColorEmoji, Apple Color Emoji" font-size="30" letter-spacing="-.429" transform="rotate(10 513 167.5)">
+            <tspan x="498" y="178">😻</tspan>
+        </text>
+        <ellipse cx="493.457" cy="69.082" fill="#3FD8FF" fill-rule="nonzero" rx="9.588" ry="23.601" transform="rotate(50 493.457 69.082)"/>
+        <circle cx="556" cy="98" r="11" fill="#FF7750" fill-rule="nonzero"/>
+        <ellipse cx="23.13" cy="259.349" fill="#3FD8FF" fill-rule="nonzero" rx="15.5" ry="7.5" transform="rotate(20 23.13 259.349)"/>
+    </g>
+</svg>

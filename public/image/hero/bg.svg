@@ -1,0 +1,21 @@
+<svg id="组件_48_1" data-name="组件 48 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="735" viewBox="0 0 1920 735">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d968d3"/>
+      <stop offset="1" stop-color="#821dbe"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="矩形_3307" data-name="矩形 3307" width="1920" height="734.092" transform="translate(0 -101.329)" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect id="矩形_3341" data-name="矩形 3341" width="1920" height="735" fill="url(#linear-gradient)"/>
+  <g id="wave" transform="translate(0 101.329)" clip-path="url(#clip-path)">
+    <rect id="矩形_3302" data-name="矩形 3302" width="1920" height="734.092" transform="translate(0 -101.329)" fill="none"/>
+    <path id="路径_19874" data-name="路径 19874" d="M3931.642-656.156s383.636,125.044,572.936,105.432,402.8-101.964,747.214,18.651,334.18-113.088,508.549-36.712S6092.126-310.3,6491.352-334.993s490.3,80.153,759.8,153.624C7392.519-157.561,7525.9-311.826,7755.9-379.333c146.979-43.138,431.951,41.123,544.9,39.665,290.371-3.746,374.494-499.336,513.867-48.7s7.039,1802.527,7.039,1802.527l-4654.055,62.109-277.421-62.109Z" transform="translate(-6374.06 587.559)" opacity="0.07" fill="url(#linear-gradient-2)"/>
+    <path id="路径_19875" data-name="路径 19875" d="M3861.829-423.566S4012.462-701.412,4480.4-648.541c151.611,17.131,311.286,94.853,500.226,113.4,136.38,12.176,250.843-65.756,552.834,17.047s620.364-28.314,823.154-17.047c263.021,14.612,458.622,300.459,723.838,431.072C7279.364-6.1,7405.506-347.327,7656.936-397s246.6,112.465,429.225,94.257S8263.927-436.6,8390.569-488.627s270.231,11.131,414.287,117.8c245.408,181.716,56.081,156.6,68.5,189.727s-37.26,1672.81-37.26,1672.81l-4931.109-18.977L4020.555,203.975Z" transform="translate(-6385.401 563.833)" opacity="0.04" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

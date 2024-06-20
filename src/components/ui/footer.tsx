@@ -2,9 +2,6 @@ import Link from "next/link";
 import Logo from "./logo";
 import Image from "next/image";
 
-import ReclameAquiIMG from "/public/images/reclame_aqui.avif";
-import Empresa5CIMG from "/public/images/empresa_5_c.avif";
-
 export function Footer() {
   const instagramMenu = [
     {
@@ -223,14 +220,18 @@ export function Footer() {
 
           <div className="flex items-center gap-14">
             <Image
-              src={ReclameAquiIMG}
+              src='/public/images/reclame_aqui.avif'
               alt="Selo ótimo reclame aqui"
-              className="w-[125px] max-[400px]:w-[90px]"
+              className="w-[125px] max-[400px]:w-[90px] h-full"
+              width={125}
+              height={40}
             />
             <Image
-              src={Empresa5CIMG}
+              src='/public/images/empresa_5_c.avif'
               alt="Selo empresa 5c"
-              className="w-[160px] max-[400px]:w-[100px]"
+              className="w-[160px] max-[400px]:w-[100px] h-full"
+              width={125}
+              height={40}
             />
           </div>
         </div>
