@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import { PackagesSlider } from "@/components/sections/packages-slider";
 import dynamic from "next/dynamic";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 //Sections 
 import { HeroSection } from "@/components/sections/hero";
 import { AdvantagesSection } from "@/components/sections/advantages";
@@ -17,8 +19,6 @@ import { BannerAdsSection } from "@/components/sections/banner-ads";
 import { DepoimentosSection } from "@/components/sections/depoimentos";
 import { FaqSection } from "@/components/sections/faq";
 
-
-
 import { SimpleSlider } from "@/components/sections/simple-slider";
 import { CommentSliderItem } from "@/components/ui/comment-slider-item";
 import { ActionBar } from "@/components/ui/action-bar";
@@ -26,7 +26,6 @@ import { MostLikedFollowersHeroItems } from "@/components/ui/most-liked-follower
 // Remove the duplicate import statement for InformativeBlogButton
 import { ITopic } from "@/components/ui/informative-blog-topic";
 import { ProviderLayout } from "@/layouts/provider.layout";
-
 
 import Link from "next/link";
 
@@ -41,10 +40,10 @@ const InformativeBlogSection = dynamic(
 );
 
 const InformativeBlogButton = dynamic(
-  () => import('@/components/ui/informative-blog-button').then((mod) => mod.InformativeBlogButton),
-  {
-    loading: () => <p>Loading...</p>,
-  }
+	() => import('@/components/ui/informative-blog-button').then((mod) => mod.InformativeBlogButton),
+	{
+		loading: () => <p>Loading...</p>,
+	}
 );
 
 export const metadata: Metadata = {
@@ -1103,48 +1102,49 @@ export default function Home() {
 
 	return (
 		<AppLayoutFragment>
-			<ProviderLayout>
-				<HeroSection
-					title="Comprar Seguidores no Instagram Reais e Brasileiros"
-					description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
-				>
-					<MostLikedFollowersHeroItems />
-				</HeroSection>
-				
-				<AdvantagesSection advantages={advantages} />
-				<DepoimentosSection />
-				<ActionBar
-					items={packages}
-				/>
-				<GuaranteeSealSection />
-				<BuyingProcessSection />
-				<PackagesSlider />
-				<SimpleSlider
-					title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
-					description="Criado por uma equipe de especialistas em redes sociais, o ImpulsioneGram nasceu para transformar a realidade de todos que querem mais visibilidade sem esperar meses para isso!"
-				>
-					{commentSliderItems.map((item, index) => {
-						return (
-							<CommentSliderItem
-								title={item.title}
-								text={item.text}
-								date={item.date}
-								profile={item.profile}
-								rating={item.rating}
-								key={index}
-							/>
-						);
-					})}
-				</SimpleSlider>
-				<HowItWorksSection />
-				<FaqSection />
-				<InformativeBlogSection
-					navigationPanelItems={navigationPanelItems}
-					informativeBlogTopicsItems={informativeBlogTopicsItems}
-				/>
-				<ArticlesSection />
-				<BannerAdsSection buttonText="Comprar Seguidores Agora!" />
-			</ProviderLayout>
+			<SpeedInsights />
+				<ProviderLayout>
+					<HeroSection
+						title="Comprar Seguidores no Instagram Reais e Brasileiros"
+						description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
+					>
+						<MostLikedFollowersHeroItems />
+					</HeroSection>
+
+					<AdvantagesSection advantages={advantages} />
+					<DepoimentosSection />
+					<ActionBar
+						items={packages}
+					/>
+					<GuaranteeSealSection />
+					<BuyingProcessSection />
+					<PackagesSlider />
+					<SimpleSlider
+						title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
+						description="Criado por uma equipe de especialistas em redes sociais, o ImpulsioneGram nasceu para transformar a realidade de todos que querem mais visibilidade sem esperar meses para isso!"
+					>
+						{commentSliderItems.map((item, index) => {
+							return (
+								<CommentSliderItem
+									title={item.title}
+									text={item.text}
+									date={item.date}
+									profile={item.profile}
+									rating={item.rating}
+									key={index}
+								/>
+							);
+						})}
+					</SimpleSlider>
+					<HowItWorksSection />
+					<FaqSection />
+					<InformativeBlogSection
+						navigationPanelItems={navigationPanelItems}
+						informativeBlogTopicsItems={informativeBlogTopicsItems}
+					/>
+					<ArticlesSection />
+					<BannerAdsSection buttonText="Comprar Seguidores Agora!" />
+				</ProviderLayout>
 		</AppLayoutFragment>
 	);
 }
