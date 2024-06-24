@@ -4,13 +4,14 @@ import { Header } from "@/components/ui/header";
 import Head from "next/head";
 import SeoLayoutFragment from "@/layouts/seo.layout";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
+	return (
 		<html lang="pt-br">
 			<SeoLayoutFragment>
 				<Head>
@@ -68,12 +69,15 @@ export default function RootLayout({
 						crossOrigin=""
 					/>
 				</Head>
-				
+
 				<GoogleTagManager
 					gtmId="GTM-NM5H6G4"
 				/>
 
-				<body>{children}</body>
+				<body>
+					{children}
+					<SpeedInsights />
+				</body>
 			</SeoLayoutFragment>
 		</html>
 	);

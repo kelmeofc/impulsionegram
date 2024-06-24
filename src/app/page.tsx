@@ -5,8 +5,6 @@ import type { Metadata } from "next";
 import { PackagesSlider } from "@/components/sections/packages-slider";
 import dynamic from "next/dynamic";
 
-import { SpeedInsights } from "@vercel/speed-insights/next"
-
 //Sections 
 import { HeroSection } from "@/components/sections/hero";
 import { AdvantagesSection } from "@/components/sections/advantages";
@@ -1102,7 +1100,6 @@ export default function Home() {
 
 	return (
 		<AppLayoutFragment>
-			<SpeedInsights />
 				<ProviderLayout>
 					<HeroSection
 						title="Comprar Seguidores no Instagram Reais e Brasileiros"
