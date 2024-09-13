@@ -31,7 +31,7 @@ export function CheckoutDialog({
 				</DialogTrigger>
 
 				<DialogContent
-					className="bg-[#D5B8EC] overflow-auto max-h-[95vh] w-[95%] z-[999] p-3 rounded-3xl"
+					className="bg-[#D5B8EC] overflow-auto max-h-[95vh] w-[95%] z-[1001] p-3 rounded-3xl"
 					style={{
 						scrollbarWidth: "thin",
 						scrollbarColor: "#5A11AF #D5B8EC",

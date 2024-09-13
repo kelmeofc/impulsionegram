@@ -51,7 +51,7 @@ export function Header() {
     })
 
     return (
-        <header className="bg-white border-b-[0.5px] border-[#C0BAC8] py-5 fixed left-0 right-0 top-0 transition-[.2] z-[900]" data-header>
+        <header className="bg-white border-b-[0.5px] border-[#C0BAC8] py-5 fixed left-0 right-0 top-0 transition-[.2] z-[50]" data-header>
             <div className="container relative flex items-center justify-between">
                 <Logo
                     width="198"

@@ -1,3 +1,6 @@
+'use client'
+
+import { scrollTo } from "@/lib/utils";
 import Link from "next/link"
 
 export function BuyFollowersButton({ text }: { text?: string }) {
@@ -6,6 +9,7 @@ export function BuyFollowersButton({ text }: { text?: string }) {
             <Link
                 href={'#comprar-agora'}
                 className="button max-[400px]:py-4 mx-auto mt-14"
+                onClick={scrollTo}
             >
                 Comprar Seguidores Agora!
             </Link>

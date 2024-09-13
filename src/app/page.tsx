@@ -366,6 +366,7 @@ export default function Home() {
 							href={
 								"https://www.impulsionegram.com.br/blog/instagram-guia-completo/"
 							}
+							target="_blank"
 						>
 							Instagram
 						</Link>
@@ -379,12 +380,12 @@ export default function Home() {
 					</p>
 
 					<p>
-						Diversos influencers e empresas utilizam da compra de seguidores para impulsionar suas outras plataformas digitais, como o <Link href={"https://tecnoblog.net/responde/o-que-e-tiktok/"}>TikTok</Link>, <Link href={"https://canaltech.com.br/empresa/youtube/"}>Youtube</Link> e <Link href={"https://pt.wikipedia.org/wiki/Twitter/"}>Twitter</Link> aumentando de forma rápida a visibilidade dos perfis em todas essas ferramentas.
+						Diversos influencers e empresas utilizam da compra de seguidores para impulsionar suas outras plataformas digitais, como o <Link href={"https://tecnoblog.net/responde/o-que-e-tiktok/"} target="_blank">TikTok</Link>, <Link target="_blank" href={"https://canaltech.com.br/empresa/youtube/"}>Youtube</Link> e <Link target="_blank" href={"https://pt.wikipedia.org/wiki/Twitter/"}>Twitter</Link> aumentando de forma rápida a visibilidade dos perfis em todas essas ferramentas.
 					</p>
 				</>
 			),
 			banner: {
-				path: "/images/blog-banners/banner-01.avif",
+				path: "/images/blog-banners/o-guia-definitivo-para-comprar-seguidores-no-instagram-em-2023.png",
 				alt: "O guia definitivo para comprar seguidores no Instagram em 2023",
 			},
 		},
@@ -485,7 +486,7 @@ export default function Home() {
 				</>
 			),
 			banner: {
-				path: "/images/blog-banners/banner-02.avif",
+				path: "/images/blog-banners/vale-a-pena-comprar-seguidores-para-o-instagram.png",
 				alt: "Vale a pena comprar seguidores para o Instagram?",
 			},
 			sub_topics: [
@@ -513,6 +514,7 @@ export default function Home() {
 									href={
 										"https://www.impulsionegram.com.br/comprar-curtidas-instagram/"
 									}
+									target="_blank"
 								>
 									curtidas
 								</Link>
@@ -610,6 +612,7 @@ export default function Home() {
 									href={
 										"https://www.impulsionegram.com.br/blog/engajamento-instagram/"
 									}
+									target="_blank"
 								>
 									o engajamento
 								</Link>{" "}
@@ -678,7 +681,7 @@ export default function Home() {
 			),
 			banner: {
 				alt: "Como garantir a segurança da sua compra de seguidores do Instagram?",
-				path: "/images/blog-banners/banner_como-garantir-a-seguranca.avif",
+				path: "/images/blog-banners/como-garantir-a-seguranca-da-sua-compra-de-seguidores-do-instagram.png",
 			},
 			sub_topics: [
 				{
@@ -741,6 +744,7 @@ export default function Home() {
 									href={
 										"https://www.impulsionegram.com.br/blog/algoritmo-instagram/"
 									}
+									target="_blank"
 								>
 									identificado pelo algoritmo
 								</Link>
@@ -778,6 +782,7 @@ export default function Home() {
 									href={
 										"https://www.impulsionegram.com.br/blog/impressoes-instagram/"
 									}
+									target="_blank"
 								>
 									Impressões
 								</Link>
@@ -852,18 +857,21 @@ export default function Home() {
 						Sendo assim, você terá mais tempo para conseguir criar conteúdos no
 						<Link
 							href={"https://www.impulsionegram.com.br/blog/close-friends/"}
+							target="_blank"
 						>
 							close friends
 						</Link>
 						,{" "}
 						<Link
 							href={"https://www.impulsionegram.com.br/blog/feed-instagram/"}
+							target="_blank"
 						>
 							feed
 						</Link>
 						,{" "}
 						<Link
 							href={"https://www.impulsionegram.com.br/blog/stories-instagram/"}
+							target="_blank"
 						>
 							stories
 						</Link>
@@ -872,6 +880,7 @@ export default function Home() {
 							href={
 								"https://www.impulsionegram.com.br/blog/como-fazer-reels-no-instagram/"
 							}
+							target="_blank"
 						>
 							reels
 						</Link>{" "}
@@ -880,6 +889,7 @@ export default function Home() {
 							href={
 								"https://www.impulsionegram.com.br/blog/melhores-horarios-postar-instagram/"
 							}
+							target="_blank"
 						>
 							melhores horas do dia
 						</Link>
@@ -890,7 +900,7 @@ export default function Home() {
 			),
 			banner: {
 				alt: "Como encontrar o melhor site para comprar seguidores com bom custo/benefício e confiáveis?",
-				path: "/images/blog-banners/banner_como-garantir-o-melhor-site.avif",
+				path: "/images/blog-banners/como-encontrar-o-melhor-site-para-comprar-seguidores-com-bom-custo.png",
 			},
 		},
 		{
@@ -951,7 +961,7 @@ export default function Home() {
 			),
 			banner: {
 				alt: "Como encontrar o melhor site para comprar seguidores com bom custo/benefício e confiáveis?",
-				path: "/images/blog-banners/banner_como-melhorar-o-site.avif",
+				path: "/images/blog-banners/7-fatores-para-escolher-o-melhor-site-para-comprar-seguires.png",
 			},
 			sub_topics: [
 				{
@@ -968,6 +978,7 @@ export default function Home() {
 								reais e brasileiros, para que você tenha, finalmente, os
 								resultados desejados, como{" "}
 								<Link
+									target="_blank"
 									href={
 										"https://www.impulsionegram.com.br/blog/como-monetizar-instagram/"
 									}
@@ -983,6 +994,7 @@ export default function Home() {
 							<p>
 								Além disso, a{" "}
 								<Link
+									target="_blank"
 									href={
 										"https://www.impulsionegram.com.br/blog/instagram-shopping/"
 									}
@@ -1000,6 +1012,7 @@ export default function Home() {
 								Ainda em dúvidas? Faça um teste grátis com 25 seguidores! É
 								muito fácil, basta acessar o link:{" "}
 								<Link
+									target="_blank"
 									href={
 										"https://www.impulsionegram.com.br/comprar-seguidores-teste-gratis/"
 									}
@@ -1100,48 +1113,47 @@ export default function Home() {
 
 	return (
 		<AppLayoutFragment>
-				<ProviderLayout>
-					<HeroSection
-						title="Comprar Seguidores no Instagram Reais e Brasileiros"
-						description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
-					>
-						<MostLikedFollowersHeroItems />
-					</HeroSection>
-
-					<AdvantagesSection advantages={advantages} />
-					<DepoimentosSection />
-					<ActionBar
-						items={packages}
-					/>
-					<GuaranteeSealSection />
-					<BuyingProcessSection />
-					<PackagesSlider />
-					<SimpleSlider
-						title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
-						description="Criado por uma equipe de especialistas em redes sociais, o ImpulsioneGram nasceu para transformar a realidade de todos que querem mais visibilidade sem esperar meses para isso!"
-					>
-						{commentSliderItems.map((item, index) => {
-							return (
-								<CommentSliderItem
-									title={item.title}
-									text={item.text}
-									date={item.date}
-									profile={item.profile}
-									rating={item.rating}
-									key={index}
-								/>
-							);
-						})}
-					</SimpleSlider>
-					<HowItWorksSection />
-					<FaqSection />
-					<InformativeBlogSection
-						navigationPanelItems={navigationPanelItems}
-						informativeBlogTopicsItems={informativeBlogTopicsItems}
-					/>
-					<ArticlesSection />
-					<BannerAdsSection buttonText="Comprar Seguidores Agora!" />
-				</ProviderLayout>
+			<ProviderLayout>
+				<HeroSection
+					title="Comprar Seguidores no Instagram Reais e Brasileiros"
+					description="Crescer no Instagram é difícil e demorado? Não mais! O ImpulsioneGram é o melhor site para você comprar seguidores reais e brasileiros e crescer seu perfil em poucos cliques."
+				>
+					<MostLikedFollowersHeroItems />
+				</HeroSection>
+				<AdvantagesSection advantages={advantages} />
+				<DepoimentosSection />
+				<ActionBar
+					items={packages}
+				/>
+				<GuaranteeSealSection />
+				<BuyingProcessSection />
+				<PackagesSlider />
+				<SimpleSlider
+					title="Desde 2014 Impulsionando Milhares de Perfis nas Redes Sociais"
+					description="Criado por uma equipe de especialistas em redes sociais, o ImpulsioneGram nasceu para transformar a realidade de todos que querem mais visibilidade sem esperar meses para isso!"
+				>
+					{commentSliderItems.map((item, index) => {
+						return (
+							<CommentSliderItem
+								title={item.title}
+								text={item.text}
+								date={item.date}
+								profile={item.profile}
+								rating={item.rating}
+								key={index}
+							/>
+						);
+					})}
+				</SimpleSlider>
+				<HowItWorksSection />
+				<FaqSection />
+				<InformativeBlogSection
+					navigationPanelItems={navigationPanelItems}
+					informativeBlogTopicsItems={informativeBlogTopicsItems}
+				/>
+				<ArticlesSection />
+				<BannerAdsSection buttonText="Comprar Seguidores Agora!" />
+			</ProviderLayout>
 		</AppLayoutFragment>
 	);
 }

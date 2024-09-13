@@ -1,6 +1,9 @@
+'use client'
+
 import Link from "next/link";
 import { CheckoutDialog } from "../ui/checkout-dialog";
 import { LinkButton } from "../ui/link-button";
+import { scrollTo } from "@/lib/utils";
 
 export function BannerAdsSection({
 	buttonText
@@ -23,9 +26,8 @@ export function BannerAdsSection({
 					<div className="w-full">
 						<Link
 							href={'#precos'}
-							id="comprar-agora"
-
 							className="mx-auto w-fit text-[22px] max-[550px]:text-[13px] font-bold text-white bg-[#4F008E] p-5 px-20 max-[800px]:px-5 rounded-full opacity-[0.8] block"
+							onClick={scrollTo}
 						>
 							{buttonText}
 						</Link>

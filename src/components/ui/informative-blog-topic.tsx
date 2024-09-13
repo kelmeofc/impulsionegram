@@ -21,7 +21,7 @@ export function InformativeBlogTopic({ topic }: { topic: ITopic }) {
 			
 			{topic.banner ? (
 				<Image
-					className="block mt-10 rounded-3xl object-contain"
+					className="block mt-10 rounded-3xl object-contain w-full"
 					width={300}
 					height={300}
 					src={topic.banner?.path}

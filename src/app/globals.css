@@ -213,13 +213,13 @@ details[open="true"] .arrow-icon {
   transition: .3s ease;
 }
 
-.woot-widget-bubble {
-  z-index: 49 !important;
+button.woot-widget-bubble {
+  z-index: 48 !important;
 }
 
 .is-shaking {
- -webkit-animation:button-shake 2.5s ease-in-out infinite; 
-   animation:button-shake 2.5s ease-in-out infinite
+  -webkit-animation: button-shake 2.5s ease-in-out infinite;
+  animation: button-shake 2.5s ease-in-out infinite
 }
 
 .is-glowing:before {
@@ -382,4 +382,10 @@ details[open="true"] .arrow-icon {
   to {
     box-shadow: 0 0 0 0 var(--glow-color-transparent)
   }
+}
+
+.summary {
+  background-image: none;
+  appearance: none;
+  -webkit-appearance: none;
 }

@@ -219,20 +219,24 @@ export function Footer() {
           </span>
 
           <div className="flex items-center gap-14">
-            <Image
-              src='/public/images/reclame_aqui.avif'
-              alt="Selo ótimo reclame aqui"
-              className="w-[125px] max-[400px]:w-[90px] h-full"
-              width={125}
-              height={40}
-            />
-            <Image
-              src='/public/images/empresa_5_c.avif'
-              alt="Selo empresa 5c"
-              className="w-[160px] max-[400px]:w-[100px] h-full"
-              width={125}
-              height={40}
-            />
+            <Link href={'https://www.reclameaqui.com.br/empresa/impulsione-gram/'} target="_blanck">
+              <Image
+                src='/images/reclame_aqui.webp'
+                alt="Selo ótimo reclame aqui"
+                className="w-[125px] max-[400px]:w-[90px] h-fit"
+                width={125}
+                height={40}
+              />
+            </Link>
+            <Link href={'https://www.fundacaosara.org.br/parceiros/'} target="_blanck">
+              <Image
+                src='/images/empresa_5_c.webp'
+                alt="Selo empresa 5c"
+                className="w-[160px] max-[400px]:w-[90px] h-fit"
+                width={125}
+                height={40}
+              />
+            </Link>
           </div>
         </div>
       </div>

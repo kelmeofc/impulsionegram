@@ -52,7 +52,8 @@ export function BurgerMenu() {
     },
     {
       content: "Blog",
-      link: "#blog",
+      link: "https://www.impulsionegram.com.br/blog/",
+      target: "_blank"
     },
   ];
 
@@ -136,6 +137,7 @@ export function BurgerMenu() {
                     }
                     setIsOpen(false);
                   }}
+                  {...li}
                 >
                   {li.content}
                 </Link>

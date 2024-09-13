@@ -3,57 +3,41 @@
 import Image from "next/image";
 import { HeroPackageContainer } from "../ui/hero-package-container";
 import {
-	useContext,
-	createContext,
-	useState,
-	useEffect,
-	Suspense,
+  useContext,
+  createContext,
+  useState,
+  useEffect,
+  Suspense,
 } from "react";
 import HeroCounter from "../ui/hero-counter";
 import dynamic from "next/dynamic";
 
 export function HeroSection({
-	title,
-	description,
-	children,
-	banner = true
+  title,
+  description,
+  children,
+  banner = true
 }: {
-	title: string;
-	description: string;
-	children: React.ReactNode;
-	banner?: boolean
+  title: string;
+  description: string;
+  children: React.ReactNode;
+  banner?: boolean
 }) {
-	const profilePhotos = [
-		"profile-01.avif",
-		"profile-02.avif",
-		"profile-03.avif",
-		"profile-04.avif",
-	];
-	/*
-	useEffect(() => {
-		const ems = document.querySelectorAll('[data-em-index]');
-
-		ems[0].scrollTo({ top: 24 * 7 });
-		ems[1].scrollTo({ top: 24 * 6 });
-
-		setInterval(() => {
-			ems[3].scrollBy({ top: 24 });
-		}, 2000);
-
-		setInterval(() => {
-			ems[2].scrollBy({ top: 24 });
-		}, 16000);
-	});
-*/
-	return (
+  const profilePhotos = [
+    "profile-01.avif",
+    "profile-02.avif",
+    "profile-03.avif",
+    "profile-04.avif",
+  ];
+ 
+  return (
     <section id="precos" className="pt-[72px]">
       <div className="container mt-14 flex gap-9 max-[1350px]:flex-col max-[834px]:mt-11 max-[428px]:mt-[26px]">
         <div
-          className={`min-[1350px]:max-w-[470px] w-full grid max-[1350px]:grid-cols-[1fr_1fr] max-[1050px]:grid-cols-[1fr] max-[1350px]:gap-7 ${
-            !banner
+          className={`min-[1350px]:max-w-[470px] w-full grid max-[1350px]:grid-cols-[1fr_1fr] max-[1050px]:grid-cols-[1fr] max-[1350px]:gap-7 ${!banner
               ? "h-fit max-[1350px]:!grid-cols-[1fr] max-[1350px]:text-center"
               : ""
-          }`}
+            }`}
         >
           <div>
             <h1 className="primary-title max-[1050px]:text-center">{title}</h1>
@@ -305,9 +289,8 @@ export function HeroSection({
               )}
 
               <div
-                className={`flex items-center justify-between max-w-[550px] mx-auto gap-3 ${
-                  !banner ? "mt-4" : ""
-                }`}
+                className={`flex items-center max-[1050px]:justify-center justify-between max-w-[550px] mx-auto gap-3 ${!banner ? "mt-4" : ""
+                  }`}
               >
                 <div className="flex gap-1 max-[400px]:w-[84px]">
                   {[1, 2, 3, 4, 5].map((item, index) => {
@@ -335,7 +318,7 @@ export function HeroSection({
                   width={114}
                   height={38}
                   src="/images/avatars.avif"
-                  className="w-auto max-w-[114px] sm:h-[38px] min-[400px]:h-[28px] h-[18px] "
+                  className="w-auto max-w-[114px] sm:h-[38px] min-[400px]:h-[28px] h-[28px] "
                 />
 
                 <p className="min-[580px]:w-[190px] max-[400px]:text-center max-[550px]:text-[10px] font-medium">

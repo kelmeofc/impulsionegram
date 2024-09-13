@@ -110,7 +110,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_comprar-curtidas-instagram-reais-e-brasileiras-em-2024.avif',
+            path: '/images/blog-banners/como-encontrar-o-melhor-site-para-comprar-seguidores-com-bom-custo.png',
             alt: 'Comprar Curtidas Instagram Reais e Brasileiras em 2024'
         }
     }, {
@@ -143,7 +143,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_a-compra-de-likes-no-instagram-como-e-que-funciona.avif',
+            path: '/images/blog-banners/banner_a-compra-de-likes-no-instagram-como-e-que-funciona.png',
             alt: 'A compra de likes no Instagram: Como é que funciona?'
         }
     }, {
@@ -218,7 +218,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_por-que-os-clientes-optam-pelo-impulsionegram.avif',
+            path: '/images/blog-banners/banner_por-que-os-clientes-optam-pelo-impulsionegram.png',
             alt: 'Por que os clientes optam pelo Impulsionegram?'
         }
     }, {
@@ -277,7 +277,7 @@ export default function ReelsPackages() {
             </>
         ),
         banner: {
-            path: '/images/blog-banners/banner_como-essa-pratica-pode-me-ajudar-a-crescer-meu-perfil-do-instagram.avif',
+            path: '/images/blog-banners/banner_como-essa-pratica-pode-me-ajudar-a-crescer-meu-perfil-do-instagram.png',
             alt: 'Como essa prática pode me ajudar a crescer meu perfil do Instagram?'
         }
     }];

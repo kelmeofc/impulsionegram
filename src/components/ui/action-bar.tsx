@@ -27,7 +27,7 @@ export function ActionBar({
 
   const { productPackage, handlePackage } = usePackageContext() as any;
 
-  const [packageIndex, setPackageIndex] = useState(0);
+  const [packageIndex, setPackageIndex] = useState(3);
   const [selectedPackage, setSelectedPackage] = useState({
     label: "",
     amount: "",
@@ -139,7 +139,7 @@ export function ActionBar({
   return (
     <div data-action-bar>
       <div
-        className="!z-[2147483001] opacity-0 pointer-events-none transition fixed bottom-0 left-0 right-0"
+        className="!z-[49] opacity-0 pointer-events-none transition fixed bottom-0 left-0 right-0"
         data-action-bar-container
       >
         {/* {items.filter((_item) => _item.card_id == (selectedPackage as any).card_id)[0].promo_price} */}
@@ -209,9 +209,9 @@ export function ActionBar({
                 className="z-[51] relative rounded-full"
                 style={{
                   background: `linear-gradient(90deg,#DFD7F2 ${
-                    (productPackage.index / (items.length - 1)) * 100
+                    ((productPackage.index == 0 ? 0.5 : productPackage.index) / (items.length - 1)) * 100
                   }%,#ECE6F9 ${
-                    (productPackage.index / (items.length - 1)) * 100
+                    ((productPackage.index == 0 ? 0.5 : productPackage.index) / (items.length - 1)) * 100
                   }%)`,
                 }}
               >
