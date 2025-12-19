@@ -33,6 +33,8 @@ export function BuyingProcessSection() {
                         className="max-w-[103px]"
                         alt="Imagem que representa a segurança"
                         src="/images/a-verdade-que.png"
+                        width={103}
+                        height={103}
                     />
 
                     <div>

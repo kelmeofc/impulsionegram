@@ -39,9 +39,9 @@ export function HeroPackageContainer({
                         )}
 
                     {productPackage.price && (
-                        <p className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(productPackage.price / 3).toFixed(2).replace('.', ',')}  sem juros no cartão</p>
+                        <div className="text-[#B2ACB6] text-base font-medium mt-3">3x de R$ {(productPackage.price / 3).toFixed(2).replace('.', ',')}  sem juros no cartão</div>
                     ) || (
-                            <p className="text-[#B2ACB6] text-base font-medium mt-3 flex gap-2 items-center">3x de R$ <HeroInstallmentPriceSkeleton />  sem juros no cartão</p>
+                            <div className="text-[#B2ACB6] text-base font-medium mt-3 flex gap-2 items-center">3x de R$ <HeroInstallmentPriceSkeleton />  sem juros no cartão</div>
                         )}
 
                     <ul className="flex gap-4 mt-3">
