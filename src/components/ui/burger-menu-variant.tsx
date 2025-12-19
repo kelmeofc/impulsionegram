@@ -18,27 +18,27 @@ export function BurgerMenu() {
     {
       content: "Comprar Seguidores",
       link: "/pacotes-seguidores-instagram",
-      class: "lg:hidden",
+      className: "lg:hidden",
     },
     {
       content: "Comprar Curtidas",
       link: "/comprar-curtidas-instagram",
-      class: "lg:hidden",
+      className: "lg:hidden",
     },
     {
       content: "Comprar Comentários",
       link: "/comprar-comentarios-instagram",
-      class: "lg:hidden",
+      className: "lg:hidden",
     },
     {
       content: "Comprar Visus Vídeo",
       link: "/comprar-visualizacoes-reels-instagram",
-      class: "lg:hidden",
+      className: "lg:hidden",
     },
     {
       content: "Comprar Visus Stores",
       link: "/comprar-visualizacoes-stories",
-      class: "lg:hidden",
+      className: "lg:hidden",
     },
     {
       content: "FAQ",
@@ -126,20 +126,21 @@ export function BurgerMenu() {
 
         <ul>
           {menu.map((li, index) => {
+            const { content, link, action, className, target } = li;
             return (
-              <li key={index} className={`mt-6 first:mt-0 ${li.class ?? ""}`}>
+              <li key={index} className={`mt-6 first:mt-0 ${className ?? ""}`}>
                 <Link
                   className="block text-lg font-semibold text-[#473257]"
-                  href={li.link}
+                  href={link}
+                  target={target}
                   onClick={() => {
-                    if (li.action) {
-                      eval(li.action);
+                    if (action) {
+                      eval(action);
                     }
                     setIsOpen(false);
                   }}
-                  {...li}
                 >
-                  {li.content}
+                  {content}
                 </Link>
               </li>
             );

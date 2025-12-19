@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Security from '/public/images/a-verdade-que.png';
 import { BuyFollowersButton } from "../ui/buy-followers-button";
 
 export function BuyingProcessSection() {
@@ -33,7 +32,7 @@ export function BuyingProcessSection() {
                     <Image
                         className="max-w-[103px]"
                         alt="Imagem que representa a segurança"
-                        src={Security}
+                        src="/images/a-verdade-que.png"
                     />
 
                     <div>

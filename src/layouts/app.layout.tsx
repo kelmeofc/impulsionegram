@@ -2,10 +2,10 @@ import { ChatwootWidget } from "@/components/ui/chatwoot-widget";
 import { Footer } from "@/components/ui/footer";
 import { Header } from "@/components/ui/header";
 import Script from "next/script";
-import React, { useEffect } from "react";
+import type { ReactNode } from "react";
 
 interface ILayoutFragmentProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function AppLayoutFragment({ children }: ILayoutFragmentProps) {
